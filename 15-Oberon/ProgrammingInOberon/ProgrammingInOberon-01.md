@@ -2,7 +2,7 @@
 
 A derivative of Programming in Modula-2 (1982)
         
-        Niklaus Wirth
+Niklaus Wirth
 
 ## Table of Contents
 
