@@ -63,7 +63,7 @@ The main purpose of and the driving force behind this project is to provide a si
 
 Recently,  a  growing number  of people has  become  interested  in designing  new,  smaller  systems.  The vast complexity of popular operating systems makes them not only obscure, but also provides opportunities for "back doors". They allow external agents to introduce spies and devils unnoticed by the user, making the system attackable and corruptible. The only safe remedy is to build a safe system anew from scratch. 
 
-最近，越來越多的人開始對設計新的、更小的系統感興趣。流行操作系統的巨大復雜性不僅使它們晦澀難懂，而且還提供了“後門”的機會。他們允許外部代理人在不被注意的情況下引入間諜和魔鬼由用戶，使系統易受攻擊和損壞。唯一安全的補救措施是建立一個安全的系統從頭開始
+最近，越來越多的人開始對設計新的、更小的系統感興趣。流行操作系統的巨大復雜性不僅使它們晦澀難懂，而且還提供了“後門”的機會。他們允許外部代理人在不被注意的情況下引入間諜和魔鬼由用戶，使系統易受攻擊和損壞。唯一安全的補救措施是從頭開始建立一個安全的系統
 
 Turning now to a practical aspect: The largest chapter of the 1992 edition of this book dealt with the compiler translating Oberon programs into code for the NS32032 processor. This processor is now neither available nor is its architecture recommendable. Instead of writing a new compiler for some other commercially available architecture, I decided to design my own in order to extend the desire for simplicity and regularity to the hardware. The ultimate benefit of this decision is not only that the software, but also the hardware of the Oberon System is described completely and rigorously. The processor is called RISC. The hardware modules are decribed exclusively in the language Verilog. 
 
@@ -71,7 +71,7 @@ Turning now to a practical aspect: The largest chapter of the 1992 edition of th
 
 The decision for a new processor was expedited by the possibility to implement it, that is, to make it concrete and available. This is due to the advent of programmable gate arrays (FPGA), allowing to turn a design into a real, functioning processor on a single chip. As a result, the described system can  be  realized  using  a  low-cost  development  board.  This  board,  Xilinx  Spartan-3  by  Digilent,  features a 1-MByte static memory, which easily accommodates the entire Oberon System, incuding its compiler. It is shown, together with a display, a keyboard and a mouse in the photo below. The board is visible in the lower, right corner. 
 
-實施它的可能性加快了對新處理器的決定，也就是說，使它具體的和可用的。這是由於可編程門陣列 (FPGA) 的出現，允許在單個芯片上將設計轉變為真正的功能處理器。結果，所描述的系統可以使用低成本的開發板來實現。這個板，Digilent 的 Xilinx Spartan-3，具有 1 兆字節的靜態內存，可輕鬆容納整個 Oberon 系統，包括它的編譯器。它與顯示器、鍵盤和鼠標一起顯示在下面的照片中。這板在右下角可見。
+實施它的可能性加快了對新處理器的決定，也就是說，使它具體的和可用的。這是由於可編程門陣列 (FPGA) 的出現，允許在單個芯片上將設計轉變為真正的功能處理器。結果，所描述的系統可以使用低成本的開發板來實現。這個板，Digilent 的 Xilinx Spartan-3，具有 1 兆字節的靜態內存，可輕鬆容納整個 Oberon 系統，包括它的編譯器。它與顯示器、鍵盤和滑鼠一起顯示在下面的照片中。這板在右下角可見。
 
 The  decision  to  develop  our  own  processor  required  that  the  chapters  on  the  compiler  and  the  linking  loader  had  to  be  completely  rewritten.  However,  it  also  provided  the  welcome  chance  to  improve their clarity considerably. The new processor indeed allowed to simplify and straighten out the entire compiler. 
 
@@ -111,7 +111,7 @@ In  contrast  to  these removals,  there  is a  single  addition  (made  in 2012
 
 In spite of these two reasons for changes -- one at the highest level, the language, the other at the lowest,  the  hardware  --  the  remainder  of  the  book  proved  to  be  pretty  stable  and  still  valid.  It  has  been my desire to present the system essentially as it existed 25 years ago, without embellishments.  The  chapters  3  -  5  on  tasking,  the  display  and  the  text,  originally  written  by  J.  Gutknecht,  have  been  carried  over  virtually  unchanged.  Significant  changes,  however,  were  necessary mainly in the descriptions of device drivers for keyboard and mouse. They now use the PS-2  interface  standard.  The  disk  has  been  replaced  by  a  single  SD-card  (flash  memory)  with  a  standard  SPI  interface.  The  interface  to  the  net  no  longer  uses  the  RS-485  interface,  but  is  also  based on the SPI standard. The chapters on the compiler and the linker are completely new. 
 
-儘管有這兩個改變的原因——一個在最高層，語言，另一個在最低的是硬件——本書的其餘部分被證明是相當穩定且仍然有效的。它有我的願望是從本質上呈現 25 年前存在的系統，而不點綴。關於任務分配、顯示和文本的第 3 - 5 章，最初由 J.Gutknecht，幾乎沒有改變。然而，重大變化是必要的主要是在鍵盤和鼠標的設備驅動程序的描述中。他們現在使用PS-2接口標準。磁盤已被單個 SD 卡（閃存）取代標準SPI接口。網絡接口不再使用 RS-485 接口，而是基於SPI標準。關於編譯器和鏈接器的章節是全新的。
+儘管有這兩個改變的原因——一個在最高層，語言，另一個在最低的是硬件——本書的其餘部分被證明是相當穩定且仍然有效的。它有我的願望是從本質上呈現 25 年前存在的系統，而不點綴。關於任務分配、顯示和文本的第 3 - 5 章，最初由 J.Gutknecht，幾乎沒有改變。然而，重大變化是必要的主要是在鍵盤和滑鼠的設備驅動程序的描述中。他們現在使用PS-2接口標準。磁盤已被單個 SD 卡（閃存）取代標準SPI接口。網絡接口不再使用 RS-485 接口，而是基於SPI標準。關於編譯器和鏈接器的章節是全新的。
 
 Mostly thanks to the regularity of the RISC instruction set, the size of the compiler could be reduced significantly.  It  now  measures  less  than  2900  lines  of  program  and  compiles  itself  in  about  3 seconds, which is proof of its efficiency. The entire system compiles itself in less than 10 seconds. 
 
@@ -226,15 +226,15 @@ The system's completion took another year and concentrated on connecting the wor
 
 In order to warrant the sizeable effort of designing and constructing an entire operating system from scratch, a number of basic concepts need to be novel. We start this chapter with a discussion of the principal concepts underlying the Oberon System and of the dominant design decisions. On this basis, a presentation of the system's structure follows. It will be restricted to its coarsest level, namely the composition and interdependence of the largest building blocks, the modules. The chapter ends with an overview of the remainder of the book. It should help the reader to understand the role, place, and significance of the parts described in the individual chapters.
 
-為了保證設計和構建整個操作系統的巨大努力scratch，一些基本概念需要新穎。我們在本章開始討論Oberon 系統的主要概念和主要設計決策。在這個基礎上，系統結構介紹如下。它將被限制在最粗糙的水平，即最大構建塊模塊的組成和相互依賴性。這本章以對本書其餘部分的概述結束。它應該有助於讀者理解各個章節中描述的部分的作用、位置和意義。
+為了保證從頭開始設計和構建整個操作系統的巨大努力，許多基本概念是需要長篇敘述的。 我們從本章開始討論 Oberon 系統的主要概念和主要設計決策。 在此基礎上，系統結構介紹如下。 它將被限制在最粗略的層面，即最大構建塊模塊的組成和相互依賴性。 本章最後概述了本書的其餘部分。 它應該有助於讀者理解各個章節中描述的部分的作用、位置和意義。
 
 The fundamental objective of an operating system is to present the computer to the user and to the programmer at a certain level of abstraction. For example, the store is presented in terms of requestable pieces or variables of a specified data type, the disk is presented in terms of sequences of characters (or bytes) called files, the display is presented as rectangular areas called viewers, the keyboard is presented as an input stream of characters, and the mouse appears as a pair of coordinates and a set of key states. Every abstraction is characterized by certain properties and governed by a set of operations. It is the task of the system to implement these operations and to manage them, constrained by the available resources of the underlying computer. This is commonly called resource management.
 
-操作系統的基本目標是將計算機呈現給用戶和某種抽象層次上的程序員。例如，商店以以下方式呈現指定數據類型的可請求片段或變量，磁盤以字符（或字節）序列稱為文件，顯示呈現為矩形區域稱為對於查看器，鍵盤顯示為字符輸入流，鼠標顯示為一對坐標和一組關鍵狀態。每個抽象都具有某些屬性並由一組操作管理。執行這些操作是系統的任務，並且管理它們，受底層計算機可用資源的限制。這是通常稱為資源管理。
+操作系統的基本目標是將計算機上的某種抽象層次呈現給用戶和程序員。例如，存儲是以指定可請求片段或變量的數據類型方式呈現，磁盤以字符（或字節）序列呈現稱為文件，顯示為矩形區域呈現稱為查看器，鍵盤為字符輸入流呈現，滑鼠為一對坐標和一組關鍵狀態呈現。每個抽象都具有某些屬性並由一組操作管理。執行這些操作是系統的任務，並且管理它們，受底層計算機可用資源的限制。這是通常稱為資源管理。
 
 Every abstraction inherently hides details, namely those from which it abstracts. Hiding may occur at different levels. For example, the computer may allow certain parts of the store, or certain devices to be made inaccessible according to its mode of operation (user/supervisor mode), or the programming language may make certain parts inaccessible through a hiding facility inherent in its visibility rules. The latter is of course much more flexible and powerful, and the former indeed plays an almost negligible role in our system. Hiding is important because it allows maintenance of certain properties (called invariants) of an abstraction to be guaranteed. Abstraction is indeed the key of any modularization, and without modularization every hope of being able to guarantee reliability and correctness vanishes. Clearly, the Oberon System was designed with the goal of establishing a modular structure on the basis of purpose-oriented abstractions. The availability of an appropriate programming language is an indispensable prerequisite, and the importance of its choice cannot be over-emphasized.
 
-每個抽象本質上都隱藏了細節，即它從中抽象出來的細節。隱藏可能發生在不同的層面。例如，計算機可能允許商店的某些部分，或某些根據其操作模式（用戶/管理員模式）或編程語言可能通過其固有的隱藏設施使某些部分不可訪問可見性規則。後者當然更加靈活和強大，前者確實可以玩在我們的系統中幾乎可以忽略不計。隱藏很重要，因為它允許維護要保證的抽象的某些屬性（稱為不變量）。抽象確實是任何模塊化的關鍵，沒有模塊化的每一個希望都能夠保證可靠性和正確性消失了。顯然，Oberon 系統的設計目標是在面向目的的抽象的基礎上建立模塊化結構。的可用性合適的編程語言是必不可少的先決條件，其重要性選擇不能過分強調。
+每個抽象本質上都隱藏了細節，即它從中抽象出來的細節。隱藏可能發生在不同的層面。例如，計算機可能依其可見性規則允許存儲的某些部分，或某些根據其操作模式（用戶/管理員模式）或可能通過編程語言使其固有的設施隱藏某些部分不可訪問。後者當然更加靈活和強大，前者確實在我們的系統中擔任幾乎可以忽略不計的腳色。隱藏很重要，因為它允許維護要保證的抽象的某些屬性（稱為不變量）。抽象確實是任何模塊化的關鍵，沒有模塊化的每一個希望都能夠保證可靠性和正確性消失了。顯然，Oberon 系統的設計目標是在面向目的的抽象的基礎上建立模塊化結構。的可用性合適的編程語言是必不可少的先決條件，其重要性選擇不能過分強調。
 
 ### 2.2. Concepts
 
@@ -250,15 +250,15 @@ The  System  provides  routines  for  generating  a  frame  (viewer),  for  movi
 
 But high interactivity requires not only a high bandwidth for visual output, it demands also flexibility of  input.  Surely,  there  is  no  need  for  an  equally  large  bandwidth,  but  a  keyboard  limited  by  the  speed of typing to about 100 Hz is not good enough. The break-through on this front was achieved by  the  so-called  mouse,  a  pointing  device  which  appeared  roughly  at  the  same  time  as  the  high-resolution display.
 
-但高交互性不僅需要用於視覺輸出的高帶寬，還需要靈活性輸入。當然，不需要同樣大的帶寬，但鍵盤受限於大約 100 Hz 的打字速度不夠好。實現了這方面的突破所謂的鼠標，一種指點設備，大致與高端設備同時出現分辨率顯示。
+但高交互性不僅需要用於視覺輸出的高帶寬，還需要靈活性輸入。當然，不需要同樣大的帶寬，但鍵盤受限於大約 100 Hz 的打字速度不夠好。實現了這方面的突破所謂的滑鼠，一種指點設備，大致與高端設備同時出現分辨率顯示。
 
 This  was  by  no  means  just  a  lucky  coincidence.  The  mouse  comes  to  fruition  only  through  appropriate  software  and  the  high-resolution  display.  It  is  itself  a  conceptually  very  simple  device  delivering  signals  when  moved  on  the  table.  These  signals  allow  the  computer  to  update  the  position of a mark - the cursor - on the display. Since feedback occurs through the human eye, no great precision is required from the mouse. For example, when the user wishes to identify a certain object on the screen, such as a letter, he moves the mouse as long as required until the mapped cursor reaches the object. This stands in marked contrast to a digitizer which is supposed to deliver exact coordinates. The Oberon System relies very much on the availability of a mouse. 
 
-這絕不只是一個幸運的巧合。鼠標只有通過適當的軟件和高分辨率顯示器。它本身就是一個概念上非常簡單的設備在桌子上移動時傳遞信號。這些信號允許計算機更新標記（光標）在顯示屏上的位置。由於反饋是通過人眼發生的，所以不鼠標需要很高的精度。例如，當用戶希望識別某個屏幕上的物體，比如一個字母，他只要移動鼠標，直到映射到光標到達對象。這與應該提供的數字化儀形成鮮明對比精確坐標。 Oberon 系統非常依賴鼠標的可用性。
+這絕不只是一個幸運的巧合。滑鼠只有通過適當的軟件和高分辨率顯示器。它本身就是一個概念上非常簡單的設備在桌子上移動時傳遞信號。這些信號允許計算機更新標記（光標）在顯示屏上的位置。由於反饋是通過人眼發生的，所以不滑鼠需要很高的精度。例如，當用戶希望識別某個屏幕上的物體，比如一個字母，他只要移動滑鼠，直到映射到光標到達對象。這與應該提供的數字化儀形成鮮明對比精確坐標。 Oberon 系統非常依賴滑鼠的可用性。
 
 Perhaps the cleverest idea was to equip mice with buttons. By being able to signal a request with the same hand that determines the cursor position, the user obtains the direct impression of issuing position-dependent requests. Position-dependence is realized in software by delegating interpretation of the signal to a procedure - a so-called handler or interpreter -which is local to the viewer in whose area the cursor momentarily appears. A surprising flexibility of command activation can be achieved in this manner by appropriate software. Various techniques have emerged in this connection, e.g. pop-up menus, pull-down-menus, etc. which are powerful even under the presence of  a  single  button  only.  For  many  applications,  a  mouse  with  several  keys  is far  superior, and  the  Oberon  System  basically  assumes  three  buttons  to  be  available.  The  assignment  of  different  functions  to  the  keys  may  of  course  easily  lead  to  confusion  when  every  application  prescribes  different  key  assignment.  This  is,  however,  easily  avoided  by  the  adherence  to  certain  "global"  conventions. In the Oberon System, the left button is primarily used for marking a position (setting a caret),  the  middle  button  for  issuing  general  commands  (see  below),  and  the  right  button  for  selecting displayed objects.
 
-也許最聰明的想法是為鼠標配備按鈕。通過能夠發出請求信號確定光標位置的同一隻手，用戶獲得發布的直接印象位置相關的請求。位置依賴是通過委託在軟件中實現的將信號解釋為過程 - 所謂的處理程序或解釋器 - 它是本地的光標瞬間出現在其區域中的查看器。命令激活的驚人靈活性可以通過適當的軟件以這種方式實現。在這方面出現了各種技術連接，例如彈出式菜單、下拉菜單等，即使在現場也很強大只有一個按鈕。對於許多應用程序，具有多個鍵的鼠標要好得多，而且Oberon System 基本上假定三個按鈕可用。賦值不同當每個應用程序規定時，鍵的功能當然很容易導致混淆不同的鍵分配。然而，這很容易通過堅持某些“全球”慣例。在 Oberon 系統中，左側按鈕主要用於標記位置（設置插入符號），用於發出通用命令的中間按鈕（見下文），以及用於選擇顯示的對象。
+也許最聰明的想法是為滑鼠配備按鈕。通過能夠發出請求信號確定光標位置的同一隻手，用戶獲得發布的直接印象位置相關的請求。位置依賴是通過委託在軟件中實現的將信號解釋為過程 - 所謂的處理程序或解釋器 - 它是本地的光標瞬間出現在其區域中的查看器。命令激活的驚人靈活性可以通過適當的軟件以這種方式實現。在這方面出現了各種技術連接，例如彈出式菜單、下拉菜單等，即使在現場也很強大只有一個按鈕。對於許多應用程序，具有多個鍵的滑鼠要好得多，而且Oberon System 基本上假定三個按鈕可用。賦值不同當每個應用程序規定時，鍵的功能當然很容易導致混淆不同的鍵分配。然而，這很容易通過堅持某些“全域”慣例。在 Oberon 系統中，滑鼠左鍵主要用於標記位置（設置插入符號），中間按鍵用於發出通用命令的（見下文），以及右鍵用於選擇顯示的對象。
 
 Recently, it has become fashionable to use overlapping windows mirroring documents being piled up  on  one's desk.  We  have  found  this  metaphor  not  entirely  convincing.  Partially  hidden  windows  are  typically  brought  to  the  top  and  made  fully  visible  before  any  operation  is  applied  to  their  contents.  In  contrast  to  the  insignificant  advantage  stands  the  substantial  effort  necessary  to  implement  this  scheme.  It  is  a  good  example  of  a  case  where  the  benefit  of  a  complication  is  incommensurate with its cost. Therefore, we have chosen a solution that is much simpler to realize, yet  has  no  genuine  disadvantages  compared  to  overlapping  windows:  tiled  viewers  as  shown  in  Fig. 2.1.
 
@@ -274,7 +274,7 @@ Position-dependent commands with fixed meaning (fixed for each type of viewer) m
 
 First of all we remark that a program in the common sense of a text compiled as a unit is mostly a far too large unit of action to serve as a command. Compare it, for example, with the insertion of a piece of text through a mouse command. In Oberon, the notion of a unit of action is separated from the notion of unit of compilation. The former is a command represented by a (exported) procedure, the  latter  is  a  module.  Hence,  a  module  may,  and  typically  does,  define  several,  even  many  commands. Such a (general) command may be invoked at any time by pointing at its name in any text  visible  in  any  viewer  on  the  display,  and  by  clicking  the  middle  mouse  button.  The  command  name has the form M.P, where P is the procedure's identifier and M that of the module in which P is declared. As a consequence, any command click may cause the loading of one or several modules, if M is not already present in main store. The next invocation of M.P occurs instantaneously, since M  is  already  loaded.  A  further  consequence  is  that  modules  are  never  (automatically)  removed,  because a next command may well refer to the same module.
 
-首先，我們要指出的是，作為一個單元編譯的文本常識中的程序主要是一個太大的行動單位無法作為命令。比較一下，例如，插入一個通過鼠標命令的一段文本。在 Oberon 中，行動單元的概念與編譯單元的概念。前者是由（導出的）過程表示的命令，後者是一個模塊。因此，一個模塊可以而且通常確實定義了幾個，甚至很多命令。這樣的（通用）命令可以在任何時候通過指向它的名稱在任何時候被調用文本在顯示器上的任何查看器中可見，並通過單擊鼠標中鍵。命令名稱的格式為 M.P，其中 P 是過程的標識符，M 是模塊的標識符，其中 P宣布。因此，任何命令點擊都可能導致加載一個或多個模塊，如果 M 還沒有出現在 main store 中。 M.P 的下一次調用瞬間發生，因為M 已經加載。進一步的結果是模塊永遠不會（自動）刪除，因為下一個命令很可能引用同一個模塊。
+首先，我們要指出的是，作為一個單元編譯的文本常識中的程序主要是一個太大的行動單位無法作為命令。比較一下，例如，插入一個通過滑鼠命令的一段文本。在 Oberon 中，行動單元的概念與編譯單元的概念。前者是由（導出的）過程表示的命令，後者是一個模塊。因此，一個模塊可以而且通常確實定義了幾個，甚至很多命令。這樣的（通用）命令可以在任何時候通過指向它的名稱在任何時候被調用文本在顯示器上的任何查看器中可見，並通過單擊滑鼠中鍵。命令名稱的格式為 M.P，其中 P 是過程的標識符，M 是模塊的標識符，其中 P宣布。因此，任何命令點擊都可能導致加載一個或多個模塊，如果 M 還沒有出現在 main store 中。 M.P 的下一次調用瞬間發生，因為M 已經加載。進一步的結果是模塊永遠不會（自動）刪除，因為下一個命令很可能引用同一個模塊。
 
 Every command has the purpose to alter the state of some operands. Typically, they are denoted by text following the command identification, and Oberon follows this convention. Strictly speaking, commands  are  denoted  as  parameterless  procedures;  but  the  system  provides  a  way  for  the  procedure to identify the text position of its origin, and hence to read and interpret the text following the  command,  i.e.  the  actual  parameters.  Both  reading  and  interpretation  must,  however,  be  programmed explicitly.
 
@@ -316,7 +316,7 @@ This  makes  it  unnecessary  to  remember  a  long  history  of  previously  ac
 
 At  the  same  time,  we  classify  Oberon  as  a  single-process  (or  single-thread)  system.  How  is  this  apparent paradox to be understood?  Perhaps it is best explained by considering the basic mode of operation. Unless engaged in the interpretation of a command, the processor is engaged in a loop continuously  polling  event  sources.  This  loop  is  called  the  central  loop;  it  is  contained  in  module  Oberon which may be regarded as the system's heart. The two fixed event sources are the mouse and the keyboard. If a keyboard event is sensed, control is dispatched to the handler installed in the so-called focus viewer, designated as the one holding the caret. If a mouse event (key) is sensed, control is dispatched to the handler in which the cursor currently lies. This is all possible under the paradigm of a single, uninterruptible process.
 
-同時，我們將 Oberon 歸類為單進程（或單線程）系統。 如何理解這個明顯的悖論？ 也許最好通過考慮基本操作模式來解釋。 除非參與命令的解釋，否則處理器將參與一個循環，不斷輪詢事件源。 這個循環稱為中央循環； 它包含在模塊 Oberon 中，可以被視為系統的核心。 兩個固定的事件源是鼠標和鍵盤。 如果檢測到鍵盤事件，控制將被分派到安裝在所謂的焦點查看器中的處理程序，指定為持有插入符的那個。 如果感測到鼠標事件（鍵），則將控制分派給光標當前所在的處理程序。 在單一的、不間斷的進程的範例下，這一切都是可能的。
+同時，我們將 Oberon 歸類為單進程（或單線程）系統。 如何理解這個明顯的悖論？ 也許最好通過考慮基本操作模式來解釋。 除非參與命令的解釋，否則處理器將參與一個循環，不斷輪詢事件源。 這個循環稱為中央循環； 它包含在模塊 Oberon 中，可以被視為系統的核心。 兩個固定的事件源是滑鼠和鍵盤。 如果檢測到鍵盤事件，控制將被分派到安裝在所謂的焦點查看器中的處理程序，指定為持有插入符的那個。 如果感測到滑鼠事件（鍵），則將控制分派給光標當前所在的處理程序。 在單一的、不間斷的進程的範例下，這一切都是可能的。
 
 The  notion  of  a  single  process  implies  non-interruptability,  and  therefore  also  that  commands  cannot  interact  with  the  user.  Interaction  is  confined  to  the  selection  of  commands  before  their  execution. Hence, there exists no input statement in typical Oberon programs. Inputs are given by parameters supplied and designated before command invocation. 
 
@@ -336,7 +336,7 @@ Oberon 和多進程系統之間的本質區別在於，在前者中，任務切�
 
 The  system  offers  the  possibility  to  insert  further  polling  commands  in  the  central  loop.  This  is  necessary  if  additional  event  sources  are  to  be  introduced.  The  prominent  example  is  a  network,  where  commands  may  be  sent  from  other  workstations.  The  central  loop  scans  a  list  of  so-called  task  descriptors.  Each  descriptor  refers  to  a  command  procedure.  The  two  standard  events  are  selected  only  if  their  guard  permits,  i.e.  if  either  keyboard  input  is  present,  or  if  a  mouse  event  occurs. Inserted tasks must provide their own guard in the beginning of the installed procedure.
 
-該系統提供了在中央迴路中插入更多輪詢命令的可能性。 如果要引入額外的事件源，這是必要的。 突出的例子是網絡，其中可以從其他工作站發送命令。 中央循環掃描所謂的任務描述符列表。 每個描述符都指向一個命令過程。 這兩個標準事件只有在它們的守衛允許時才會被選中，即如果鍵盤輸入存在，或者鼠標事件發生。 插入的任務必須在安裝過程的開頭提供自己的守衛。
+該系統提供了在中央迴路中插入更多輪詢命令的可能性。 如果要引入額外的事件源，這是必要的。 突出的例子是網絡，其中可以從其他工作站發送命令。 中央循環掃描所謂的任務描述符列表。 每個描述符都指向一個命令過程。 這兩個標準事件只有在它們的守衛允許時才會被選中，即如果鍵盤輸入存在，或者滑鼠事件發生。 插入的任務必須在安裝過程的開頭提供自己的守衛。
 
 The example of a network inserting commands, called requests, raises a question: what happens if the  processor  is  engaged  in  the  execution  of  another  command  when  the  request  arrives?  Evidently, the request would be lost unless measures are taken. The problem is easily remedied by buffering the input. This is done in every driver of an input device, in the keyboard driver as well as the  network  driver.  The  incoming  signal  triggers  an  interrupt,  and  the  invoked  interrupt  handler  accepts the input and buffers it. We emphasize that such interrupt handling is confined to drivers, system  components  at  the  lowest  level.  An  interrupt  does  not  evoke  a  task  selection  and  a  task  switch. Control simply returns to the point of interruption, and the interrupt remains unnoticeable to programs. There exists, as with every rule, an exception: an interrupt due to keyboard input of the abort character returns control to the central loop. 
 
@@ -346,7 +346,7 @@ The example of a network inserting commands, called requests, raises a question:
 
 Certainly, the concepts of viewers specifying their own interpretation of mouse clicks, of commands invokable  from  any  text  on  the  display,  of  any  displayed  object  being  selectable  as  an  interface  between  commands,  and  of  commands  being  dialog-free,  uninterruptible  units  of  action,  have  considerable  influence  on  the  style  of  programming  in  Oberon,  and  they  thoroughly  change  the  style  of  using  the  computer.  The  ease  and  flexibility  in  the  way  pieces  of  text  can  be  selected,  moved, copied, and designated as command and as command parameters, drastically reduces the need  for  typing.  The  mouse  becomes  the  dominant  input  device:  the  keyboard  merely  serves  to  input textual data. This is accentuated by the use of so-called tool texts, compositions of frequently used commands, which are typically displayed in the narrower system track of viewers. One simply doesn't type commands! They are usually visible somewhere already. Typically, the user composes a tool text for every project pursued. Tool texts can be regarded as individually configurable private menus.
 
-當然，viewers的概念指定了他們自己對鼠標點擊的解釋，可以從顯示器上的任何文本調用的命令，任何顯示的對像都可以選擇作為命令之間的接口，以及命令是無對話的，不間斷的動作單元，已經 對 Oberon 的編程風格產生了相當大的影響，他們徹底改變了使用計算機的方式。 選擇、移動、複製和指定為命令和命令參數的文本片段的方式的簡便性和靈活性極大地減少了鍵入的需要。 鼠標成為主要的輸入設備：鍵盤僅用於輸入文本數據。 這通過使用所謂的工具文本、常用命令的組合而得到強調，這些文本通常顯示在觀眾的較窄系統軌道中。 一個人根本不輸入命令！ 它們通常已經在某處可見。 通常，用戶會為每個追求的項目撰寫工具文本。 工具文本可視為可單獨配置的私人菜單。
+當然，viewers的概念指定了他們自己對滑鼠點擊的解釋，可以從顯示器上的任何文本調用的命令，任何顯示的對像都可以選擇作為命令之間的接口，以及命令是無對話的，不間斷的動作單元，已經 對 Oberon 的編程風格產生了相當大的影響，他們徹底改變了使用計算機的方式。 選擇、移動、複製和指定為命令和命令參數的文本片段的方式的簡便性和靈活性極大地減少了鍵入的需要。 滑鼠成為主要的輸入設備：鍵盤僅用於輸入文本數據。 這通過使用所謂的工具文本、常用命令的組合而得到強調，這些文本通常顯示在觀眾的較窄系統軌道中。 一個人根本不輸入命令！ 它們通常已經在某處可見。 通常，用戶會為每個追求的項目撰寫工具文本。 工具文本可視為可單獨配置的私人菜單。
 
 The rarity of issuing commands by typing them has the most agreeable benefit that their names can be meaningful words. For example, the copy operation is denoted by Copy instead of cp, rename by Rename instead of rn, the call for a file directory excerpt is named Directory instead of ls. The need  for  memorizing  an  infinite  list  of  cryptic  abbreviations,  which  is  another  hallmark  of  user-unfriendly systems, vanishes.
 
@@ -354,7 +354,7 @@ The rarity of issuing commands by typing them has the most agreeable benefit tha
 
 But the influence of the Oberon concept is not restricted to the style in which the computer is used. It  extends  also  to  the  way  programs  are  designed  to  communicate  with  the  environment.  The  definition of the abstract type Text in the system's core suggests the replacement of files by texts as carrier  of  input  and  output  data  in  very many  cases. The  advantage  to be gained  lies  in  the  text's  immediate  editability.  For  example,  the  output  of  the  command  System.Directory  produces  the  desired excerpt of the file directory in the form of a (displayed) text. Parts of it or the whole may be selected and copied into other texts by regular editing commands (mouse clicks). Or, the compiler accepts  texts  as  input.  It  is  therefore  possible  to  compile  a  text,  execute  the  program,  and  to  recompile  the  re-edited  text  without  storing  it  on  disk  between  compilations  and  tests.  The  ubiquitous  editability  of  text  together  with  the  persistence  of  global  data  (in  particular  viewers)  allows many steps that do not contribute to the progress of the task actually pursued to be avoided.
 
-但 Oberon 概念的影響並不僅限於計算機的使用方式。 它還擴展到程序設計與環境通信的方式。 系統核心中抽象類型Text的定義暗示在很多情況下以文本代替文件作為輸入輸出數據的載體。 獲得的優勢在於文本的即時可編輯性。 例如，命令 System.Directory 的輸出以（顯示的）文本形式生成所需的文件目錄摘錄。 可以通過常規編輯命令（單擊鼠標）選擇部分或全部內容並將其複製到其他文本中。 或者，編譯器接受文本作為輸入。 因此，可以編譯文本、執行程序並重新編譯重新編輯的文本，而無需在編譯和測試之間將其存儲在磁盤上。 文本無處不在的可編輯性以及全局數據（特別是查看者）的持久性允許避免許多無助於實際追求的任務進展的步驟。
+但 Oberon 概念的影響並不僅限於計算機的使用方式。 它還擴展到程序設計與環境通信的方式。 系統核心中抽象類型Text的定義暗示在很多情況下以文本代替文件作為輸入輸出數據的載體。 獲得的優勢在於文本的即時可編輯性。 例如，命令 System.Directory 的輸出以（顯示的）文本形式生成所需的文件目錄摘錄。 可以通過常規編輯命令（單擊滑鼠）選擇部分或全部內容並將其複製到其他文本中。 或者，編譯器接受文本作為輸入。 因此，可以編譯文本、執行程序並重新編譯重新編輯的文本，而無需在編譯和測試之間將其存儲在磁盤上。 文本無處不在的可編輯性以及全局數據（特別是查看者）的持久性允許避免許多無助於實際追求的任務進展的步驟。
 
 #### 2.2.5. Extensibility
 
@@ -376,17 +376,17 @@ Activation of commands residing in modules that are not present in the store imp
 
 激活存儲中不存在的模塊中的命令意味著加載模塊，當然還有它們的所有導入。 然而，調用加載器並不局限於命令激活； 它也可能通過程序調用發生。 此功能對於成功實現真正的可擴展性是不可或缺的。 模塊必須可按需加載。 例如，當圖形元素出現在已處理的文檔中時，文檔編輯器加載圖形包，否則不會。
 
-The  Oberon  System  features  no  separate  linker.  A  module  is  linked  with  its  imports  when  it  is  loaded,  and  never  before.  As  a  consequence,  every  module  is  present  only  once,  in  main  store  (linked) as well as on backing store (unlinked, as file). Avoiding the generation of multiple copies in different, linked object files is the key to storage economy. Prelinked mega-files do not occur in the Oberon System, and every module is freely reusable.
+The Oberon System features no separate linker. A module is linked with its imports when it is loaded, and never before. As a consequence, every module is present only once, in main store  (linked) as well as on backing store (unlinked, as file). Avoiding the generation of multiple copies in different, linked object files is the key to storage economy. Prelinked mega-files do not occur in the Oberon System, and every module is freely reusable.
 
 Oberon 系統沒有單獨的鏈接器。 模塊在加載時與其導入鏈接，而之前從未如此。 因此，每個模塊只存在一次，在主存儲（鏈接）和後備存儲（未鏈接，作為文件）中。 避免在不同的、鏈接的目標文件中生成多個副本是存儲經濟的關鍵。 Oberon 系統中不會出現預先鏈接的巨型文件，並且每個模塊都可以自由重複使用。
 
 ### 2.3. The system's structure
 
-The  largest  identifiable  units  of  the  system  are  its  modules.  It  is  therefore  most  appropriate  to  describe a system's structure in terms of its modules. As their interfaces are explicitly declared, it is also  easy  to  exhibit  their  interdependence  in  the  form  of  a  directed  graph.  The  edges  indicate  imports.
+The largest identifiable units of the system are its modules. It is therefore most appropriate to describe a system's structure in terms of its modules. As their interfaces are explicitly declared, it is also easy to exhibit their interdependence in the form of a directed graph. The edges indicate imports.
 
 系統最大的可識別單元是它的模塊。 因此，用模塊來描述系統的結構是最合適的。 由於它們的接口是明確聲明的，因此也很容易以有向圖的形式展示它們的相互依賴性。 邊緣表示進口。
 
-The  module  graph  of  a  system  programmed  in  Oberon  is  hierarchical,  i.e.  has  no  cycles.  The lowest members of the hierarchy effectively import hardware only. We refer here to modules which contain  device  drivers.  But module  Kernel  also  belongs  to  this  class;  it  "imports  memory"  and  includes the disk driver. The modules on the top of the hierarchy effectively export to the user. As the user has direct access to command procedures, we call these top members command modules or tool modules.
+The module graph of a system programmed in Oberon is hierarchical, i.e. has no cycles. The lowest members of the hierarchy effectively import hardware only. We refer here to modules which contain device drivers. But module Kernel also belongs to this class; it "imports memory" and includes the disk driver. The modules on the top of the hierarchy effectively export to the user. As the user has direct access to command procedures, we call these top members command modules or tool modules.
 
 在 Oberon 中編程的系統模塊圖是分層的，即沒有循環。 層次結構的最低成員僅有效地導入硬件。 我們在這裡指的是包含設備驅動程序的模塊。 但是模塊 Kernel 也屬於這個類； 它“導入內存”並包含磁盤驅動程序。 層次結構頂部的模塊有效地導出給用戶。 由於用戶可以直接訪問命令過程，我們將這些頂級成員稱為命令模塊或工具模塊。
 
@@ -398,11 +398,11 @@ The hierarchy of the basic system is shown in a table of direct imports and as a
 
 Module  names  in  the  plural  form  typically  indicate  the  definition  of  an  abstract  data  type  in  the  module. The type is exported together with the pertinent operations. Examples are Files, Modules, Fonts, Texts, Viewers, MenuViewers, and TextFrames. Modules whose names are in singular form typically  denote  a  resource  that  the  module  manages,  be  it  a  global  variable  or  a  device.  The  variable or the device is itself hidden (not exported) and becomes accessible through the module's exported  procedures.  Examples  are  all  device  drivers,  Input  for  keyboard  and  mouse,  Kernel  for  memory  and  disk,  and  Display.  Exceptions  are  the  command  modules  whose  name  is  mostly  chosen according to the activity they primarily represent, like System, and Edit
 
-複數形式的模塊名稱通常表示模塊中抽象數據類型的定義。 該類型與相關操作一起導出。 示例包括文件、模塊、字體、文本、查看器、菜單查看器和 TextFrames。 名稱為單數形式的模塊通常表示模塊管理的資源，無論是全局變量還是設備。 變量或設備本身是隱藏的（不導出）並且可以通過模塊的導出過程訪問。 示例是所有設備驅動程序、鍵盤和鼠標的輸入、內存和磁盤的內核以及顯示。 例外是命令模塊，其名稱主要根據它們主要代表的活動來選擇，例如系統和編輯
+複數形式的模塊名稱通常表示模塊中抽象數據類型的定義。 該類型與相關操作一起導出。 示例包括文件、模塊、字體、文本、查看器、菜單查看器和 TextFrames。 名稱為單數形式的模塊通常表示模塊管理的資源，無論是全局變量還是設備。 變量或設備本身是隱藏的（不導出）並且可以通過模塊的導出過程訪問。 示例是所有設備驅動程序、鍵盤和滑鼠的輸入、內存和磁盤的內核以及顯示。 例外是命令模塊，其名稱主要根據它們主要代表的活動來選擇，例如系統和編輯
 
 Module  Oberon  is,  as  already  mentioned,  the  heart  of  the  system  containing  the  central  loop  to  which  control  returns  after  each  command  interpretation,  independent  of  whether  it  terminates  normally  or  abnormally.  Oberon  exports  several  procedures  of  auxiliary  nature,  but  primarily  also  the  one  allowing  the  invocation  of  commands  (Call) and  access  to  the  command's  parameter  text  through variable Oberon.Par. Furthermore, it contains global, exported variables: the log text. The log  text  typically  serves  to  issue  prompts  and  short  failure  reports  of  commands.  The  text  is  displayed  in  a  log  viewer  that  is  automatically  opened  when  module  System  is  initialized.  Module  Oberon furthermore contains the two markers used globally on the display, the mouse cursor and the  star  pointer.  It  exports  procedures  to  draw  and  to  erase  them,  and  allows  the  installation  of  different patterns for them. 
 
-正如已經提到的，模塊 Oberon 是系統的核心，包含中央循環，控制在每個命令解釋後返回，無論它是正常終止還是異常終止。 Oberon 導出幾個輔助性質的過程，但主要也是允許調用命令 (Call) 和通過變量 Oberon.Par 訪問命令的參數文本的過程。 此外，它還包含全局的、導出的變量：日誌文本。 日誌文本通常用於發出提示和簡短的命令失敗報告。 文本顯示在日誌查看器中，該查看器在初始化模塊系統時自動打開。 Module Oberon 還包含顯示器上全局使用的兩個標記，即鼠標光標和星形指針。 它導出繪製和擦除它們的程序，並允許為它們安裝不同的圖案。
+正如已經提到的，模塊 Oberon 是系統的核心，包含中央循環，控制在每個命令解釋後返回，無論它是正常終止還是異常終止。 Oberon 導出幾個輔助性質的過程，但主要也是允許調用命令 (Call) 和通過變量 Oberon.Par 訪問命令的參數文本的過程。 此外，它還包含全局的、導出的變量：日誌文本。 日誌文本通常用於發出提示和簡短的命令失敗報告。 文本顯示在日誌查看器中，該查看器在初始化模塊系統時自動打開。 Module Oberon 還包含顯示器上全局使用的兩個標記，即滑鼠光標和星形指針。 它導出繪製和擦除它們的程序，並允許為它們安裝不同的圖案。
 
 The system shown in Fig. 2.2. basically contains facilities for generating and editing texts, and for storing them in the file system. All other functions are performed by modules that must be added in the  usual  way  by  module  loading  on  demand.  This  includes,  notably,  the  compiler,  network  communication,  document  editors,  and  all  sorts  of  programs  designed  by  users.  The  high  priority  given in the system's conception to modularity, to avoiding unnecessary frills, and to concentrate on the indispensable in the core, has resulted in a system of remarkable compactness. Although this property  may  be  regarded  as  of  little  importance  in  this  era  of  falling  costs  of large  memories,  we  consider  it  to  be  highly  essential.  We  merely  should  like  to  draw  the  reader's  attention  to  the  correlation  between  a  systems'  size  and  its  reliability.  Also,  we  do  not  consider  it  as  good  engineering  practice  to  consume  a  resource  lavishly  just  because  it  happens  to  be  cheap.  The  following table lists the core's modules and the major application modules, and it indicates the size of code (in words) and static variables (in bytes) and, the number of source program lines.
 
@@ -410,7 +410,8 @@ The system shown in Fig. 2.2. basically contains facilities for generating and e
 
 ### 2.4. A tour through the chapters
 
-Implementation of a system proceeds bottom-up. Naturally, because modules on higher levels are clients  of  those  on  the  lower  levels  and  cannot  function  without  the  availability  of  their  imports.  Description  of  a  system,  on  the  other  hand,  is  better  ordered  in  the  top-down  direction.  This  is  because a system is designed with its expected applications and functions in mind. Decomposition into  a  hierarchy  of  modules  is  justified  by  the  use  of  auxiliary  functions  and  abstractions  and  by  postponing their more detailed explanation to a later time when their need has been fully motivated. For this reason, we will proceed essentially in the top-down direction.
+Implementation of a system proceeds bottom-up. Naturally, because modules on higher levels are clients of those on the lower levels and cannot function without the availability of their imports. Description of a system, on the other hand, is better ordered in the top-down direction. This is because a system is designed with its expected applications and functions in mind. Decomposition into a hierarchy of modules is justified by the use of auxiliary functions and abstractions and by postponing their more detailed explanation to a later time when their need has been fully motivated. For this reason, we will proceed essentially in the top-down direction.
+
 
 系統的實施是自下而上進行的。 自然地，因為較高級別的模塊是較低級別的模塊的客戶，並且沒有它們的導入可用性就無法運行。 另一方面，系統的描述最好按自上而下的方向排列。 這是因為系統在設計時考慮了其預期的應用程序和功能。 通過使用輔助功能和抽象以及將它們的更詳細解釋推遲到它們的需求被充分激發時的稍後時間來證明分解為模塊層次結構是合理的。 因此，我們將基本上按照自上而下的方向進行。
 
@@ -424,7 +425,7 @@ Chapter 4 explains Oberon's display system. It starts with a discussion of our c
 
 Chapter 5 introduces text. Oberon distinguishes itself by treating Text as an abstract data type that is integrated in the central  system.  Numerous  fundamental  consequences  are  discussed.  For  example, a text can be produced by one command, edited by a user, and then consumed by a next command.  Commands  themselves  can  be  represented  textually  in  the  form  M.P,  followed  by  a  textual  parameter  list.  Consequently,  any  command  can  be  called  directly  from  within  a  text  (so-called  tool)  simply  by  pointing  at  it  with  the  mouse.  However,  the  core  of  this  chapter  is  a  presentation of Oberon's text system as a case study in program modularization. The concerns of managing a text and displaying it are nicely separated. Both the text manager and the text display feature  an  abstract  public  interface  as  well  as  an  internally  hidden  data  structure.  Finally  in  this  chapter, Oberon's type-font management and the toolbox for editing are discussed.
 
-第5章介紹正文。 Oberon 的與眾不同之處在於將文本視為集成在中央系統中的抽象數據類型。 討論了許多基本後果。 例如，文本可以由一個命令生成，由用戶編輯，然後由下一個命令使用。 命令本身可以以 M.P 的形式以文本形式表示，後跟文本參數列表。 因此，任何命令都可以直接從文本（所謂的工具）中調用，只需用鼠標指向它即可。 然而，本章的核心是以 Oberon 的文本系統作為程序模塊化案例研究的介紹。 管理文本和顯示文本的關注點很好地分開了。 文本管理器和文本顯示都具有抽象的公共接口以及內部隱藏的數據結構。 本章最後討論了 Oberon 的類型字體管理和編輯工具箱。
+第5章介紹正文。 Oberon 的與眾不同之處在於將文本視為集成在中央系統中的抽象數據類型。 討論了許多基本後果。 例如，文本可以由一個命令生成，由用戶編輯，然後由下一個命令使用。 命令本身可以以 M.P 的形式以文本形式表示，後跟文本參數列表。 因此，任何命令都可以直接從文本（所謂的工具）中調用，只需用滑鼠指向它即可。 然而，本章的核心是以 Oberon 的文本系統作為程序模塊化案例研究的介紹。 管理文本和顯示文本的關注點很好地分開了。 文本管理器和文本顯示都具有抽象的公共接口以及內部隱藏的數據結構。 本章最後討論了 Oberon 的類型字體管理和編輯工具箱。
 
 Chapters 6 - 9 describe the inner core, still in a top-down path. Chapter 6 explains the loader of program modules and motivates the introduction of the data type Module. The chapter includes the management of the memory part holding program code and defines the format in which compiled modules are stored as object files. Furthermore, it discusses the problems of binding separately compiled modules together and of referencing objects defined in other modules.
 
@@ -440,7 +441,7 @@ The management of memory is the subject of Chapter 8. A single, central storage 
 
 At the lowest level of the module hierarchy we find device drivers. They are described in Chapter 9, which  contains  drivers  for  some  widely  accepted  interface  standards.  The  first  is  PS-2,  a  serial  transmission with synchronous clock. This is used for the keyboard and for the Mouse. The second is SPI, a standard for bi-directional, serial transmission with synchronous clock. This is used for the "disk", represented  by  an SDI-card  (flash  memory),  and  for  the  network.  And  the  third  standard  is  RS-232 typically used for simple and slow data links. It is bidirectional and asynchronous.
 
-在模塊層次結構的最低級別，我們找到了設備驅動程序。 它們在第 9 章中描述，其中包含一些廣泛接受的接口標準的驅動程序。 第一種是 PS-2，一種帶有同步時鐘的串行傳輸。 這用於鍵盤和鼠標。 第二種是 SPI，一種雙向、串行傳輸和同步時鐘的標準。 這用於以 SDI 卡（閃存）為代表的“磁盤”和網絡。 第三個標準是 RS-232，通常用於簡單和慢速的數據鏈接。 它是雙向和異步的。
+在模塊層次結構的最低級別，我們找到了設備驅動程序。 它們在第 9 章中描述，其中包含一些廣泛接受的接口標準的驅動程序。 第一種是 PS-2，一種帶有同步時鐘的串行傳輸。 這用於鍵盤和滑鼠。 第二種是 SPI，一種雙向、串行傳輸和同步時鐘的標準。 這用於以 SDI 卡（閃存）為代表的“磁盤”和網絡。 第三個標準是 RS-232，通常用於簡單和慢速的數據鏈接。 它是雙向和異步的。
 
 The second part of the book, consisting of Chapters 10 - 15, is devoted to what may be called first applications of the basic Oberon System. These chapters are therefore independent of each other, making reference to Chapters 3 - 9 only.
 
@@ -472,7 +473,7 @@ The  compiler  and  thereby  the  chapter  is  partitioned  into  two  main  par
 
 Texts  play  a  predominant  role  in  the  Oberon  System.  Their  preparation  is  supported  by  the  system's major tool, the editor. In Chapter 13 we describe another editor, one that handles graphic objects. At first, only horizontal and vertical lines and short captions are introduced as objects. The major difference to texts lies in the fact that their coordinates in the drawing plane do not follow from those  of  their  predecessor  automatically,  because  they  form  a  set  rather  than  a  sequence.  Each  object  carries  its  own,  independent  coordinates.  The  influence  of  this  seemingly  small  difference  upon an editor are far-reaching and permeate the entire design. There exist hardly any similarities between a text and a graphics editor. Perhaps one should be mentioned: the partitioning into three parts.  The  bottom  module  defines  the  respective  abstract  data  structure  for  texts  or  graphics,  together  with,  of  course,  the  procedures  handling  the  structure,  such  as  searches,  insertions,  and  deletions.  The  middle  module  in  the  hierarchy  defines  a  respective  frame  and  contains  all  procedures  concerned  with  displaying  the  respective  objects  including  the  frame  handler  defining  interpretation  of  mouse  and  keyboard  events.  The  top  modules  are  the  respective  tool  modules  (Edit,  Draw).  The  presented  graphics  editor  is  particularly  interesting  in  so  far  as  it  constitutes  a  convincing  example  of  Oberon's  extensibility.  The  graphics  editor  is  integrated  into  the  entire  system; it embeds its graphic frames into menu-viewers and uses the facilities of the text system for its caption elements. And lastly, new kinds of elements can be incorporated by the mere addition of new  modules,  i.e.  without  expanding,  even  without  recompiling  the  existing  ones.  Two  examples  are shown in Chapter 13 itself: rectangles and circles. 
 
-文本在 Oberon 系統中起著主導作用。 他們的準備得到系統的主要工具編輯器的支持。 在第 13 章中，我們描述了另一個編輯器，一個處理圖形對象的編輯器。 起初，只有橫線和豎線以及短標題作為對像被引入。 與文本的主要區別在於它們在繪圖平面中的坐標不會自動遵循其前身的坐標，因為它們形成一個集合而不是一個序列。 每個對像都有自己的獨立坐標。 這種看似微小的差異對編輯的影響是深遠的，貫穿於整個設計。 文本編輯器和圖形編輯器之間幾乎沒有任何相似之處。 也許應該提到一個：分為三個部分。 底部模塊定義了文本或圖形各自的抽象數據結構，當然還有處理該結構的過程，例如搜索、插入和刪除。 層次結構中的中間模塊定義了相應的框架，並包含與顯示相應對像有關的所有過程，包括定義鼠標和鍵盤事件解釋的框架處理程序。 頂部模塊是相應的工具模塊（編輯、繪圖）。 所呈現的圖形編輯器特別有趣，因為它構成了 Oberon 可擴展性的一個令人信服的例子。 圖形編輯器集成到整個系統中； 它將其圖形框架嵌入到菜單查看器中，並使用文本系統的功能作為其標題元素。 最後，可以通過僅僅添加新模塊來合併新類型的元素，即無需擴展，甚至無需重新編譯現有模塊。 第 13 章本身展示了兩個示例：矩形和圓形。
+文本在 Oberon 系統中起著主導作用。 他們的準備得到系統的主要工具編輯器的支持。 在第 13 章中，我們描述了另一個編輯器，一個處理圖形對象的編輯器。 起初，只有橫線和豎線以及短標題作為對像被引入。 與文本的主要區別在於它們在繪圖平面中的坐標不會自動遵循其前身的坐標，因為它們形成一個集合而不是一個序列。 每個對像都有自己的獨立坐標。 這種看似微小的差異對編輯的影響是深遠的，貫穿於整個設計。 文本編輯器和圖形編輯器之間幾乎沒有任何相似之處。 也許應該提到一個：分為三個部分。 底部模塊定義了文本或圖形各自的抽象數據結構，當然還有處理該結構的過程，例如搜索、插入和刪除。 層次結構中的中間模塊定義了相應的框架，並包含與顯示相應對像有關的所有過程，包括定義滑鼠和鍵盤事件解釋的框架處理程序。 頂部模塊是相應的工具模塊（編輯、繪圖）。 所呈現的圖形編輯器特別有趣，因為它構成了 Oberon 可擴展性的一個令人信服的例子。 圖形編輯器集成到整個系統中； 它將其圖形框架嵌入到菜單查看器中，並使用文本系統的功能作為其標題元素。 最後，可以通過僅僅添加新模塊來合併新類型的元素，即無需擴展，甚至無需重新編譯現有模塊。 第 13 章本身展示了兩個示例：矩形和圓形。
 
 The Draw System has been extensively used for the preparation of diagrams of electronic circuits. This  application  suggests  a  concept  that  is  useful  elsewhere  too,  namely  a  recursive  definition  of  the  notion  of  object.  A  set  of  objects  may  be  regarded  as  an  object  itself  and  be  given  a  name.  Such  an  object  is  called  a  macro.  It  is  a  challenge  to  the  designer  to  implement  a  macro  facility  such that it is also extensible, i.e. in no way refers to the type of its elements, not even in its input operations of files on which macros are stored. 
 
@@ -528,7 +529,7 @@ In principle, we distinguish two categories of tasks in Oberon: Interactive task
 
 Every interactive task is represented by a so-called viewer. Viewers constitute the interface to Oberon's display-system. They embody a variety of roles that are collected in an abstract data type Viewer. We shall give a deeper insight into the display system in Chapter 4. For the moment it suffices to know that viewers are represented graphically as rectangles on the display screen and that they are implicit carriers of interactive tasks. Figure 3.1 shows a typical Oberon display screen that is divided up into seven viewers corresponding to seven simultaneously active interactive tasks.
 
-每個交互式任務都由一個所謂的查看器表示。 查看器構成了 Oberon 顯示系統的接口。 它們體現了收集在抽象數據類型 Viewer 中的各種角色。 我們將在第 4 章對顯示系統進行更深入的了解。目前，只要知道觀眾在顯示屏上以圖形方式表示為矩形，並且他們是交互任務的隱含載體就足夠了。 圖 3.1 顯示了一個典型的 Oberon 顯示屏，該顯示屏分為七個觀眾，對應七個同時活動的交互任務。
+每個交互式任務都由一個所謂的查看器表示。 查看器構成了 Oberon 顯示系統的接口。 它們體現了收集在抽象數據類型 Viewer 中的各種角色。 我們將在第 4 章對顯示系統進行更深入的了解。目前，只要知道查看器在顯示屏上以圖形方式表示為矩形，並且他們是交互任務的隱含載體就足夠了。 圖 3.1 顯示了一個典型的 Oberon 顯示屏，該顯示屏分為七個查看器，對應七個同時活動的交互任務。
 
 In order to get firmer ground under our feet, we now present the programmed declaration of type Viewer in a slightly abstracted form:
 
@@ -536,7 +537,7 @@ In order to get firmer ground under our feet, we now present the programmed decl
 
     Viewer = POINTER TO ViewerDesc;
     ViewerDesc = RECORD
-        X, Y, W, H: INTEGER;
+		X, Y, W, H: INTEGER;
         handle: Handler;
         state: INTEGER
     END;
@@ -601,3 +602,1176 @@ We should not end this Section without drawing an important conclusion. Transfer
 
 我們不應該在得出重要結論之前結束本節。 任務之間的控制轉移在 Oberon 中作為普通過程（實際上是過程變量）的普通調用和返回來實現。 搶占是不可能的。 由此我們得出結論，任務的活動週期是按順序排列的，並且可以由單個控制線程控制。 這種簡化得到了很好的回報：公共資源的鎖是完全可有可無的，死鎖不是主題。
 
+### 3.2. The task scheduler
+
+We start from the general assumption that, at any given time, a number of well-determined tasks are ready in the system to be serviced. Remember that two categories of tasks exist: Interactive tasks and background tasks. They differ substantially in the criteria of activation or reactivation and in the priority of dispatching. Interactive tasks are (re)activated exclusively upon interactions by the user and are dispatched with high priority. In contrast, background tasks are polled with low priority.
+
+我們從一般假設開始，即在任何給定時間，系統中都準備好一些確定好的任務以供服務。 請記住，存在兩類任務：交互式任務和後台任務。 它們在激活或重新激活的標準以及調度的優先級方面有很大不同。 交互式任務僅在用戶交互時（重新）激活，並以高優先級調度。 相反，後台任務的輪詢優先級較低。
+
+We already know that interactive tasks are activated by sending messages. The types of messages used for this purpose are InputMsg and ControlMsg reporting keyboard events and mouse events respectively. Slightly simplified, they are declared as
+
+我們已經知道交互任務是通過發送消息來激活的。 用於此目的的消息類型是分別報告鍵盤事件和滑鼠事件的 InputMsg 和 ControlMsg。 稍微簡化一下，它們被聲明為
+
+	InputMsg = RECORD (ViewerMsg)
+	id: INTEGER;
+	X, Y: INTEGER;
+	keys: SET;
+	ch: CHAR
+	END;
+	ControlMsg = RECORD (ViewerMsg)
+	id: INTEGER;
+	X, Y: INTEGER
+	END;
+
+
+The field id specifies the exact request transmitted with this specific reactivation. In the case of InputMsg the possible requests are consume (the character specified by field ch) and track (mouse, starting from state given by keys and X, Y). In case of ControlMsg the choice is mark (the viewer at position X, Y) or neutralize. Mark means moving the global system pointer (typically represented as a star-shaped mark) to the current position of the mouse. Neutralizing a viewer is equivalent to removing all marks and graphical attributes from this viewer.
+
+字段 id 指定與此特定重新激活一起傳輸的確切請求。 在 InputMsg 的情況下，可能的請求是消耗（字段 ch 指定的字符）和跟踪（滑鼠，從鍵和 X、Y 給定的狀態開始）。 在 ControlMsg 的情況下，選擇是標記（位於 X、Y 位置的查看器）或中和。 標記表示將全局系統指針（通常表示為星形標記）移動到滑鼠當前位置。 中和查看器相當於從該查看器中刪除所有標記和圖形屬性。
+
+All tasking facilities are collected in one program module, called Oberon. In particular, the module's definition exposes the declarations of the abstract data type Task and of the message types InputMsg and ControlMsg. The module's most important contribution, however, is the task scheduler (often referred to as “Oberon loop”) that can be regarded as the system's dynamic center.
+
+所有任務處理設施都集中在一個名為 Oberon 的程序模塊中。 特別是，模塊的定義公開了抽像數據類型 Task 和消息類型 InputMsg 和 ControlMsg 的聲明。 然而，該模塊最重要的貢獻是任務調度程序（通常稱為“Oberon 循環”），它可以被視為系統的動態中心。
+
+Before studying the scheduler in detail we need some more preparation. We start with the institution of the focus viewer. By definition, this is a distinguished viewer that by convention consumes subsequent keyboard input. Note that we identify the focus viewer with the focus task, hereby making use of the one-to-one correspondence between viewers and tasks.
+
+在詳細研究調度程序之前，我們需要做一些準備工作。 我們從焦點觀眾的製度開始。 根據定義，這是一個傑出的查看器，按照慣例會使用後續的鍵盤輸入。 請注意，我們使用焦點任務來識別焦點查看器，從而利用查看器和任務之間的一對一對應關係。
+
+Module Oberon provides the following facilities in connection with the focus viewer: A global variable FocusViewer, a procedure PassFocus for transferring the role of focus to a new viewer, and a defocus variant of ControlMsg for notifying the old focus viewer of such a transfer.
+
+Module Oberon 提供以下與焦點查看器相關的功能：全局變量 FocusViewer、用於將焦點角色轉移到新查看器的過程 PassFocus 以及用於通知舊焦點查看器此類轉移的 ControlMsg 的散焦變體。
+
+The implementation details of the abstract data type Task are hidden from the clients. It is sufficient to know that all task descriptors are organized in a ring and that a pointer points to the previously activated task. The ring is guaranteed never to be empty because the above mentioned garbage collector is installed as a permanent sentinel task at system loading time.
+
+抽像數據類型 Task 的實現細節對客戶端是隱藏的。 知道所有任務描述符都組織成一個環並且指針指向先前激活的任務就足夠了。 保證環永遠不會為空，因為上面提到的垃圾收集器在系統加載時作為永久哨兵任務安裝。
+
+
+The following is a slightly abstracted version of the actual scheduler code operating on the task ring. It should be associated with procedure Loop in the module Oberon.
+
+以下是在任務環上運行的實際調度程序代碼的一個稍微抽象的版本。 它應該與模塊 Oberon 中的過程 Loop 相關聯。
+
+	get mouse position and state of keys;
+	REPEAT
+	IF keyboard input available THEN read character
+		IF character is escape THEN
+		broadcast neutralize message to viewers
+		ELSIF character is mark THEN
+		send mark message to viewer containing mouse
+		ELSE send consume message to focus viewer
+		END;
+		get mouse position and state of keys
+	ELSIF at least one key pressed THEN
+		REPEAT
+		send track message to viewer containing mouse;
+		get mouse position and state of keys
+		UNTIL all keys released
+	ELSE (*no key pressed*)
+		send track message to viewer containing mouse;
+		take next task in ring as current task;
+		call its handler (if specified time period has elapsed)
+		get mouse position and state of keys
+	END
+	UNTIL FALSE
+	
+The system executes a sequence of uninterrupted procedures (tasks). Interactive tasks are triggered by input data being present, either from the keyboard, the mouse, or other input sources. Background tasks are taken up in a round-robin manner. Interactive tasks have priority.
+
+系統執行一系列不間斷的過程（任務）。 交互式任務由來自鍵盤、滑鼠或其他輸入源的輸入數據觸發。 後台任務以循環方式進行。 交互式任務具有優先權。
+
+Having consciously excluded exceptional program behavior in our explanations so far, some comments about the way of runtime continuation in the case of a failing task or, in other words, in the case of a trap are in order here. On the (abstract) level of tasks, we can identify three sequential actions of recovery taken after a program failure:
+
+到目前為止，在我們的解釋中有意識地排除了異常的程序行為，這裡有一些關於在任務失敗的情況下運行時繼續運行的方式的評論，換句話說，在陷阱的情況下。 在（抽象）任務級別上，我們可以確定程序失敗後採取的三個連續恢復操作：
+
+	recovery after program failure =
+	BEGIN save current system state;
+	call installed trap handler;
+	roll back to start of task scheduler
+	END
+	
+Essentially, the system state is determined by the values of all global and local variables at a given time. The trap handler typically opens an extra viewer displaying the cause of the trap and the saved system state. Notice in the program fragment above that background tasks are removed from the ring after failing. This is an effective precaution against cascades of repeated failures. Obviously, no such precaution is necessary in the case of interactive tasks because their reactivation is under control of the user of the system.
+
+本質上，系統狀態由給定時間的所有全局和局部變量的值決定。 陷阱處理程序通常會打開一個額外的查看器，顯示陷阱的原因和保存的系統狀態。 請注意，在上面的程序片段中，後台任務在失敗後會從環中移除。 這是防止重複故障級聯的有效預防措施。 顯然，在交互式任務的情況下不需要這樣的預防措施，因為它們的重新激活在系統用戶的控制之下。
+
+Summarizing the essence of the tasking system: Oberon is a multitasking system based on a twocategory model. Interactive tasks are interfacing with the display system and are scheduled with high priority upon user interactions. Background tasks are stand-alone and are scheduled with low priority. Task activations are modeled as message passing and eventually as calls of procedures assigned to variables. They are sequentially ordered and controlled by a single thread of control.
+
+總結任務系統的本質： Oberon是一個基於雙類模型的多任務系統。 交互式任務與顯示系統交互，並在用戶交互時以高優先級進行調度。 後台任務是獨立的，並以低優先級安排。 任務激活被建模為消息傳遞，並最終被建模為調用分配給變量的過程。 它們由單個控制線程按順序排序和控制。
+
+### 3.3. The concept of command
+
+An operating system constitutes a general purpose platform on which application software packages can build upon. To software designers the platform appears as interface to "the system" and (in particular) to the underlying hardware. Unfortunately, interfaces defined by conventional operating systems often suffer from an all too primitive access mechanism that is based solely on the concept of "software interrupt" or "supervisor call" and on files taking the role of “connecting pipes". The situation is especially ironic when compared with the development of high-level programming languages towards extreme abstraction.
+
+操作系統構成了一個通用平台，應用程序軟件包可以在該平台上構建。 對於軟件設計者來說，平台表現為“系統”和（特別是）底層硬件的接口。 不幸的是，傳統操作系統定義的接口常常受到過於原始的訪問機制的影響，該機制僅基於“軟件中斷”或“管理程序調用”的概念以及扮演“連接管道”角色的文件。這種情況尤其嚴重 與高級編程語言向極端抽象的發展相比，具有諷刺意味。
+
+We have put greatest emphasis in Oberon on closing the semantic gap between application software packages and the system platform. The result of our efforts is a highly expressive and consistent application programming interface (API) in the form of an explicit hierarchy of module definitions. Perhaps the most significant and most notable outcome of this approach is a collection of very powerful and system-wide abstract data types like Task, Frame, Viewer, File, Font, Text, Module, Reader, Scanner, Writer etc..
+
+我們在 Oberon 中非常強調縮小應用軟件包和系統平台之間的語義鴻溝。 我們努力的結果是以模塊定義的顯式層次結構形式出現的高度表達和一致的應用程序編程接口 (API)。 也許這種方法最重要和最顯著的成果是收集了非常強大和系統範圍的抽像數據類型，如任務、框架、查看器、文件、字體、文本、模塊、閱讀器、掃描儀、寫入器等。
+
+#### 3.3.1. Atomic actions
+
+The most important generic function of any operating system is executing programs. A clarification of the term program as it is used in Oberon comprises two views: a static one and a dynamic one. Statically, an Oberon program is simply a package of software together with an entry point. More formally, an Oberon program is a pair (M*, P), where M is an arbitrary module, P is an exported parameterless procedure of M, and M* denotes the hierarchy consisting of M itself and of all directly and indirectly imported modules. Note that two hierarchies M* and N* are not generally disjoint, even if M and N are different modules. Rather, their intersection is a superset of the operating system.
+
+任何操作系統最重要的通用功能是執行程序。 對 Oberon 中使用的術語程序的澄清包括兩個視圖：靜態視圖和動態視圖。 從靜態上講，Oberon 程序只是一個帶有入口點的軟件包。 更正式地說，Oberon 程序是一對 (M*, P)，其中 M 是任意模塊，P 是 M 的導出無參數過程，M* 表示由 M 本身以及所有直接和間接導入的模塊組成的層次結構 . 請注意，兩個層次結構 M* 和 N* 通常不相交，即使 M 和 N 是不同的模塊。 相反，它們的交集是操作系統的超集。
+
+Viewed dynamically, an Oberon program is defined as an atomic action (often called command) operating on the global system state, where atomic means "without user interaction". This definition is just a necessary consequence of our model of non-preemptive task scheduling with the benefit of a single carrier thread. We can argue like this: When a traditional interactive program requires input from the user, , the current task is normally preempted in favor of another task that produces the required input data. Therefore, a traditional interactive program can be viewed as a sequence of atomic actions interrupted by actions that possibly belong to other programs. Whereas in traditional systems these interruptions may occur at any time, in Oberon they can occur only after the completion of a task, of a command.
+
+從動態的角度來看，Oberon 程序被定義為對全局系統狀態進行操作的原子操作（通常稱為命令），其中原子的意思是“無需用戶交互”。 這個定義只是我們的非搶占式任務調度模型的必然結果，它具有單載體線程的優勢。 我們可以這樣論證：當傳統的交互式程序需要用戶輸入時，當前任務通常會被另一個產生所需輸入數據的任務搶占。 因此，傳統的交互式程序可以被視為一系列原子操作，這些操作被可能屬於其他程序的操作打斷。 在傳統系統中，這些中斷可能隨時發生，而在 Oberon 中，它們只能在任務或命令完成後發生。
+
+Quintessentially, Oberon programs are represented in the form of commands that are in the form of exported parameterless procedures that do not interact with the user of the system.
+
+本質上，Oberon 程序以命令的形式表示，這些命令以導出的無參數過程的形式出現，不與系統用戶交互。
+
+Returning to the calling and execution of programs we now arrive at the following refined code version:
+
+回到程序的調用和執行，我們現在得到以下改進的代碼版本：
+
+	call program (M*, P) = BEGIN
+	  load module hierarchy M*; call command P
+	END
+
+The system interface to the command mechanism itself is again provided by module Oberon. Its primary operation can be paraphrased as "call a command by its name and pass a list of actual parameters":
+
+命令機製本身的系統接口再次由模塊 Oberon 提供。 它的主要操作可以解釋為“通過名稱調用命令並傳遞實際參數列表”：
+
+    PROCEDURE Call (name: ARRAY OF CHAR; par: ParList; VAR res: INTEGER);
+
+name is the name of the desired command in the form M.P, par is the list of actual parameters, and res is a result code. But in fact we have separated the setting of parameters from the actual call. Parameters are set by calling
+
+name 是所需命令的名稱，格式為 M.P，par 是實際參數列表，res 是結果代碼。 但實際上我們已經把參數的設置和實際的調用分開了。 參數通過調用設置
+
+	PROCEDURE SetPar (F: Display.Frame; T: Texts.Text; pos: INTEGER);
+
+and the actual call is achieved by calling
+
+而實際的調用是通過調用來實現的
+	
+	PROCEDURE Call (name: ARRAY OF CHAR; VAR res: INTEGER);
+
+The pair (T, pos) specifies the starting position of a textual parameter list. F indicates the calling viewer. Notice the occurrence of yet another abstract data type of name Text that is exported by module Texts. We shall devote Chapter 5 to a thorough discussion of Oberon's text system. For the moment we can simply look at a text as a sequence of characters.
+
+(T, pos) 對指定文本參數列表的起始位置。 F 表示調用查看器。 請注意另一個抽像數據類型名稱 Text 的出現，它由模塊 Texts 導出。 我們將在第 5 章詳細討論 Oberon 的文本系統。 目前，我們可以簡單地將文本視為字符序列。
+
+The list of actual parameters is handed over to the called command by module Oberon in the form of an exported global variable Par:
+
+實際參數列表由模塊 Oberon 以導出的全局變量 Par 的形式交給調用的命令：
+
+	Par: RECORD vwr: Viewers.Viewer;
+	frame: Display.Frame;
+	text: Texts.Text;
+	pos: INTEGER
+	END
+
+In principle, commands operate on the entire system and can access the current global state via the system's powerful abstract modular interface, of which the list of actual parameters is just one component. Another one is the so-called system log which is a system-wide protocol reporting on the progress of command execution and on exceptional events in chronological order. The log is represented as a global variable of type Text:
+
+原則上，命令對整個系統進行操作，可以通過系統強大的抽像模塊化接口訪問當前的全局狀態，實際參數列表只是其中的一個組成部分。 另一個是所謂的系統日誌，它是一種系統範圍的協議，按時間順序報告命令執行的進度和異常事件。 日誌表示為文本類型的全局變量：
+
+	Log: Texts.Text;
+	
+It should have become clear by now that implementers of commands may rely on a rich arsenal of abstract global facilities that reflect the current system state and make it accessible. In other words, they may rely on a high degree of system integration. Therefore, Oberon features an extraordinarily broad spectrum of mutually integrated facilities. For example, the system distinguishes itself by a complete integration of the abstract data types Viewer and Text that we encountered above. They will be the subject of Chapters 4 and 5.
+
+現在應該清楚的是，命令的實施者可能依賴於反映當前系統狀態並使其可訪問的豐富的抽象全局設施庫。 換句話說，它們可能依賴於高度的系統集成。 因此，Oberon 擁有極其廣泛的相互集成的設施。 例如，系統通過完全集成我們上面遇到的抽像數據類型 Viewer 和 Text 而與眾不同。 它們將是第 4 章和第 5 章的主題。
+
+Module Oberon assists the integration of these types with the following conceptual features, of which the first two are familiar to us already: Standard parameter list for commands, system log, generic text selection, and generic copy viewer. At this point we should add a word of clarification to our use of the term "generic". It is synonymous with "interpretable individually by any viewer (interactive task)" and is typically used in connection with messages or orders whose receiver's exact identity is unknown.
+
+Module Oberon 通過以下概念特徵協助這些類型的集成，其中前兩個我們已經很熟悉了：命令的標準參數列表、系統日誌、通用文本選擇和通用複制查看器。 在這一點上，我們應該對術語“通用”的使用添加一個詞來澄清。 它是“可由任何查看者單獨解釋（交互式任務）”的同義詞，通常用於接收者確切身份未知的消息或命令。
+
+Let us now go into a brief discussion of the generic facilities without, however, leaving the level of our current abstraction and understanding.
+
+現在讓我們在不離開我們當前的抽象和理解級別的情況下簡要討論通用設施。
+
+#### 3.3.2. Generic text selection
+
+Textual selections are characterized by a text, a stretch of characters within that text, and a time stamp. Without further qualification "the text selection" always means "the most recent text selection". It can be obtained programmatically by calling procedure GetSelection:
+
+文本選擇的特徵在於文本、文本中的一段字符和時間戳。 沒有進一步的限制，“文本選擇”始終表示“最近的文本選擇”。 它可以通過調用過程 GetSelection 以編程方式獲得：
+
+	PROCEDURE GetSelection (VAR text: Texts.Text; VAR beg, end, time: LONGINT);
+
+The parameters specify the desired stretch of text starting at position beg and ending at end - 1 as well as the associated time stamp. The procedure is implemented in form of a broadcast of a socalled selection message to all viewers. The declaration of this message is
+
+這些參數指定所需的文本段，從位置 beg 開始到 end - 1 結束，以及相關的時間戳。 該過程以向所有觀眾廣播所謂的選擇消息的形式實現。 這條消息的聲明是
+
+	SelectionMsg = RECORD (ViewerMsg)
+	time: INTEGER;
+	text: Texts.Text;
+	beg, end: INTEGER
+	END;
+
+#### 3.3.3. Generic copy viewer
+
+Generic copying is synonymous with reproducing and cloning. It is the most elementary generic operation possible. Again, a variant of type ViewerMsg is used for the purpose of transmitting requests of the desired type:
+
+通用複制是複制和克隆的同義詞。 這是最基本的通用操作。 同樣，ViewerMsg 類型的變體用於傳輸所需類型的請求：
+
+	CopyMsg = RECORD (ViewerMsg) vwr: Viewers.Viewer END
+
+Receivers of a copy message typically generate a clone of themselves and return it to the sender via field *vwr*.
+
+複製消息的接收者通常會生成自己的克隆，並通過字段 *vwr* 將其返回給發送者。
+
+Let us now summarize this Section:. Oberon is an operating system that presents itself to its clients in the form of a highly expressive abstract modular interface that exports many powerful abstract data types like, for example, Viewer and Text. A rich arsenal of global data types and generic facilities serve the purpose of system integration at a high degree. Programs in Oberon are modeled as so-called commands, i.e. as exported parameterless procedures that do not interact with the user. The collection of commands provided by a module appears as its user interface. Parameters are passed to commands via a global parameter list, registered by the calling task in the central module Oberon. Commands operate on the global state of the system.
+
+現在讓我們總結一下這一部分： Oberon 是一種操作系統，它以高度表現力的抽像模塊化接口的形式向其客戶展示自身，該接口導出許多強大的抽像數據類型，例如 Viewer 和 Text。 豐富的全球數據類型和通用設施在很大程度上服務於系統集成的目的。 Oberon 中的程序被建模為所謂的命令，即不與用戶交互的導出的無參數過程。 模塊提供的命令集合顯示為它的用戶界面。 參數通過全局參數列表傳遞給命令，由中央模塊 Oberon 中的調用任務註冊。 命令對系統的全局狀態進行操作。
+
+#### 3.4. Toolboxes
+
+Modules typically appear in three different forms. The first is a module that encapsulates some data, letting them be accessed only through exported procedures and functions. A good example is Module FileDir, encapsulating the file directory and protecting it from disruptive access. A second kind is the module representing an abstract data type, exporting a type and its associated operators. Typical examples are modules Files, Modules, Viewers, and Texts. A third kind is the collection of procedures pertaining to the same topic, such as module RS-232 handling communication over a serial line.
+
+模塊通常以三種不同的形式出現。 第一個是封裝一些數據的模塊，只允許通過導出的過程和函數訪問它們。 一個很好的例子是 Module FileDir，封裝文件目錄並保護它免受中斷訪問。 第二種是表示抽像數據類型的模塊，導出類型及其關聯的運算符。 典型示例是模塊文件、模塊、查看器和文本。 第三種是屬於同一主題的程序集合，例如模塊 RS-232 處理串行線路上的通信。
+
+Oberon adds a fourth form: the toolbox. By definition, this is a pure collection of commands in the sense of the previous section. Toolboxes distinguish themselves principally from the other forms of modules by the fact that they lie on top of the modular hierarchy. Toolbox modules are "imported" by system users at run-time. In other words, their definitions define the user interface. Typical examples are modules System and Edit. As a rule of thumb there exists a toolbox for every topic or application.
+
+Oberon 添加了第四種形式：工具箱。 根據定義，這是上一節意義上的純命令集合。 工具箱主要區別於其他形式的模塊，因為它們位於模塊化層次結構的頂部。 工具箱模塊由系統用戶在運行時“導入”。 換句話說，它們的定義定義了用戶界面。 典型的例子是模塊系統和編輯。 根據經驗，每個主題或應用程序都有一個工具箱。
+
+As an example of a toolbox definition we quote an annotated version of module System:
+
+作為工具箱定義的示例，我們引用了模塊系統的註釋版本：
+
+	DEFINITION System;
+	(*System management, Chapters 3 and 8*)
+	PROCEDURE SetUser; (*identification*)
+	PROCEDURE SetFont; (*for typed text*)
+	PROCEDURE SetColor; (*for typed text and graphics*)
+	PROCEDURE SetOffset; (*for typed text*)
+	PROCEDURE Date; (*set or display time and date*)
+	PROCEDURE Collect; (*garbage*)
+	
+	(*Display management, Chapter 4*)
+	PROCEDURE Open; (*viewer*)
+	PROCEDURE Close; (*viewer*)
+	PROCEDURE CloseTrack;
+	PROCEDURE Recall; (*most recently closed viewer*)
+	PROCEDURE Copy; (*viewer*)
+	PROCEDURE Grow; (*viewer*)
+	PROCEDURE Clear; (*clear log*)
+	
+	(*Module management, Chapter 6*)
+	PROCEDURE Free; (*specified modules*)
+	PROCEDURE ShowCommands; (*of specified module*)
+	PROCEDURE ShowModules; (*list loaded modules*)
+	
+	(*File management, Chapter 7*)
+	PROCEDURE Directory;
+	PROCEDURE CopyFiles;
+	PROCEDURE RenameFiles;
+	PROCEDURE DeleteFiles;)
+	
+	(*System inspection, Chapter 8*)
+	PROCEDURE Watch; (*tasks, memory and disk storage*)
+	END System;
+
+An important consequence of our integrated systems approach is the possibility of constructing a universal, interactive command interpreter bound to viewers of textual contents. If the text obeys the following syntax (specified in Extended Backus-Naur Form EBNF), we call it command tool:
+
+我們的集成系統方法的一個重要結果是有可能構建一個通用的、交互式的命令解釋器，綁定到文本內容的查看者。 如果文本遵循以下語法（在擴展巴科斯範式 EBNF 中指定），我們將其稱為命令工具：	
+
+	CommandTool = { [Comment] CommandName [ParameterList] }.
+
+If present, the parameter list is made available to the called command via fields text and pos in the global variable Par that is exported from module Oberon. Because this parameter list is interpreted individually by each command, its format is completely open. However, we postulate some conventions and rules for the purpose of a standardized user interface:
+
+如果存在，則參數列表可通過從模塊 Oberon 導出的全局變量 Par 中的字段 text 和 pos 提供給調用的命令。 因為這個參數列表是由每個命令單獨解釋的，所以它的格式是完全開放的。 但是，為了標準化用戶界面，我們假設了一些約定和規則：
+
+1.) The elements of a textual parameter list are universal syntactical tokens like name, literal string, integer, real number, and special character.
+
+2.) An arrow "^" in the textual parameter list refers to the current text selection for continuation. In the special case of the arrow following the command name immediately, the entire parameter list is represented by the text selection.
+
+3.) An asterisk "*" in the textual parameter list refers to the currently marked viewer. Typically, the asterisk replaces the name of a file. In such a case the contents of the viewer marked by the system pointer (star) is processed by the command interpreter instead of the contents of a file.
+
+4.) An at-character "@" in the textual parameter list indicates that the selection marks the (beginning of the) text which is taken as operand.
+
+5.) A terminator-character "~" terminates the textual parameter list in case of a variable number of parameters.
+
+
+1.) 文本參數列表的元素是通用語法標記，如名稱、文字字符串、整數、實數和特殊字符。
+
+2.) 文本參數列表中的箭頭“^”指的是要繼續的當前文本選擇。 在箭頭緊跟在命令名稱之後的特殊情況下，整個參數列表由文本選擇表示。
+
+3.) 文本參數列表中的星號“*”表示當前標記的查看器。 通常，星號會替換文件名。 在這種情況下，由系統指針（星號）標記的查看器的內容由命令解釋器處理，而不是文件的內容。
+
+4.) 文本參數列表中的 at 字符“@”表示選擇標記了作為操作數的文本（的開頭）。
+
+5.) 在參數數量可變的情況下，終止符“~”終止文本參數列表。
+
+Because command tools are ordinary, editable texts (in contrast to menus in conventional systems) they can be customized "on the fly", which makes the system highly flexible. We refer again to Figure 3.1 that shows a typical Oberon screen layout consisting of two vertical tracks, a wider user track on the left and a narrow system track on the right. Three documents are displayed in the user track: A text, a graphic, and a picture. In the system track we find one logviewer displaying the system log, two tool-viewers making available the standard system tool and a customized private tool respectively.
+
+因為命令工具是普通的、可編輯的文本（與傳統系統中的菜單不同），所以它們可以“即時”定制，這使得系統非常靈活。 我們再次參考圖 3.1，它顯示了一個典型的 Oberon 屏幕佈局，由兩個垂直軌道組成，左側是較寬的用戶軌道，右側是較窄的系統軌道。 用戶軌道中顯示了三個文檔：文本、圖形和圖片。 在系統軌道中，我們找到一個顯示系統日誌的日誌查看器，兩個工具查看器，分別提供標準系統工具和自定義私有工具。
+
+In concluding this Chapter, let us exemplify the concepts of command and tool by the system control section of the System toolbox. Consisting of the commands SetUser, Date, SetFont, SetColor, and Collect it is used to control system-wide facilities. In detail, their function is installing the user's identification, displaying or setting the system date and time, presetting the system type-font for typed text, setting the system color, and activating the garbage collector.
+
+在結束本章時，讓我們通過系統工具箱的系統控制部分來舉例說明命令和工具的概念。 它由命令 SetUser、Date、SetFont、SetColor 和 Collect 組成，用於控制系統範圍的設施。 具體來說，它們的功能是安裝用戶標識、顯示或設置系統日期和時間、為鍵入的文本預設系統類型字體、設置系統顏色以及激活垃圾收集器。
+
+In summary, a toolbox is a special form of an Oberon module. It is defined as a collection of commands. Appearing at the top of the modular hierarchy the toolboxes in their entirety fix the system’s user interface. Command tools are sequences of textually represented command calls. They are editable and customizable. In a typical Oberon screen layout the tools are displayed in viewers within the system track.
+
+總之，工具箱是 Oberon 模塊的一種特殊形式。 它被定義為命令的集合。 出現在模塊化層次結構頂部的工具箱整體修復了系統的用戶界面。 命令工具是文本表示的命令調用序列。 它們是可編輯和可定制的。 在典型的 Oberon 屏幕佈局中，工具顯示在系統軌道內的查看器中。
+
+# 4 The Display System
+
+The display screen is the most important part of the interface presented by a personal workstation to its users. At first sight, it simply represents a rectangular output area. However, in combination with the mouse, it quickly develops into a sophisticated interactive input/output platform of almost unlimited flexibility. It is mainly its Janus-faced characteristic that makes the display screen stand out from ordinary external devices to be managed by the operating system. In the current chapter we shall give more detailed insight into the reasons for the central position the display system takes within the operating system, and for its determining influence on the entire system architecture. In particular, we shall show that the display system is a natural basis or anchor for functional extensibility.
+
+顯示屏是個人工作站向其用戶呈現的界面中最重要的部分。 乍一看，它只是代表一個矩形輸出區域。 然而，與鼠標結合後，它迅速發展成為一個複雜的交互式輸入/輸出平台，幾乎具有無限的靈活性。 主要是其劍鋒般的特性，使得顯示屏從普通的外部設備中脫穎而出，由操作系統來管理。 在本章中，我們將更詳細地探討顯示系統在操作系統中佔據中心位置的原因，以及它對整個系統體系結構的決定性影響。 特別是，我們將表明顯示系統是功能可擴展性的天然基礎或錨點。
+
+## 4.1. The screen layout model
+
+In the early seventies, Xerox PARC in California launched the Smalltalk-project with the goal of conceiving and developing new and more natural ways to communicate with personal computers [Goldberg]. Perhaps the most conspicuous among several significant achievements of this endeavor is the idea of applying the desktop metaphor to the display screen. This metaphor comprises a desktop and a collection of possibly mutually overlapping pages of paper that are laid out on the desktop. By projecting such a configuration onto the surface of a screen we get the familiar picture of Figure 4.1 showing a collection of partially or totally visible rectangular areas on a background, so-called windows or viewers.
+
+七十年代初期，加利福尼亞州的 Xerox PARC 啟動了 Smalltalk 項目，其目標是構思和開發新的、更自然的方式來與個人計算機進行通信 [Goldberg]。 在這項努力的幾個重要成就中，最引人注目的可能是將桌面比喻應用於顯示屏的想法。 這個比喻包括一個桌面和一組可能相互重疊的紙頁，這些紙頁放置在桌面上。 通過將這樣的配置投影到屏幕表面，我們得到了熟悉的圖 4.1，顯示了背景上部分或完全可見的矩形區域的集合，即所謂的窗口或查看器。
+
+![Figure 4.1 Desktop showing partially overlapping viewers](ProjectOberon-Fig04-01.PNG)
+
+Figure 4.1 Desktop showing partially overlapping viewers
+
+The desktop metaphor is used by many modern operating systems and user interface shells both as a natural model for the system to separate displayed data belonging to different tasks, and as a powerful tool for users to organize the display screen interactively, according to individual taste and preference. However, there are inherent drawbacks in the metaphor. They are primarily connected with overlapping. Firstly, any efficient management of overlapping viewers must rely on a subordinate management of (arbitrary) sub-rectangles and on sophisticated clipping operations. This is so because partially overlapped viewers must be partially restored under control of the viewer manager. For example, in Figure 4.1, rectangles a, b, and c in viewer B ought to be restored individually after closing of viewer A. Secondly, there is a significant danger of covering viewers completely and losing them forever. And thirdly, no canonical heuristic algorithms exist for automatic allocation of screen space to newly opened viewers.
+
+桌面隱喻被許多現代操作系統和用戶界面外殼使用，既作為系統分離屬於不同任務的顯示數據的自然模型，又作為用戶根據個人喜好和交互方式組織顯示屏幕的強大工具。 偏愛。 然而，隱喻存在固有的缺陷。 它們主要與重疊有關。 首先，重疊觀察者的任何有效管理都必須依賴於（任意）子矩形的從屬管理和復雜的裁剪操作。 這是因為部分重疊的查看器必須在查看器管理器的控制下部分恢復。 例如，在圖 4.1 中，查看器 B 中的矩形 a、b 和 c 應該在關閉查看器 A 後單獨恢復。其次，存在完全覆蓋查看器並永遠丟失它們的重大危險。 第三，不存在用於為新打開的查看器自動分配屏幕空間的規範啟發式算法。
+
+Experience has shown that partial overlapping is desirable and beneficial in rare cases only, and so the additional complexity of its management [Binding, Wille] is hard to justify. Therefore, alternate strategies to structure a display screen have been looked for. An interesting class of established solutions can be titled as tiling. There are several variants of tiling [Cohen]. Perhaps the most obvious one (because the most unconstrained one) is based on iterated horizontal or vertical splitting of existing viewers. Starting with the full screen and successively opening viewers A, B, C, D, E, and F we get to a configuration as in Figure 4.2.
+
+經驗表明，部分重疊僅在極少數情況下是可取和有益的，因此其管理 [Binding, Wille] 的額外複雜性很難證明是合理的。 因此，一直在尋找構建顯示屏的替代策略。 一類有趣的既定解決方案可以稱為平鋪。 平鋪 [Cohen] 有多種變體。 也許最明顯的一個（因為最不受約束的一個）是基於現有觀眾的迭代水平或垂直拆分。 從全屏開始，依次打開查看器 A、B、C、D、E 和 F，我們得到如圖 4.2 所示的配置。
+
+![Figure 4.2 Viewer configuration resulting from unconstrained tiling](ProjectOberon-Fig04-02.PNG)
+
+Figure 4.2 Viewer configuration resulting from unconstrained tiling
+
+A second variant is hierarchic tiling. Again, the hierarchy starts with a full screen that is now decomposed into a number of vertical tracks, each of which is further decomposed into a number of horizontal viewers. We decided in favor of this kind of tiling in Oberon, mainly because the algorithm of reusing the area of a closed viewer is simpler and more uniform. For example, assume that in Figure 4.2 viewer F has been closed. Then, it is straightforward to reverse the previous opening operation by extending viewer E at its bottom end. However, if the closed viewer is B, no such simple procedure exists. For example, the freed area can be shared between viewers C and D by making them extend to their left. Clearly, no such complicated situations can occur in the case of hierarchic tiling.
+
+第二種變體是分層平鋪。 同樣，層次結構從全屏開始，現在被分解為多個垂直軌道，每個垂直軌道進一步分解為多個水平查看器。 我們決定在 Oberon 中支持這種平鋪，主要是因為重用封閉查看器區域的算法更簡單、更統一。 例如，假設在圖 4.2 中查看器 F 已關閉。 然後，通過在其底部擴展觀察器 E，可以直接反轉之前的打開操作。 但是，如果關閉的查看器是 B，則不存在這樣的簡單過程。 例如，通過讓觀察者 C 和 D 向左延伸，可以在觀察者 C 和 D 之間共享空閒區域。 顯然，在分層平舖的情況下不會出現這種複雜的情況。
+
+Hierarchic tiling is also used in Xerox PARC's Cedar system [Teitelman]. However, the Oberon variant differs from the Cedar variant in some respects. Firstly, Oberon supports quick temporary context switching by overlaying one track or any contiguous sequence of tracks with new layers. In Figure 4.3 a snapshot of a standard Oberon display screen is graphically represented. It suggests two original tracks and two levels of overlay, where the top layer is screen-filling. Secondly, unlike Cedar display screens, Oberon displays do not provide reserved areas for system-wide facilities, Standard Cedar screens feature a command row at the top and an icon row at the bottom. And thirdly, Oberon is based on a different heuristic strategy for the automatic placement of new viewers. As a Cedar default invariant, the area of every track is divided up evenly among the viewers in this track. When a new viewer is to be placed, the existing viewers in the track are requested to reduce their size and move up appropriately. The newly opened viewer is then allocated in the freed spot at the bottom. In contrast, Oberon normally splits the largest existing viewer in a given track into two halves of equal size. As an advantage of this latter allocation strategy we note that existing contents are kept stable.
+
+分層平鋪也用於 Xerox PARC 的 Cedar 系統 [Teitelman]。 但是，Oberon 變體在某些方面與 Cedar 變體不同。 首先，Oberon 通過用新層覆蓋一個軌道或任何連續的軌道序列來支持快速臨時上下文切換。 在圖 4.3 中，以圖形方式表示了標準 Oberon 顯示屏的快照。 它建議使用兩條原始軌道和兩層疊加層，其中頂層是屏幕填充。 其次，與 Cedar 顯示屏不同，Oberon 顯示屏不為系統範圍的設施提供預留區域，標準 Cedar 屏幕在頂部有一個命令行，在底部有一個圖標行。 第三，Oberon 基於不同的啟發式策略來自動放置新觀眾。 作為 Cedar 默認的不變量，每個軌道的區域在該軌道的觀眾之間平均分配。 當要放置新的viewer時，要求track中已有的viewer縮小尺寸並適當上移。 然後將新打開的查看器分配到底部的空閒位置。 相比之下，Oberon 通常會將給定軌道中最大的現有觀眾分成大小相等的兩半。 作為後一種分配策略的優勢，我們注意到現有內容保持穩定。
+
+![Figure 4.3 Overlay of tracks and sequences of tracks](ProjectOberon-Fig04-03.PNG)
+
+Figure 4.3 Overlay of tracks and sequences of tracks
+
+## 4.2. Viewers as objects
+
+Although everybody seems to agree on the meaning of the term viewer, no two different system
+designers actually do. The original role of a viewer as merely a separate display area has
+meanwhile become heavily overloaded with additional functionality. Depending on the underlying
+system are viewers' individual views on a certain configuration of objects, carriers of tasks,
+processes, applications, etc. Therefore, we first need to define our own precise understanding of
+the concept of viewer.
+
+The best guide to this aim is the abstract data type Viewer that we introduced in Chapter 3. We
+recapitulate: Type Viewer serves as a template describing viewers abstractly as “black boxes” in
+terms of a state of visibility, a rectangle on the display screen, and a message handler. The exact
+functional interface provided by a given variant of viewer is determined by the set of messages
+accepted. This set is structured as a customized hierarchy of type extensions.
+
+We can now obtain a more concrete specification of the role of viewer by identifying some basic
+categories of universal messages that are expected to be accepted by all variants of viewer. For
+example, we know that messages reporting about user interactions as well as messages defining
+a generic operation are universal. These two categories of universal messages document the
+roles of viewers as interactive tasks and as parts of an integrated system respectively.
+
+In total, there are four such categories. They are here listed together with the corresponding topics
+and message dispatchers:
+
+| Dispatcher            | Topic						| Message						|
+|-----------------------|---------------------------|-------------------------------|
+| Task scheduler        | dispatching of task		| reports user interaction		|
+| Command interpreter   | processing of command		| defines generic operation		|
+| Viewer manager        | organizing display area	| change of location or size	|
+| Document manager      | operating on document		| change of contents or format	|
+
+These topics essentially define the role of Oberon viewers. In short, we may look at an Oberon
+viewer as a non-overlapped rectangular box on the screen both acting as an integrated display
+area for some objects of a document and representing an interactive task in the form of a sensitive
+editing area.
+
+Shifting emphasis a little and regarding the various message dispatchers as subsystems, we
+recognize immediately the role of viewers as integrators of the different subsystems via message-
+based interfaces. In this light type *Viewer* appears as a common object-oriented basis of Oberon's
+subsystems.
+
+The topics listed above constitute some kind of backbone of the contents of the Chapters 3, 4 and
+5. Task scheduling and command interpreting are already familiar to us from Sections 3.2 and 3.3.
+Viewer management and text management will be the topics of Sections 4.4 and 5.2 respectively.
+Thereby, the built-in type *Text* will serve as a prime example of a document type.
+
+The activities that a viewer performs are basically controlled by events or, more precisely, by
+messages representing *event notices*. We shall explain this in detail in Sections 4.4 and 5.3 in the
+cases of an abstract class of standard viewers and a class of viewers displaying standard text
+respectively.
+
+Here is a preliminary overview of some archetypal kinds of message:
+• After each key stroke a keyboard message containing the typed character is sent to the
+current focus viewer and after each mouse click a mouse message reporting the new
+state of the mouse is sent to the viewer containing the current mouse position.
+• A message often represents some generic operation that is expected to be interpreted
+individually by its recipients. Obvious examples in our context are "return current textual
+selection", "copy-over stretch of text", and "produce a copy (clone)". Notice that generic
+operations are the key to extensibility.
+• In a tiling viewer environment, every opening of a new viewer and every change of size or
+location of an existing viewer has an obvious effect on adjacent viewers. The viewer
+manager therefore issues a message for every affected viewer requesting it to adjust its
+size appropriately.
+• Whenever the contents or the format of a document has changed, a message notifying all
+visible viewers of the change is broadcast. Notice that broadcasting messages by a model
+(document) to the entirety of its potential views (viewers) is an interesting implementation
+of the famous MVC (model-view-controller) pattern that dispenses models from “knowing”
+(registering) their views.
+
+## 4.3. Frames as Basic Display Entities
+
+When we introduced viewers in Chapter 3 and in the previous section, we simplified with the aim
+of abstraction. We know already that viewers appear as elements of second order in the tiling
+hierarchy. Having treated them as black boxes so far we have not revealed anything about the
+continuation of the hierarchy. As a matter of fact, viewers are neither elementary display entities
+nor atoms. They are just a special case of so-called display frames. Display frames or frames in
+short are arbitrary rectangles displaying a collection of objects or an excerpt of a document. In
+particular, frames may recursively contain other frames, a capability that makes them an
+extremely powerful tool for any display organizer.
+
+The type *Frame* is declared as
+
+    Frame = POINTER TO FrameDesc;
+    FrameDesc = RECORD
+    next, dsc: Frame;
+    X, Y, W, H: INTEGER;
+    handle: Handler
+    END;
+
+The components next and dsc are connections to further frames. Their names suggest a multilevel
+recursive hierarchical structure: next points to the next frame on the same level, while dsc
+points to the (first) descendant, i.e. to the next lower level of the hierarchy of nested frames. X, Y,
+W, H, and the handler handle serve the original purpose to that we introduced them. In particular,
+the handler allows frames to react individually on the receipt of messages. Its type is
+
+    Handler = PROCEDURE (F: Frame; VAR M: FrameMsg);
+
+where FrameMsg represents the root of a potentially unlimited tree hierarchy of possible
+messages to frames:
+
+    FrameMsg = RECORD END;
+
+Having now introduced the concept of frames, we can reveal the whole truth about viewers. As a
+matter of fact, type Viewer is a derived type, it is a type extension of Frame:
+
+    Viewer = POINTER TO ViewerDesc;
+    ViewerDesc = RECORD (FrameDesc)
+      state: INTEGER
+    END;
+
+These declarations formally express the fact that viewers are nothing but a special case (or
+variant or subclass) of general frames, additionally featuring a state of visibility. In particular,
+viewers inherit the hierarchical structure of frames. This is an extremely useful property
+immediately opening an unlimited spectrum of possibilities for designers of a specific subclass of
+viewers to organize the representing rectangular area. For example, the area of viewers of, say,
+class Desktop may take the role of a background being covered by an arbitrary collection of
+possibly mutually overlapping frames. In other words, our decision of using a tiling viewer scheme
+globally can easily be overwritten locally.
+
+An even more important example of a predefined structure is provided by the abstract class of socalled
+menu viewers whose shape is familiar from most snapshots taken of the standard Oberon
+display screen. A menu viewer consists of a thin rectangular boundary line and an interior area
+being vertically decomposed into a menu region at the top and a contents region at the bottom
+(see Figure 4.4).
+
+    
+        Figure 4.4 The compositional structure of a menu viewer
+
+In terms of data structures, the class of menu viewers is defined as a type extension of Viewer
+with an additional component menuH specifying the height of the menu frame:
+
+    MenuViewer = POINTER TO MenuViewerDesc;
+    MenuViewerDesc = RECORD (ViewerDesc)
+    menuH: INTEGER
+    END;
+
+Each menu viewer V specifies exactly two descendants: The menu frame V.dsc and the frame of
+main contents or main frame V.dsc.next. Absolutely nothing is fixed about the contents of the two
+descendant frames. In the standard case, however, the menu frame is a text frame, displaying a
+line of commands in inverse video mode. By definition, the nature of the main frame specifies the
+type of the viewer. If it is a text frame as well, then we call the viewer a text viewer, if it a graphics
+frame, we call it a graphics viewer etc.
+
+## 4.4. Display management
+
+Oberon's display system comprises two main topics: Viewer management and cursor handling.
+Let us first turn to the much more involved topic of viewer management and postpone cursor
+handling to the end of this Section. Before we can actually begin our explanations we need to
+introduce the concept of the logical display area. It is modeled as a two-dimensional Cartesian
+plane housing the totality of objects to be displayed. The essential point of this abstraction is a
+rigorous decoupling of any aspects of physical display devices. As a matter of fact, any concrete
+assignment of display monitors to certain finite regions of the display area is a pure matter of
+configuring the system.
+
+Being a subsystem of a system with a well-defined modular structure the display system appears
+in the form of a small hierarchy of modules. Its core is a linearly ordered set consisting of three
+modules: Display, Viewers, and MenuViewers, the latter building upon the formers. Conceptually,
+each module contributes an associated class of display-oriented objects and a collection of related
+service routines.
+
+The following is an overview of the subsystem viewer management. Modules on upper lines
+import modules on lower lines and types on upper lines extend types on lower lines.
+
+| Module     | Type   | Service                           |
+|------------|--------|-----------------------------------|
+| MenuViewer | Viewer | Message handling for menu viewers |
+| Viewers    | Viewer | Tiling viewer management          |
+| Display    | Frame  | Block-oriented raster operations  |
+
+Inspecting the column titled Type we recognize precisely our familiar types Frame, Viewer, and
+MenuViewer respectively, where the latter is an abbreviation of MenuViewers.Viewer.
+
+In addition to the core modules of the display system a section in module Oberon provides a
+specialized application programming interface (API) that simplifies the use of the viewer
+management package by applications in the case of standard Oberon display configurations. We
+shall come back to this topic in Section 4.6.
+
+For the moment let us concentrate on the core of the viewer management and in particular on the
+modules Viewers and MenuViewers, saving the discussion of the module Display for the next
+section. Typically, we start the presentation of a module by listing and commenting its definition,
+and we refer to subsequent listings for its implementation.
+
+### 4.4.1. Viewers
+
+Focusing first on module Viewers we can roughly define the domain of its responsibility as
+"initializing and maintaining the global layout of the display area". From the previous discussion
+we are well acquainted already with the structure of the global display space as well as with its
+building blocks: The display area is hierarchically tiled with display frames, where the first two
+levels in the frame hierarchy correspond to tracks and viewers respectively.
+
+This is the formal definition:
+
+    DEFINITION Viewers;
+      IMPORT Display;
+      
+      CONST restore = 0; modify = 1; suspend = 2; (*message ids*) 
+      
+      TYPE Viewer = POINTER TO ViewerDesc;
+      
+        ViewerDesc = RECORD (Display.FrameDesc)
+          state: INTEGER
+        END;
+
+      ViewerMsg = RECORD (Display.FrameMsg)
+        id: INTEGER;
+        X, Y, W, H: INTEGER;
+        state: INTEGER
+      END;
+
+      VAR curW: INTEGER;
+    
+      (*track handling*)
+      PROCEDURE InitTrack (W, H: INTEGER; Filler: Viewer);
+      PROCEDURE OpenTrack (X, W: INTEGER; Filler: Viewer);
+      PROCEDURE CloseTrack (X: INTEGER);
+    
+      (*viewer handling*)
+      PROCEDURE Open (V: Viewer; X, Y: INTEGER);
+      PROCEDURE Change (V: Viewer; Y: INTEGER);
+      PROCEDURE Close (V: Viewer);
+    
+      (*miscellaneous*)
+      PROCEDURE This (X, Y: INTEGER): Viewer;
+      PROCEDURE Next (V: Viewer): Viewer;
+    
+      PROCEDURE Recall (VAR V: Viewer);
+      PROCEDURE Locate (X, H: INTEGER; VAR fil, bot, alt, max: Viewer);
+    
+      PROCEDURE Broadcast (VAR M: Display.FrameMsg);
+    END Viewers.
+
+Some comments: A first group of procedures consisting of InitTrack, OpenTrack, and CloseTrack
+supports the track structure of the display area. InitTrack creates a new track of width W and
+height H by partitioning off a vertical strip of width W from the display area. In addition, InitTrack
+initializes the newly created track with a filler viewer that is supplied as a parameter. The filler
+viewer essentially serves as background filling up the track at its top end. It reduces to height 0 if
+the track is covered completely by productive viewers.
+
+Configuring the display area is part of system initialization after startup. It amounts to executing a
+sequence of steps of the form
+
+    NEW(Filler); Filler.handle := HandleFiller; InitTrack(W, H, Filler)
+
+where HandleFiller is supposed to handle messages that require modifications of size and cursor
+drawing.
+
+The global variable curW indicates the width of the already configured part of the display area.
+Note that configuring starts with x = 0 and is non-reversible in the sense that the grid defined by
+the initialized tracks cannot be refined later. However, remember that it can be coarsened at any
+time by overlaying a contiguous sequence of existing tracks by a single new track.
+Procedure OpenTrack serves exactly this purpose. The track (or sequence of tracks) to be
+overlaid in the display-area must be spanned by the segment [X, X + W). Procedure CloseTrack is
+inverse to OpenTrack. It is called to close the (topmost) track located at X in the display area, and
+to restore the previously covered track (or sequence of tracks).
+
+The next three procedures are used to organize viewers within individual tracks. Procedure Open
+allocates a given viewer at a given position. More precisely, Open locates the viewer containing
+the point (X, Y), splits it horizontally at height Y, and opens the viewer V in the lower part of the
+area. In the special case of Y coinciding with the upper boundary line of the located viewer this is
+closed automatically. Procedure Change allows to change the height of a given viewer V by
+moving its upper boundary line to a new location Y (within the limits of its neighbors). Procedure
+Close removes the given viewer V from the display area. Figure 4.5 makes these operations clear.
+
+    Figure 4.5 Basic operations on viewers
+
+The last group of procedures provides miscellaneous services. Procedure This identifies the
+viewer displayed at (X, Y). Procedure Next returns the next upper neighbor of a given displayed
+viewer V. Procedure Recall allows recalling and restoring the most recently closed viewer. Locate
+is a procedure that assists heuristic allocation of new viewers. For any given track and desired
+minimum height, procedure Locate offers a choice of some distinguished viewers in the track: the
+filler viewer, the viewer at the bottom, an alternative choice, and the viewer of maximum height.
+Finally, procedure Broadcast broadcasts a message to the display area, that is, sends the given
+message to all viewers that are currently displayed.
+
+It is now a good time to throw a glance behind the scenes. Let us start with revealing module
+Viewer’s internal data structure. Remember that according to the principle of information hiding an
+internal data structure is fully private to the containing module and accessible through the
+module’s procedural interface only. Figure 4.6 shows a data structure view of the display snapshot
+taken in Figure 4.4. Note that the overlaid tracks and viewers are still part of the internal data
+structure.
+
+In the data structure we recognize an anchor that represents the display area and points to a list
+of tracks, each of them in turn pointing to a list of viewers, each of them in turn pointing to a list of
+arbitrary sub-frames. Both the list of tracks and the list of viewers are closed to a ring, where the
+filler track (filling up the display area) and the filler viewers (filling up the tracks) act as anchors.
+Additionally, each track points to a (possibly empty) list of tracks lying underneath. These frames
+are invisible on the display, and shaded in Figure 4.6.
+
+    Figure 4.6 A snapshot of the internal data structure corresponding to Figure 4.3
+
+Technically, the track descriptor type TrackDesc is a private extension of the viewer descriptor
+type ViewerDesc. Repeating the declarations of viewer descriptors and frame descriptors, we get
+to this hierarchy of types:
+
+    TrackDesc = RECORD (ViewerDesc)
+      under: Display.Frame
+    END;
+
+
+    ViewerDesc = RECORD (FrameDesc)
+      state: INTEGER
+    END;
+
+    FrameDesc = RECORD
+      next, dsc: Frame;
+      X, Y, W, H: INTEGER;
+      handle: Handler
+    END;
+
+It is noteworthy that the data structure of the viewer manager is heterogeneous with Frame as
+base type. It provides a nice example of a nested hierarchy of frames with the additional property
+that the first two levels correspond to the first two levels in the type hierarchy defined by Track,
+Viewer, and Frame.
+
+In an object-oriented environment objects are autonomous entities in principle. However, they may
+be bound to some higher instance (other than the system) temporarily. For example, we can look
+at the objects belonging to a module's private data structure as bound to this module. Deciding if
+an object is currently bound is then a fundamental problem. In the case of viewers, this
+information is contained in an extra instance variable called state.
+
+As a system invariant, we have for every viewer V
+
+    V is bound to module Viewers ⇔ V.state # 0
+
+If we call visible any displayed viewer and suspended any viewer that is covered by an overlaying
+track we can refine this invariant to
+
+    {V is visible ⇔ V.state > 0 } and { V is suspended ⇔ V.state < 0 }
+
+In addition, more detailed information about the kind of viewer V is given by the magnitude
+|V.state|:
+
+| V.state | kind of viewer |
+|---------|----------------|
+| 0       | closed         |
+| 1       | filler         |
+| -1      | productive     |
+
+The magnitude |V.state| is kept invariant by module Viewers. It could be used, for example, to
+distinguish different levels of importance or preference with the aim of supporting a smarter
+algorithm for heuristic allocation of new viewers. The variable state is treated as read-only by
+every module other than Viewers.
+
+We are now sufficiently prepared to understand how the exported procedures of module Viewers
+work behind the scenes. All of them operate on the internal dynamic data structure just explained.
+Some use the structure as a reference only or operate on individual elements (procedures This,
+Next, Locate, Change), others add new elements to the structure (procedures InitTrack,
+OpenTrack, Open), and even others remove elements (procedures CloseTrack, Close). Most
+procedures have side-effects on the size or state of existing elements.
+
+Let us now change perspective and look at module Viewers as a general low-level manager of
+viewers whose exact contents are unknown to it (and whose controlling software might have been
+developed years later). In short, let us look at module Viewers as a manager of black boxes. Such
+an abstraction immediately makes it impossible for the implementation to call fixed procedures for,
+say, changing a viewer's size or state. The facility needed is a message-oriented interface.
+
+    TYPE ViewerMsg = RECORD (Display.FrameMsg)
+      id: INTEGER;
+      X, Y, W, H: INTEGER;
+      state: INTEGER
+    END;
+
+There exist three variants of Viewer messages, discriminated by the field id: Restore contents,
+modify height (extend or reduce at bottom), and suspend (close temporarily or permanently). The
+additional components of the message inform about the desired new location, size, and state.
+
+The following table lists senders, messages, and recipients of viewer messages.
+
+| Originator    | Message               | Recipients                        |
+|---------------|-----------------------|-----------------------------------|
+| OpenTrack     | Suspend temporarily   | Viewers covered by opening track  | 
+| CloseTrack    | Suspend permanently   | Viewers in closing track          |
+| Open          | Modify or suspend     | Upper neighbor of opening viewer  |
+| Change        | Modify                | Upper neighbor of changing viewer |
+| Close         | Suspend permanently   | Closing viewer                    |
+
+### 4.4.2. Menu Viewers
+
+So far, we have treated viewers abstractly as black boxes. Our next step is now to focus on a
+special class of viewers called menu viewers. Remembering the definition given earlier we know
+that a menu viewer is characterized by a structure consisting of two vertically tiled “descendant”
+frames, a menu frame at the top and a frame of contents at the bottom. Because the nature and
+contents of these frames are typically unknown by their “ancestor” (or “parent”) viewer, a collection
+of abstract messages is again a postulating form of interface. As net effect, the handling of menu
+viewers boils down to a combination of preprocessing, transforming and forwarding messages to
+the descendant frames. In short, the display space in Oberon is hierarchically organized and
+message passing within the display space obeys the pattern of strict parental control.
+
+Again, we start our more detailed discussion with a module interface definition:
+
+    DEFINITION MenuViewers;
+    IMPORT Viewers, Display;
+    CONST extend = 0; reduce = 1; move = 2; (*message ids*)
+    TYPE
+    Viewer = POINTER TO ViewerDesc;
+    ViewerDesc = RECORD (Viewers.ViewerDesc)
+    menuH: INTEGER
+    END;
+    ModifyMsg = RECORD (Display.FrameMsg)
+    id: INTEGER;
+    dY, Y, H: INTEGER
+    END;
+    PROCEDURE Handle (V: Display.Frame; VAR M: Display.FrameMsg);
+    PROCEDURE New (Menu, Main: Display.Frame; menuH, X, Y: INTEGER): Viewer;
+    END MenuViewers.
+
+The interface represented by this definition is conspicuously narrow. There are just two
+procedures: A generator procedure New and a standard message handler Handle. The generator
+returns a newly created menu viewer displaying the two (arbitrary) frames passed as parameters.
+The message handler implements the entire “behavior” of an object and in particular the above
+mentioned message dispatching functionality.
+
+Message handlers in Oberon are implemented in the form of procedure variables that obviously
+must be initialized properly at object creation time. In other words, some concrete behavior must
+explicitly be bound to each object, where different instances of the same object type could
+potentially have a different behavior and/or the same instance could change its behavior during its
+lifetime. Our object model is therefore instance-centered.
+
+Conceptually, the creation of an object is an atomic action consisting of three basic steps:
+
+    allocate memory block; install message handler; initialize state variables
+
+In the case of a standard menu viewer V this can be expressed as
+    
+    NEW(V); V.handle := Handle; V.dsc := Menu; V.dsc.next := Main; V.menuH := menuH
+
+With that, calling New is equivalent with
+
+    create V; open V at X, Y
+
+where opening V needs assistance by module Viewers.
+
+The implementation of procedure Handle embodies the standard strategy of message handling by
+menu viewers. The following code is a coarse-grained view of it.
+
+    Message handler for menu viewers
+
+    IF message reports about user interaction THEN
+    IF variant is mouse tracking THEN
+    IF mouse is in menu region THEN
+    IF mouse is in upper menu region and left key is pressed THEN
+    handle changing of viewer
+    ELSE delegate handling to menu-frame
+    END
+    ELSE
+    IF mouse is in main-frame THEN delegate handling to main-frame END
+    END
+    ELSIF variant is keyboard input THEN
+    delegate handling to menu frame;
+    delegate handling to main frame
+    END
+    ELSIF message defines generic operation THEN
+    IF message requests copy (clone) THEN
+    send copy message to menu frame to get a copy (clone);
+    send copy message to main frame to get a copy (clone);
+    create menu viewer clone from copies
+    ELSE
+    delegate handling to menu frame;
+    delegate handling to main frame
+    END
+    ELSIF message reports about change of contents THEN
+    delegate handling to menu frame;
+    delegate handling to main frame
+    ELSIF message requests change of location or size THEN
+    IF operation is restore THEN
+    draw viewer area and border;
+    send modify message to menu frame to make it extend from height 0;
+    send modify message to main frame to make it extend from height 0
+    ELSIF operation is modify THEN
+    IF operation is extend THEN
+    extend viewer area and border;
+    send modify message to menu frame to make it extend;
+    send modify message to main frame to make it extend
+    ELSE (*reduce*)
+    send modify message to main frame to make it reduce;
+    send modify message to menu frame to make it reduce;
+    reduce viewer area and border
+    END
+    ELSIF operation is suspend THEN
+    send modify message to main frame to make it reduce to height 0;
+    send modify message to menu frame to make it reduce to height 0
+    END
+    END
+
+In principle, the handler acts as a message dispatcher that either processes a message directly
+and/or delegates its processing to the descendant frames. Note that the handler's main alternative
+statement discriminates precisely among the four basic categories of messages.
+
+From the above outlined algorithm handling copy messages, that is, requests for generating a
+copy or clone of a menu viewer, we can derive a general recursive scheme for the creation of a
+clone of an arbitrary frame:
+
+    send copy message to each element in the list of descendants;
+    generate copy of the original frame descriptor;
+    attach copies of descendants to the copy of descriptor
+
+The essential point here is the use of new outgoing messages in order to process a given
+incoming message. We can regard message processing as a transformation that maps incoming
+messages into a set of outgoing messages, with possible side-effects. The simplest case of such
+a transformation is known as delegation. In this case, the input message is simply passed on to
+the descendant(s).
+
+As a fine point we clarify that the above algorithm is designed to create a deep copy of a
+composite object (a menu viewer in our case). If a shallow copy would be desired, the
+descendants would not have to be copied, and the original descendants instead of their copies
+would be attached to the copy of the composite object.
+
+Another example of message handling is provided by mouse tracking. Assume that a mouse
+message is received by a menu viewer while the mouse is located in the upper part of its menu
+frame and the left mouse key is kept down. This means "change viewer's height by moving its top
+line vertically". No message to express the required transformation of the sub-frames yet exists.
+Consequently, module MenuViewers takes advantage of our open (extensible) message model
+and simply introduces an appropriate message type called ModifyMsg:
+
+    ModifyMsg = RECORD (Display.FrameMsg)
+    id: INTEGER;
+    dY, Y, H: INTEGER
+    END;
+
+The field id specifies one of two variants: extend or reduce. The first variant of the message
+requests the receiving frame to move by the vertical translation vector dY and then to extend to
+height H at bottom. The second variant requests the frame to reduce to height H at bottom and
+then to move by dY. In both cases Y indicates the Y-coordinate of the new lower-left corner.
+Figure 4.7 summarizes this graphically.
+
+Messages arriving from the viewer manager and requesting the receiving viewer to extend or
+reduce at its bottom are also mapped into messages of type ModifyMsg. Of course, no translation
+is needed in these cases, and dY is 0.
+
+The attentive reader might perhaps have asked why the standard handler is exported by module
+MenuViewers at all. The thought behind is reusability of code. For example, a message handler
+for a subclass of menu viewers could be implemented effectively by reusing menu viewer's
+standard handler. After having handled all new or differing cases first it would simply (super-)call
+the standard handler subsequently.
+
+
+    Figure 4.7 The modify frame operation
+
+### 4.4.3. Cursor Management
+
+Traditionally, a cursor indicates and visualizes on the screen the current location of the caret in a
+text or, more generally, the current focus of attention. A small arrow or similar graphic symbol is
+typically used for this purpose. In Oberon, we have slightly generalized and abstracted this
+concept. A cursor is a path in the logical display area whose current position can be made visible
+by a marker.
+
+The viewer manager and the cursor handler are two concurrent users of the same display area.
+Actually, we should imagine two parallel planes, one displaying viewers and the other displaying
+cursors. If there is just one physical plane we take care of painting markers non-destructively, for
+example in inverse-video mode. Then, no precondition must be established before drawing a
+marker. However, in the case of a viewer task painting destructively in its viewer's area, the area
+must be locked first after turning invisible all markers in the area.
+
+The technical support of cursor management is again contained in module Oberon. The
+corresponding application programming interface is
+
+    DEFINITION Oberon;
+    TYPE Marker = RECORD
+    Fade, Draw: PROCEDURE (x, y: INTEGER)
+    END;
+    Cursor = RECORD
+    marker: Marker; on: BOOLEAN; X, Y: INTEGER
+    END;
+    VAR Arrow, Star: Marker;
+    Mouse, Pointer: Cursor;
+    PROCEDURE OpenCursor (VAR c: Cursor);
+    PROCEDURE FadeCursor (VAR c: Cursor);
+    PROCEDURE DrawCursor (VAR c: Cursor; VAR m: Marker; X, Y: INTEGER);
+
+    PROCEDURE MarkedViewer (): Viewers.Viewer;
+    PROCEDURE RemoveMarks (X, Y, W, H: INTEGER);
+    ...
+    END Oberon.
+
+The state of a cursor is given by its mode of visibility (on), its position (X, Y) in the display area,
+and the current marker. Marker is an abstract data type with an interface consisting of two
+operations Fade and Draw. The main benefit we can draw from this abstraction is once more
+conceptual independence of the underlying hardware. For example, Fade and Draw can adapt to
+a given monitor hardware with built-in cursor support or, in case of absence of such support, can
+simply be implemented as identical procedures (an involution) drawing the marker pattern in
+inverse video mode.
+
+The functional interface to cursors consists of three operations: OpenCursor to open a new cursor,
+FadeCursor to switch off the marker of an open cursor, and DrawCursor to extend the path of a
+cursor to a new position and mark it with the given marker. We emphasize that the marker
+representing a given cursor can change its shape dynamically on the fly.
+
+Two cursors, Mouse and Pointer are predefined. They represent the mouse and an interactively
+controlled global system pointer respectively. Typically (but not necessarily) these cursors are
+visualized by the built-in markers Arrow (a small arrow pointing to north-west) and Star (a star
+symbol) respectively. The pointer can be used to mark any displayed object. It serves primarily as
+an implicit parameter of commands.
+
+Two assisting service procedures MarkedViewer and RemoveMarks are added in connection with
+the predefined cursors. MarkedViewer returns the viewer that is currently marked by the pointer.
+Its resulting value is equivalent to Viewers.This(Pointer.X, Pointer.Y). RemoveMarks turns
+invisible the predefined cursors within a given rectangle in the display area. This procedure is
+used to lock the rectangle for its caller.
+
+Summary of the essential points and characteristics of Oberon's concept of cursor handling:
+
+1.) By virtue of the use of abstract markers and of the logical display area, any potential hardware
+dependence is encapsulated in system modules and is therefore hidden from the application
+programmer. Cursors are moving uniformly within the whole display area, even across screen
+boundaries.
+
+2.) Cursor handling is decentralized by delegating it to the individual handlers that are installed in
+viewers. Typically, a handler reacts on the receipt of a mouse tracking message by drawing the
+mouse cursor at the indicated new position. The benefit of such individualized handling is
+flexibility. For example, a smart local handler might choose the shape of the visualizing marker
+depending on the exact location, or it might force the cursor onto a grid point.
+
+3.) Even though cursor handling is decentralized, there is some intrinsic support for cursor
+drawing built into the declaration of type Cursor. Cursors are objects of full value and, as such,
+can "memorize" their current state. Consequently, the interface operations FadeCursor and
+DrawCursor need to refer to the desired future state only.
+
+4.) Looking at the viewer manager as one user of the display area, the cursor handler is a second
+(and logically concurrent) user of the same resource. If there is just one physical plane
+implementing the display area, any region must be locked by a current user before destructive
+painting. Therefore, markers are usually painted non-destructively in inverse-video mode.
+
+Let us now recapitulate the entire Section. The central resource managed by the display
+subsystem is the logical display area whose purpose is abstraction from the underlying display
+monitor hardware. The display area is primarily used by the viewer manager for the
+accommodation of tracks and viewers, which are merely the first two levels of a potentially
+unlimited nested hierarchy of display frames. For example, standard menu viewers contain two
+subordinate frames: A menu frame and a main frame of contents. Viewers are treated as black
+boxes by the viewer manager and are addressed via messages. Viewers and, more generally
+frames, are used as elements of message-based interfaces connecting the display subsystem
+
+with other subsystems like the task scheduler and the various document managers. Finally, the
+display area is also the living room of cursors. In Oberon, a cursor is a marked path. Two standard
+cursors Mouse and Pointer are predefined.
+
+## 4.5. Raster Operations
+
+In Section 4.4 we introduced the display area as an abstract concept, modeled as a twodimensional
+Cartesian plane. So far, this view of the display space was sufficient because we
+were interested in its global structure only and ignored contents completely. However, if we are
+interested in the displayed contents, we need to reveal more details about the model.
+
+The Cartesian plane representing the display area is discrete. We consider points in the display
+area as grid points or picture elements (pixels), and we assume contents to be generated by
+assigning colors to the pixels. For the moment, the number of possible colors a pixel can attain is
+irrelevant. In the binary case of two colors we think of one color representing background and the
+other color representing foreground.
+
+The most elementary operation generating contents in a discrete plane is "set color of pixel" or
+"set pixel" for short. While a few drawing algorithms directly build on this atomic operation, blockoriented
+functionality (traditionally called raster operations) plays a much more important role in
+practice. By a block we mean a rectangular area of pixels whose bounding lines are parallel to the
+axes of the coordinate system.
+
+Raster operations are based on a common principle: A block of width SW and height SH of source
+pixels is placed at a given point of destination (DX, DY) in the display area. In the simplest case,
+the destination block (DX, DY, SW, SH) is plainly overwritten by the source block. In general, the
+new value of a pixel in the destination block is a combination of its old value and the value of the
+corresponding source pixel:
+
+    d := F(s, d)
+
+F is sometimes called the mode of combination of the raster operation. The raster is stored as an
+array of values of type SET, each set representing 32 black/white pixels. The modes of combining
+source and destination is implemented by the following set operations:
+
+    | mode      | operation     |
+    |-----------|---------------|
+    | replace   | s             |
+    | paint     | s + d (or)    |
+    | invert    | s / d (xor)   |
+
+Note that invert is equivalent with inverse video mode if s is TRUE for all pixels.
+
+There are many different variants of raster operations. Some refer to a source block in the display
+area, others specify a constant pattern to be taken as source block. Some variants require
+replication of the source block within a given destination block (DX, DY, DW, DH) rather than
+simple placement.
+
+The challenge when designing a raster interface is finding a unified, small and complete set of
+raster operations that covers all needs, in particular including the need of placing character
+glyphs. The amazingly compact resulting set of Oberon raster operations is exported by module
+Display:
+
+    DEFINITION Display;
+    CONST black = 0; white = 1; (*colors*)
+    replace = 0; paint = 1; invert = 2; (*operation modes*)
+    PROCEDURE Dot (col, x, y, mode: INTEGER);
+    PROCEDURE ReplConst (col, x, y, w, h, mode: INTEGER);
+    PROCEDURE CopyPattern (col, patadr, x, y, mode: INTEGER);
+    PROCEDURE CopyBlock (sx, sy, w, h, dx, dy, mode: INTEGER);
+
+    PROCEDURE ReplPattern (col, patadr, x, y, w, h, mode: INTEGER);
+    END Display.
+
+In the parameter lists of the above raster operations, mode is the mode of combination (replace,
+paint, or invert). CopyBlock copies the source block (sx, sy, w, h) to position (dx, dy) and uses
+mode to combine new contents in the destination block (dx, dy, w, h). It is assumed tacitly that the
+numbers of colors per pixel in the source block and in the destination area are identical. It is
+perhaps informative to know that CopyBlock is essentially equivalent with the famous BitBlt (bit
+block transfer) in the SmallTalk project [Goldberg]. In Oberon, CopyBlock is used primarily for
+scrolling contents within a viewer.
+
+The remaining raster operations use a constant pattern. Patterns are implemented as arrays of
+bytes, and the parameter patadr is the address of the relevant pattern. The first two bytes indicate
+width w and height h of the pattern. Pattern data are given as a sequence of bytes to be placed
+into the destination block from left to right and from bottom to top. Each line takes an integral
+number of bytes. Hence, the number of data bytes is ((w+7) DIV 8) * h. An example is shown in
+Figure 4.8.
+
+    Figure 4.8 A pattern and its encoding as an array of bytes (in hex)
+
+Some standard patterns are included in module Display and exported as global variables. Among
+them are patterns arrow, hook, and star intended to represent the cursor, the caret, and the
+marker. A second group of predefined patterns supports drawing graphics.
+
+The parameter col in the pattern-oriented raster operations specifies the pattern's foreground
+color. Colors black (background) and white are predefined. Procedure CopyPattern copies the
+pattern to location x, y in the display area, using the given combination mode. It is probably the
+most frequently used operation of all because it is needed to write text. Procedure ReplPattern
+replicates the given pattern to the given destination block. It starts at bottom left and proceeds
+from left to right and from bottom to top. Procedures Dot and ReplConst are special cases of
+CopyPattern and ReplPattern respectively, taking a fixed implicit pattern consisting of a single
+foreground pixel. Dot is exactly our previously mentioned "set pixel". ReplConst is used to draw
+horizontal and vertical lines of various widths.
+
+The raster operations are a prominent example of the use of Oberon's data type SET. Formally,
+variables are sets of integers between 0 and 31. Here, they are taken as sets of bits numbered
+from 0 to 31. We consider the replication of 1's (mode = replace or paint) in the rectangle with
+origin x, y, width w, and height h. Every line consists of 1024 pixels, or 32 words. al, ar, a0, a1 are
+addresses.
+
+    VAR al, ar, a0, a1: INTEGER;
+    left, right, pixl, pixr: SET;
+    al := base + y*128;
+    ar := ((x+w-1) DIV 32)*4 + al; al := (x DIV 32)*4 + al;
+    left := {(x MOD 32) .. 31}; right := {0 .. ((x+w-1) MOD 32)};
+    FOR a0 := al TO al + (h-1)*128 BY 128 DO
+    SYSTEM.GET(a0, pixl); SYSTEM.GET(ar, pixr);
+    SYSTEM.PUT(a0, pixl + left);
+
+    FOR a1 := a0+4 TO ar-4 BY 4 DO SYSTEM.PUT(a1, {0 .. 31}) END ;
+    SYSTEM.PUT(ar, pixr + right)
+    END
+
+The definition (and even more so the implementation) of module Display provides support for a
+restricted class of possible hardware configurations only. Any number of display monitors is
+theoretically possible. However, they must be mapped to a regular horizontal array of predefined
+cells in the display area. Each cell is vertically split into two congruent regions, where the
+corresponding monitor is supposed to be able to select and display one of the two regions
+alternatively. Finally, it is assumed that all cells hosting black-and-white monitors are allocated to
+the left of all cells hosting color monitors. Figure 4.9 gives an impression of such a configuration.
+
+    Figure 4.9 General, regular cell structure of display area
+
+Under these restrictions any concrete configuration can be parameterized by the variables of the
+definition above. Unit, Width, and Height specify the extent of a displayed region, where Width and
+Height are width and height in pixel units, and Unit is the size of a pixel in units of 1/36’000 mm.
+1/36’000 mm is a common divisor of all of the standard metric units used by the typesetting
+community, like mm, inch, Pica point and point size of usual printing devices. Bottom and UBottom
+specify the bottom y-coordinate of the primary region and the secondary region respectively.
+Finally, Left and ColLeft give the left x-coordinate of the area of black-and-white monitors and of
+color monitors respectively.
+
+## 4.6. Standard display configurations and toolbox
+
+Let us now take up again our earlier topic of configuring the display area. We have seen that no
+specific layout of the display area is distinguished by the general viewer management itself.
+However, some support of the familiar standard Oberon display look is provided by module
+Oberon.
+
+In the terminology of this module, a standard configuration consists of one or several horizontally
+adjacent displays, where a display is a pair consisting of two tracks of equal height, a user track
+on the left and a system track on the right. Note that even though no reference to any physical
+monitor is made, a display is typically associated with a monitor in reality.
+
+This is the relevant excerpt of the definition:
+
+    DEFINITION Oberon;
+    PROCEDURE OpenDisplay (UW, SW, H: INTEGER);
+    PROCEDURE OpenTrack (X, W: INTEGER);
+    PROCEDURE DisplayWidth (X: INTEGER): INTEGER;
+    PROCEDURE DisplayHeight (X: INTEGER): INTEGER;
+    PROCEDURE UserTrack (X: INTEGER): INTEGER;
+    
+    PROCEDURE SystemTrack (X: INTEGER): INTEGER;
+    PROCEDURE AllocateUserViewer (DX: INTEGER; VAR X, Y: INTEGER);
+    PROCEDURE AllocateSystemViewer (DX: INTEGER; VAR X, Y: INTEGER);
+    END Oberon.
+
+Procedure OpenDisplay initializes and opens a new display of the dimensions H (height), UW
+(width of user track), and SW (width of system track). Procedure OpenTrack overlays the
+sequence of existing tracks spanned by the segment [X, X + W) by a new track. Both procedure
+OpenDisplay and OpenTrack take from the client the burden of creating a filler viewer.
+
+The next group of procedures DisplayWidth, DisplayHeight, UserTrack and SystemTrack return
+width or height of the respective structural entity located at position X in the display area.
+
+Procedures AllocateUserViewer and AllocateSystemViewer make proposals for the allocation of a
+new viewer in the desired track of the display located at DX. In first priority, the location is
+determined by the system pointer that can be set manually. If the pointer is not set, a location is
+calculated on the basis of some heuristics whose strategies rely on different splitting fractions that
+are applied in the user track and in the system track respectively, with the aim of generating
+aesthetically satisfactory layouts.
+
+In addition to the programming interface provided by module Oberon for the case of standard
+display layouts, the display management section in the System toolbox provides a user interface:
+
+    DEFINITION System; (*Display management*)
+    PROCEDURE Open; (*viewer*)
+    PROCEDURE Close; (*viewer*)
+    PROCEDURE CloseTrack;
+    PROCEDURE Recall; (*most recently closed viewer*)
+    PROCEDURE Copy; (*viewer*)
+    PROCEDURE Grow; (*viewer*)
+    PROCEDURE Clear; (*clear system log*)
+    END System.
+
+In turn, these commands are called to open a text viewer in the system track, close a viewer,
+close a track, recall (and reopen) the most recently closed viewer, copy a viewer, and grow a
+viewer. The commands Close, CloseTrack, Recall, Copy, and Grow are generic. Close, Copy, and
+Grow are typically included in the title bar of a menu viewer. Their detailed implementations follow
+subsequently.
+
+## References
+[Binding] C. Binding, User Interface Components based on a Multiple Window Package,
+University of Washington, Seattle, Technical Report 85-08-07.
+[Cohen] E.S. Cohen, E.T. Smith, L.A. Iverson, Constraint-Based Tiled Windows,
+IEEE, 1985
+[Wille] M. Wille, Overview: Entwurf und Realisierung eines Fenstersystems für
+Arbeitsplatzrechner, Diss. ETH Nr. 8771, 1988.
+[Goldberg] A. Goldberg, Smalltalk-80: The Interactive Programming Environment,
+Addison-Wesley 1984.
+[Teitelman] W. Teitelman, "A tour through Cedar",
+IEEE Software, 1, (2), 44-73 (1984).
