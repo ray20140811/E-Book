@@ -1,36 +1,34 @@
-#+TITLE: GNU Emacs manual ¤¤¤å¤â¥U - 1 The Organization of the Screen
+#+TITLE: GNU Emacs manual ä¸­æ–‡æ‰‹å†Š - 1 The Organization of the Screen
 #+AUTHOR: Free Software Foundation, Inc.
 #+DATE: 2023-09-18
 
-** 1.2 The Echo Area °jÁn°Ï
+** 1.2 The Echo Area å›é¡¯å€åŸŸ
 
 The line at the very bottom of the frame is the echo area. It is used to display small amounts of text for various purposes.
 
-´V³Ì©³³¡ªº½u¬O¦^ªi°Ï°ì¡C¥¦¥Î©ó¥X©ó¦UºØ¥ØªºÅã¥Ü¤Ö¶q¤å¥»¡C
+å¹€æœ€åº•éƒ¨çš„ç·šæ˜¯å›é¡¯å€åŸŸã€‚å®ƒç”¨æ–¼å‡ºæ–¼å„ç¨®ç›®çš„é¡¯ç¤ºå°‘é‡æ–‡æœ¬ã€‚
 
 The echo area is so-named because one of the things it is used for is echoing, which means displaying the characters of a multi-character command as you type. Single-character commands are not echoed. Multi-character commands (see Keys) are echoed if you pause for more than a second in the middle of a command. Emacs then echoes all the characters of the command so far, to prompt you for the rest. Once echoing has started, the rest of the command echoes immediately as you type it. This behavior is designed to give confident users fast response, while giving hesitant users maximum feedback.
 
-¦^Åã°Ï°ì¤§©Ò¥H¦p¦¹©R¦W¡A¬O¦]¬°¥¦ªº¥Î³~¤§¤@¬O¦^Åã¡A³o·N¨ıµÛ¦b±zÁä¤J®ÉÅã¥Ü¦h¦r²Å©R¥Oªº¦r²Å¡C³æ¦r²Å©R¥O¤£·|³Q¦^Åã¡C¦pªG±z¦b©R¥O¤¤¶¡¼È°±¶W¹L¤@¬í¡A«h·|¦^Åã¦h¦r²Å©R¥O¡]½Ğ°Ñ¾\«öÁä¡^¡CµM«á¡AEmacs ·|¦^Åã¨ì¥Ø«e¬°¤î¸Ó©R¥Oªº©Ò¦³¦r²Å¡A¥H´£¥Ü±z°õ¦æ¨ä¾l¾Ş§@¡C
-¤@¥¹¶}©l¦^Åã¡A©R¥Oªº¨ä¾l³¡¤À±N¦b±zÁä¤J®É¥ß§Y¦^Åã¡C¦¹¦æ¬°¦®¦b¬°¦Û«Hªº¥Î¤á´£¨Ñ§Ö³tÅTÀ³¡A¦P®É¬°µS¿İªº¥Î¤á´£¨Ñ³Ì¤jªº¤ÏõX¡C
+å›é¡¯å€åŸŸä¹‹æ‰€ä»¥å¦‚æ­¤å‘½åï¼Œæ˜¯å› ç‚ºå®ƒçš„ç”¨é€”ä¹‹ä¸€æ˜¯å›é¡¯ï¼Œé€™æ„å‘³è‘—åœ¨æ‚¨éµå…¥æ™‚é¡¯ç¤ºå¤šå­—ç¬¦å‘½ä»¤çš„å­—ç¬¦ã€‚å–®å­—ç¬¦å‘½ä»¤ä¸æœƒè¢«å›é¡¯ã€‚å¦‚æœæ‚¨åœ¨å‘½ä»¤ä¸­é–“æš«åœè¶…éä¸€ç§’ï¼Œå‰‡æœƒå›é¡¯å¤šå­—ç¬¦å‘½ä»¤ï¼ˆè«‹åƒé–±æŒ‰éµï¼‰ã€‚ç„¶å¾Œï¼ŒEmacs æœƒå›é¡¯åˆ°ç›®å‰ç‚ºæ­¢è©²å‘½ä»¤çš„æ‰€æœ‰å­—ç¬¦ï¼Œä»¥æç¤ºæ‚¨åŸ·è¡Œå…¶é¤˜æ“ä½œã€‚ä¸€æ—¦é–‹å§‹å›é¡¯ï¼Œå‘½ä»¤çš„å…¶é¤˜éƒ¨åˆ†å°‡åœ¨æ‚¨éµå…¥æ™‚ç«‹å³å›é¡¯ã€‚æ­¤è¡Œç‚ºæ—¨åœ¨ç‚ºè‡ªä¿¡çš„ç”¨æˆ¶æä¾›å¿«é€ŸéŸ¿æ‡‰ï¼ŒåŒæ™‚ç‚ºçŒ¶è±«çš„ç”¨æˆ¶æä¾›æœ€å¤§çš„åé¥‹ã€‚
 
 The echo area is also used to display an error message when a command cannot do its job. Error messages may be accompanied by beeping or by flashing the screen.
 
-·í©R¥OµLªk§¹¦¨¨ä¤u§@®É¡A¦^Åã°Ï°ìÁÙ¥Î©óÅã¥Ü¿ù»~®ø®§¡C¿ù»~®ø®§¥i¯à·|¦ñÀH¸Á»ïÁn©Î«Ì¹õ°{Ã{¡C
+ç•¶å‘½ä»¤ç„¡æ³•å®Œæˆå…¶å·¥ä½œæ™‚ï¼Œå›é¡¯å€åŸŸé‚„ç”¨æ–¼é¡¯ç¤ºéŒ¯èª¤æ¶ˆæ¯ã€‚éŒ¯èª¤æ¶ˆæ¯å¯èƒ½æœƒä¼´éš¨èœ‚é³´è²æˆ–å±å¹•é–ƒçˆã€‚
 
-Some commands display informative messages in the echo area to tell you what the command has done, or to provide you with some specific information. These informative messages, unlike error messages, are not accompanied with a beep or flash. For example, C-x = (hold down Ctrl and type x, then let go of Ctrl and type =) displays a message describing the character at point, its position in the buffer, and its current column in the window. Commands that take a long time often display messages ending in ¡¥...¡¦ while they are working (sometimes also indicating how much progress has been made, as a percentage), and add ¡¥done¡¦ when they are finished.
+Some commands display informative messages in the echo area to tell you what the command has done, or to provide you with some specific information. These informative messages, unlike error messages, are not accompanied with a beep or flash. For example, C-x = (hold down Ctrl and type x, then let go of Ctrl and type =) displays a message describing the character at point, its position in the buffer, and its current column in the window. Commands that take a long time often display messages ending in â€˜...â€™ while they are working (sometimes also indicating how much progress has been made, as a percentage), and add â€˜doneâ€™ when they are finished.
 
-¬Y¨Ç©R¥O·|¦b¦^Åã°Ï°ì¤¤Åã¥Ü«H®§©Ê®ø®§¡A§i¶D±z¸Ó©R¥O°õ¦æ¤F­ş¨Ç¾Ş§@¡A©ÎªÌ¬°±z´£¨Ñ¤@¨Ç¯S©w«H®§¡C»P¿ù»~®ø®§¤£¦P¡A³o¨Ç«H®§©Ê®ø®§¤£·|¦ñÀH¸Á»ïÁn©Î°{Ã{¡C¨Ò¦p¡AC-x = ¡]«ö¦íCtrl¨ÃÁä¤Jx¡AµM«áÃP¶}Ctrl¨ÃÁä¤J=¡^±NÅã¥Ü¤@±ø®ø®§¡A´y­z·í«e¦ì¸mªº¦r²Å¡B¨ä¦b½w½Ä°Ï¤¤ªº¦ì¸m¥H¤Î¨ä¦bµ¡¤f¤¤ªº·í«e¦C¡C
-»İ­n«Üªø®É¶¡ªº©R¥O³q±`·|Åã¥Ü¥H ' µ²§Àªº®ø®§...' ·í¥L­Ì¤u§@®É¡]¦³®É¤]ªí©ú¤w¸g¨ú±o¤F¦h¤Ö¶i®i¡A¥H¦Ê¤À¤ñªí¥Ü¡^¡A¨Ã²K¥[ '§¹²¦¡¦·í¥L­Ì§¹¦¨®É¡C
+æŸäº›å‘½ä»¤æœƒåœ¨å›é¡¯å€åŸŸä¸­é¡¯ç¤ºä¿¡æ¯æ€§æ¶ˆæ¯ï¼Œå‘Šè¨´æ‚¨è©²å‘½ä»¤åŸ·è¡Œäº†å“ªäº›æ“ä½œï¼Œæˆ–è€…ç‚ºæ‚¨æä¾›ä¸€äº›ç‰¹å®šä¿¡æ¯ã€‚èˆ‡éŒ¯èª¤æ¶ˆæ¯ä¸åŒï¼Œé€™äº›ä¿¡æ¯æ€§æ¶ˆæ¯ä¸æœƒä¼´éš¨èœ‚é³´è²æˆ–é–ƒçˆã€‚ä¾‹å¦‚ï¼ŒC-x = ï¼ˆæŒ‰ä½Ctrlä¸¦éµå…¥xï¼Œç„¶å¾Œé¬†é–‹Ctrlä¸¦éµå…¥=ï¼‰å°‡é¡¯ç¤ºä¸€æ¢æ¶ˆæ¯ï¼Œæè¿°ç•¶å‰ä½ç½®çš„å­—ç¬¦ã€å…¶åœ¨ç·©è¡å€ä¸­çš„ä½ç½®ä»¥åŠå…¶åœ¨çª—å£ä¸­çš„ç•¶å‰åˆ—ã€‚éœ€è¦å¾ˆé•·æ™‚é–“çš„å‘½ä»¤é€šå¸¸æœƒé¡¯ç¤ºä»¥ ' çµå°¾çš„æ¶ˆæ¯...' ç•¶ä»–å€‘å·¥ä½œæ™‚ï¼ˆæœ‰æ™‚ä¹Ÿè¡¨æ˜å·²ç¶“å–å¾—äº†å¤šå°‘é€²å±•ï¼Œä»¥ç™¾åˆ†æ¯”è¡¨ç¤ºï¼‰ï¼Œä¸¦æ·»åŠ  'å®Œç•¢â€™ç•¶ä»–å€‘å®Œæˆæ™‚ã€‚
 
 Informative echo area messages are saved in a special buffer named *Messages*. (We have not explained buffers yet; see Using Multiple Buffers, for more information about them.) If you miss a message that appeared briefly on the screen, you can switch to the *Messages* buffer to see it again. The *Messages* buffer is limited to a certain number of lines, specified by the variable message-log-max. (We have not explained variables either; see Variables, for more information about them.) Beyond this limit, one line is deleted from the beginning whenever a new message line is added at the end.
 
-«H®§©Ê¦^Åã°Ï°ì®ø®§«O¦s¦b¦W¬° *¯d¨¥*¡C¡]§Ú­ÌÁÙ¨S¦³¸ÑÄÀ½w½Ä°Ï¡F ¦³Ãö¥¦­Ìªº§ó¦h«H®§¡A ½Ğ°Ñ¾\¨Ï¥Î¦h­Ó½w½Ä°Ï¡C¡^¦pªG±z¿ù¹L¤F«Ì¹õ¤Wµu¼È¥X²{ªº®ø®§¡A±z¥i¥H¤Á´«¨ì*¯d¨¥*½w½Ä¥H¦A¦¸¬d¬İ¥¦¡C³o*¯d¨¥* ½w½Ä°Ï¶È­­©ó¤@©w¼Æ¶qªº¦æ¡A¥ÑÅÜ¶q«ü©wmessage-log-max¡C¡]§Ú­Ì¤]¨S¦³¸ÑÄÀÅÜ¶q¡F¦³Ãö¥¦­Ìªº§ó¦h«H®§¡A½Ğ°Ñ¾\ÅÜ¶q¡C¡^¶W¥X¦¹­­¨î¡A¨C·í¦b¥½§À²K¥[·s®ø®§¦æ®É¡A´N·|±q¶}ÀY§R°£¤@¦æ¡C
+ä¿¡æ¯æ€§å›é¡¯å€åŸŸæ¶ˆæ¯ä¿å­˜åœ¨åç‚º *ç•™è¨€*ã€‚ï¼ˆæˆ‘å€‘é‚„æ²’æœ‰è§£é‡‹ç·©è¡å€ï¼› æœ‰é—œå®ƒå€‘çš„æ›´å¤šä¿¡æ¯ï¼Œ è«‹åƒé–±ä½¿ç”¨å¤šå€‹ç·©è¡å€ã€‚ï¼‰å¦‚æœæ‚¨éŒ¯éäº†å±å¹•ä¸ŠçŸ­æš«å‡ºç¾çš„æ¶ˆæ¯ï¼Œæ‚¨å¯ä»¥åˆ‡æ›åˆ°*ç•™è¨€*ç·©è¡ä»¥å†æ¬¡æŸ¥çœ‹å®ƒã€‚é€™*ç•™è¨€* ç·©è¡å€åƒ…é™æ–¼ä¸€å®šæ•¸é‡çš„è¡Œï¼Œç”±è®Šé‡æŒ‡å®šmessage-log-maxã€‚ï¼ˆæˆ‘å€‘ä¹Ÿæ²’æœ‰è§£é‡‹è®Šé‡ï¼›æœ‰é—œå®ƒå€‘çš„æ›´å¤šä¿¡æ¯ï¼Œè«‹åƒé–±è®Šé‡ã€‚ï¼‰è¶…å‡ºæ­¤é™åˆ¶ï¼Œæ¯ç•¶åœ¨æœ«å°¾æ·»åŠ æ–°æ¶ˆæ¯è¡Œæ™‚ï¼Œå°±æœƒå¾é–‹é ­åˆªé™¤ä¸€è¡Œã€‚
 
 See Customization of Display, for options that control how Emacs uses the echo area.
 
-½Ğ°Ñ¾\Customization of Display¡A¤F¸Ñ±±¨î Emacs ¦p¦ó¨Ï¥Î¦^Åã°Ï°ìªº¿ï¶µ¡C
+è«‹åƒé–±Customization of Displayï¼Œäº†è§£æ§åˆ¶ Emacs å¦‚ä½•ä½¿ç”¨å›é¡¯å€åŸŸçš„é¸é …ã€‚
 
 The echo area is also used to display the minibuffer, a special window where you can input arguments to commands, such as the name of a file to be edited. When the minibuffer is in use, the text displayed in the echo area begins with a prompt string, and the active cursor appears within the minibuffer, which is temporarily considered the selected window. You can always get out of the minibuffer by typing C-g. See The Minibuffer.
 
-¦^Åã°Ï°ìÁÙ¥Î©óÅã¥Ü minibuffer ¡A³o¬O¤@­Ó¯S®íµ¡¤f¡A±z¥i¥H¦b¨ä¤¤¿é¤J©R¥O°Ñ¼Æ¡A¨Ò¦p­n½s¿èªº¤å¥óªº¦WºÙ¡C
-·í¨Ï¥Î°g§A½w½Ä°Ï®É¡A¦^Åã°Ï°ì¤¤Åã¥Üªº¤å¥»¥H´£¥Ü¦r²Å¦ê¶}ÀY¡A¨Ã¥B¬¡°Ê¥ú¼Ğ¥X²{¦b°g§A½w½Ä°Ï¤º¡A¼È®É±N¨äµø¬°©Ò¿ïµ¡¤f¡C±z©l²×¥i¥H³q¹L¿é¤J¨Ó°h¥X°g§A½w½Ä°ÏC-g¡C½Ğ°Ñ¾\°g§A½w½Ä°Ï¡C
+å›é¡¯å€åŸŸé‚„ç”¨æ–¼é¡¯ç¤º minibuffer ï¼Œé€™æ˜¯ä¸€å€‹ç‰¹æ®Šçª—å£ï¼Œæ‚¨å¯ä»¥åœ¨å…¶ä¸­è¼¸å…¥å‘½ä»¤åƒæ•¸ï¼Œä¾‹å¦‚è¦ç·¨è¼¯çš„æ–‡ä»¶çš„åç¨±ã€‚
+ç•¶ä½¿ç”¨è¿·ä½ ç·©è¡å€æ™‚ï¼Œå›é¡¯å€åŸŸä¸­é¡¯ç¤ºçš„æ–‡æœ¬ä»¥æç¤ºå­—ç¬¦ä¸²é–‹é ­ï¼Œä¸¦ä¸”æ´»å‹•å…‰æ¨™å‡ºç¾åœ¨è¿·ä½ ç·©è¡å€å…§ï¼Œæš«æ™‚å°‡å…¶è¦–ç‚ºæ‰€é¸çª—å£ã€‚æ‚¨å§‹çµ‚å¯ä»¥é€šéè¼¸å…¥ä¾†é€€å‡ºè¿·ä½ ç·©è¡å€C-gã€‚è«‹åƒé–±è¿·ä½ ç·©è¡å€ã€‚
