@@ -1,0 +1,75 @@
+#+TITLE: GNU Emacs manual 中文手冊 - 1 The Organization of the Screen
+#+AUTHOR: Free Software Foundation, Inc.
+#+DATE: 2023-09-18
+
+* 1 The Organization of the Screen 屏幕的組織
+
+On a graphical display, such as on GNU/Linux using the X Window System, Emacs occupies a graphical window.
+On a text terminal, Emacs occupies the entire terminal screen.
+We will use the term frame to mean a graphical window or terminal screen occupied by Emacs.
+Emacs behaves very similarly on both kinds of frames.
+It normally starts out with just one frame, but you can create additional frames if you wish (see Frames and Graphical Displays).
+
+在圖形顯示上，例如在使用 X Window 系統的 GNU/Linux 上，Emacs 佔據一個圖形窗口。
+在文本終端上，Emacs 佔據整個終端屏幕。
+我們將使用術語 “框架”來表示 Emacs 佔用的圖形窗口或終端屏幕。
+Emacs 在兩種框架上的行為非常相似。
+通常一開始只有一幀，但如果您願意，您可以創建其他幀（請參閱幀和圖形顯示）。
+
+Each frame consists of several distinct regions.
+At the top of the frame is a menu bar, which allows you to access commands via a series of menus.
+On a graphical display, directly below the menu bar is a tool bar, a row of icons that perform editing commands when you click on them.
+At the very bottom of the frame is an echo area, where informative messages are displayed and where you enter information when Emacs asks for it.
+
+每個幀由幾個不同的區域組成。
+框架頂部是一個菜單欄，它允許您通過一系列菜單訪問命令。
+在圖形顯示器上，菜單欄的正下方是工具欄，這是一排圖標，單擊它們即可執行編輯命令。
+框架的最底部是一個回顯區域，其中顯示信息性消息，並且當 Emacs 要求時您可以在其中輸入信息。
+
+The main area of the frame, below the tool bar (if one exists) and above the echo area, is called the window.
+Henceforth in this manual, we will use the word “window” in this sense.
+Graphical display systems commonly use the word “window” with a different meaning;
+but, as stated above, we refer to those graphical windows as “frames”.
+
+框架的主要區域位於工具欄（如果存在）下方和回波區域上方，稱為窗口。
+今後在本手冊中，我們將在這個意義上使用“窗口”一詞。
+圖形顯示系統通常使用具有不同含義的“窗口”一詞；
+但是，如上所述，我們將這些圖形窗口稱為“框架”。
+
+An Emacs window is where the buffer—the text or other graphics you are editing or viewing—is displayed.
+On a graphical display, the window possesses a scroll bar on one side, which can be used to scroll through the buffer.
+The last line of the window is a mode line.
+This displays various information about what is going on in the buffer,
+such as whether there are unsaved changes, the editing modes that are in use, the current line number, and so forth.
+
+Emacs 窗口是顯示緩衝區（您正在編輯或查看的文本或其他圖形）的地方。
+在圖形顯示上，窗口的一側有一個滾動條，可用於滾動緩衝區。
+窗口的最後一行是模式行。
+這會顯示有關緩衝區中發生的情況的各種信息，例如是否有未保存的更改、正在使用的編輯模式、當前行號等等。
+
+When you start Emacs, there is normally only one window in the frame.
+However, you can subdivide this window horizontally or vertically to create multiple windows, each of which can independently display a buffer (see Multiple Windows).
+
+當您啟動 Emacs 時，框架中通常只有一個窗口。
+但是，您可以水平或垂直細分該窗口以創建多個窗口，每個窗口可以獨立顯示一個緩衝區（請參閱多個窗口）。
+
+At any time, one window is the selected window.
+On a graphical display, the selected window shows a more prominent cursor (usually solid and blinking);
+other windows show a less prominent cursor (usually a hollow box).
+On a text terminal, there is only one cursor, which is shown in the selected window.
+The buffer displayed in the selected window is called the current buffer, and it is where editing happens.
+Most Emacs commands implicitly apply to the current buffer; the text displayed in unselected windows is mostly visible for reference.
+If you use multiple frames on a graphical display, selecting a particular frame selects a window in that frame.
+
+在任何時候，一個窗口就是被選擇的窗口。
+在圖形顯示上，選定的窗口顯示更突出的光標（通常穩定並閃爍）；
+其他窗口顯示不太突出的光標（通常是空心框）。
+在文本終端上，只有一個光標，顯示在所選窗口中。
+所選窗口中顯示的緩衝區稱為當前緩衝區，它是編輯發生的地方。
+大多數 Emacs 命令隱式應用於當前緩衝區；未選擇的窗口中顯示的文本大多可見以供參考。
+如果在圖形顯示上使用多個框架，則選擇特定框架將選擇該框架中的窗口。
+
+- Point 觀點
+- The Echo Area 迴聲區
+- The Mode Line 模式行
+- The Menu Bar 選單欄
