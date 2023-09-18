@@ -1,0 +1,21 @@
+#+TITLE: GNU Emacs manual 中文手冊 - 1 The Organization of the Screen
+#+AUTHOR: Free Software Foundation, Inc.
+#+DATE: 2023-09-18
+
+** 1.1 Point 要點
+
+The cursor in the selected window shows the location where most editing commands take effect, which is called point2. Many Emacs commands move point to different places in the buffer; for example, you can place point by clicking mouse button 1 (normally the left button) at the desired location.
+
+所選窗口中的光標顯示大多數編輯命令生效的位置，稱為點2。許多 Emacs 命令將指針移動到緩衝區中的不同位置；例如，您可以通過單擊鼠標按鈕 1（通常是左鍵）在所需位置放置點。
+
+By default, the cursor in the selected window is drawn as a solid block and appears to be on a character, but you should think of point as between two characters; it is situated before the character under the cursor. For example, if your text looks like ‘frob’ with the cursor over the ‘b’, then point is between the ‘o’ and the ‘b’. If you insert the character ‘!’ at that position, the result is ‘fro!b’, with point between the ‘!’ and the ‘b’. Thus, the cursor remains over the ‘b’, as before.
+
+默認情況下，所選窗口中的光標被繪製為實心塊，並且看起來位於一個字符上，但您應該將點視為兩個字符之間；它位於 光標下的字符之前。例如，如果您的文本看起來像 '弗洛布' 將光標置於 '乙'，則點位於 ' 之間哦' 和 '乙'。如果插入字符 '！' 在那個位置，結果是 '來回！b'，點位於 ' 之間！' 和 '乙'。因此，光標保留在 '乙'， 像之前一樣。
+
+If you are editing several files in Emacs, each in its own buffer, each buffer has its own value of point. A buffer that is not currently displayed remembers its value of point if you later display it again. Furthermore, if a buffer is displayed in multiple windows, each of those windows has its own value of point.
+
+如果您在 Emacs 中編輯多個文件，每個文件都在自己的緩衝區中，每個緩衝區都有自己的 point 值。如果稍後再次顯示當前未顯示的緩衝區，它會記住其點值。此外，如果緩衝區顯示在多個窗口中，則每個窗口都有自己的點值。
+
+See Displaying the Cursor, for options that control how Emacs displays the cursor.
+
+有關控制 Emacs 如何顯示光標的選項， 請參閱顯示光標。
