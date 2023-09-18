@@ -1,0 +1,36 @@
+#+TITLE: GNU Emacs manual 中文手冊 - 1 The Organization of the Screen
+#+AUTHOR: Free Software Foundation, Inc.
+#+DATE: 2023-09-18
+
+** 1.2 The Echo Area 迴聲區
+
+The line at the very bottom of the frame is the echo area. It is used to display small amounts of text for various purposes.
+
+幀最底部的線是回波區域。它用於出於各種目的顯示少量文本。
+
+The echo area is so-named because one of the things it is used for is echoing, which means displaying the characters of a multi-character command as you type. Single-character commands are not echoed. Multi-character commands (see Keys) are echoed if you pause for more than a second in the middle of a command. Emacs then echoes all the characters of the command so far, to prompt you for the rest. Once echoing has started, the rest of the command echoes immediately as you type it. This behavior is designed to give confident users fast response, while giving hesitant users maximum feedback.
+
+回顯區域之所以如此命名，是因為它的用途之一是回顯，這意味著在您鍵入時顯示多字符命令的字符。單字符命令不會被回顯。如果您在命令中間暫停超過一秒，則會回顯多字符命令（請參閱按鍵）。然後，Emacs 會回顯到目前為止該命令的所有字符，以提示您執行其餘操作。
+一旦開始回顯，命令的其餘部分將在您鍵入時立即回顯。此行為旨在為自信的用戶提供快速響應，同時為猶豫的用戶提供最大的反饋。
+
+The echo area is also used to display an error message when a command cannot do its job. Error messages may be accompanied by beeping or by flashing the screen.
+
+當命令無法完成其工作時，回顯區域還用於顯示錯誤消息。錯誤消息可能會伴隨蜂鳴聲或屏幕閃爍。
+
+Some commands display informative messages in the echo area to tell you what the command has done, or to provide you with some specific information. These informative messages, unlike error messages, are not accompanied with a beep or flash. For example, C-x = (hold down Ctrl and type x, then let go of Ctrl and type =) displays a message describing the character at point, its position in the buffer, and its current column in the window. Commands that take a long time often display messages ending in ‘...’ while they are working (sometimes also indicating how much progress has been made, as a percentage), and add ‘done’ when they are finished.
+
+某些命令會在回顯區域中顯示信息性消息，告訴您該命令執行了哪些操作，或者為您提供一些特定信息。與錯誤消息不同，這些信息性消息不會伴隨蜂鳴聲或閃爍。例如，C-x = （按住Ctrl並鍵入x，然後鬆開Ctrl並鍵入=）將顯示一條消息，描述當前位置的字符、其在緩衝區中的位置以及其在窗口中的當前列。
+需要很長時間的命令通常會顯示以 ' 結尾的消息...' 當他們工作時（有時也表明已經取得了多少進展，以百分比表示），並添加 '完畢’當他們完成時。
+
+Informative echo area messages are saved in a special buffer named *Messages*. (We have not explained buffers yet; see Using Multiple Buffers, for more information about them.) If you miss a message that appeared briefly on the screen, you can switch to the *Messages* buffer to see it again. The *Messages* buffer is limited to a certain number of lines, specified by the variable message-log-max. (We have not explained variables either; see Variables, for more information about them.) Beyond this limit, one line is deleted from the beginning whenever a new message line is added at the end.
+
+信息性回顯區域消息保存在名為 *留言*。（我們還沒有解釋緩衝區； 有關它們的更多信息， 請參閱使用多個緩衝區。）如果您錯過了屏幕上短暫出現的消息，您可以切換到*留言*緩衝以再次查看它。這*留言* 緩衝區僅限於一定數量的行，由變量指定message-log-max。（我們也沒有解釋變量；有關它們的更多信息，請參閱變量。）超出此限制，每當在末尾添加新消息行時，就會從開頭刪除一行。
+
+See Customization of Display, for options that control how Emacs uses the echo area.
+
+請參閱Customization of Display，了解控制 Emacs 如何使用回顯區域的選項。
+
+The echo area is also used to display the minibuffer, a special window where you can input arguments to commands, such as the name of a file to be edited. When the minibuffer is in use, the text displayed in the echo area begins with a prompt string, and the active cursor appears within the minibuffer, which is temporarily considered the selected window. You can always get out of the minibuffer by typing C-g. See The Minibuffer.
+
+回顯區域還用於顯示 minibuffer ，這是一個特殊窗口，您可以在其中輸入命令參數，例如要編輯的文件的名稱。
+當使用迷你緩衝區時，回顯區域中顯示的文本以提示字符串開頭，並且活動光標出現在迷你緩衝區內，暫時將其視為所選窗口。您始終可以通過輸入來退出迷你緩衝區C-g。請參閱迷你緩衝區。
