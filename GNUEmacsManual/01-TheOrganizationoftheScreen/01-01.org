@@ -2,7 +2,7 @@
 #+AUTHOR: Free Software Foundation, Inc.
 #+DATE: 2023-09-18
 
-** 1.1 Point ­nÂI
+** 1.1 Point ÂI
 
 The cursor in the selected window shows the location where most editing commands take effect, which is called point2. Many Emacs commands move point to different places in the buffer; for example, you can place point by clicking mouse button 1 (normally the left button) at the desired location.
 

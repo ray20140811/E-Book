@@ -69,7 +69,7 @@ If you use multiple frames on a graphical display, selecting a particular frame 
 大多數 Emacs 命令隱式應用於當前緩衝區；未選擇的窗口中顯示的文本大多可見以供參考。
 如果在圖形顯示上使用多個框架，則選擇特定框架將選擇該框架中的窗口。
 
-- Point 觀點
-- The Echo Area 迴聲區
+- Point 點
+- The Echo Area 回顯區域
 - The Mode Line 模式行
 - The Menu Bar 選單欄
