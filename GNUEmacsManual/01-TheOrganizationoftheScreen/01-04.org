@@ -1,0 +1,25 @@
+#+TITLE: GNU Emacs manual 中文手冊 - 1 The Organization of the Screen
+#+AUTHOR: Free Software Foundation, Inc.
+#+DATE: <2023-09-21 週四>
+
+** 1.4 The Menu Bar
+
+Each Emacs frame normally has a menu bar at the top which you can use to perform common operations. There’s no need to list them here, as you can more easily see them yourself.
+
+每個 Emacs 框架的頂部通常都有一個功能表欄，您可以使用它來執行常見操作。沒有必要在這裡列出它們，因為您可以自己更輕鬆地看到它們。
+
+On a display that supports a mouse, you can use the mouse to choose a command from the menu bar. An arrow on the right edge of a menu item means it leads to a subsidiary menu, or submenu. A ‘...’ at the end of a menu item means that the command will prompt you for further input before it actually does anything.
+
+在支援滑鼠的顯示器上，您可以使用滑鼠從功能表列中選擇命令。選單項目右邊緣的箭頭表示它指向子選單或子選單。A '…' 位於選單項目末端表示該命令將在實際執行任何操作之前提示您進一步輸入。
+
+Some of the commands in the menu bar have ordinary key bindings as well; if so, a key binding is shown after the item itself. To view the full command name and documentation for a menu item, type C-h k, and then select the menu bar with the mouse in the usual way (see Documentation for a Key).
+
+選單列中的一些指令也有普通的按鍵綁定；如果是這樣，則在該項目本身之後會顯示一個鍵綁定。若要查看選單項目的完整命令名稱和文檔，請鍵入 C-h k，然後以通常的方式用滑鼠選擇功能表列（請參閱按鍵文檔）。
+
+Instead of using the mouse, you can also invoke the first menu bar item by pressing F10 (to run the command menu-bar-open). You can then navigate the menus with the arrow keys or with C-b, C-f (left/right), C-p, and C-n (up/down). To activate a selected menu item, press RET; to cancel menu navigation, press C-g or ESC ESC ESC. (However, note that when Emacs was built with a GUI toolkit, the menus are drawn and controlled by the toolkit, and the key sequences to cancel menu navigation might be different from the above description.)
+
+您也可以按F10（執行命令menu-bar-open）來呼叫第一個功能表列項，而不是使用滑鼠。然後，您可以使用箭頭鍵或使用C-b、 C-f（左/右）、C-p和C-n（上/下）瀏覽選單。若要啟動選定的選單項，請按RET; 若要取消選單導航，請按C-g或ESC ESC ESC。（但是，請注意，當使用 GUI 工具包建立 Emacs 時，選單是由工具包繪製和控制的，取消選單導航的按鍵順序可能與上述描述不同。）
+
+On a text terminal, you can optionally access the menu-bar menus in the echo area. To this end, customize the variable tty-menu-open-use-tmm to a non-nil value. Then typing F10 will run the command tmm-menubar instead of dropping down the menu. (You can also type M-`, which always invokes tmm-menubar.) tmm-menubar lets you select a menu item with the keyboard. A provisional choice appears in the echo area. You can use the up and down arrow keys to move through the menu to different items, and then you can type RET to select the item. Each menu item is also designated by a letter or digit (usually the initial of some word in the item’s name). This letter or digit is separated from the item name by ‘==>’. You can type the item’s letter or digit to select the item.
+
+在文字終端上，您可以選擇存取回顯區域中的選單列選單。為此，將變數自訂 tty-menu-open-use-tmm為非值nil。然後鍵入 F10將運行命令tmm-menubar而不是下拉式選單。（您也可以鍵入M-`，它始終會呼叫 tmm-menubar。） tmm-menubar讓您可以使用鍵盤選擇選單項目。臨時選擇出現在回顯區域。您可以使用向上和向下箭頭鍵在選單中移動到不同的項目，然後您可以鍵入RET以選擇該項目。每個選單項目也由字母或數字指定（通常是項目名稱中某個單字的首字母）。該字母或數字與項目名稱之間以 ' 分隔==>'。您可以輸入項目的字母或數字來選擇項目。
