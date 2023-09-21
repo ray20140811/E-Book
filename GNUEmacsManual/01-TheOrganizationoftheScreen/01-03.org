@@ -1,12 +1,8 @@
-# Table of Contents
+#+TITLE: GNU Emacs manual 中文手冊 - 1 The Organization of the Screen
+#+AUTHOR: Free Software Foundation, Inc.
+#+DATE: 2023-09-18
 
-1.  [1.3 The Mode Line 模式行](#org426e4e3)
-
-
-
-<a id="org426e4e3"></a>
-
-# 1.3 The Mode Line 模式行
+** 1.3 The Mode Line 模式行
 
 At the bottom of each window is a mode line, which describes what is going on in the current buffer. When there is only one window, the mode line appears right above the echo area; it is the next-to-last line in the frame. On a graphical display, the mode line is drawn with a 3D box appearance. Emacs also usually draws the mode line of the selected window with a different color from that of unselected windows, in order to make it stand out.
 
@@ -15,6 +11,10 @@ At the bottom of each window is a mode line, which describes what is going on in
 The text displayed in the mode line has the following format:
 
 模式行中顯示的文字具有以下格式：
+
+#+BEGIN_COMMENT
+ cs:ch-fr  buf      pos line   (major minor)
+#+END_COMMENT
 
 On a text terminal, this text is followed by a series of dashes extending to the right edge of the window. These dashes are omitted on a graphical display.
 
@@ -32,17 +32,17 @@ On a text terminal, cs is preceded by two additional characters that describe th
 
 在文字終端上，cs前面有兩個附加字符，用於描述鍵盤輸入和終端輸出的編碼系統。此外，如果您使用輸入法， cs前面會有一個標識輸入法的字串（請參閱輸入法）。
 
-The character after cs is usually a colon. If a different string is displayed, that indicates a nontrivial end-of-line convention for encoding a file. Usually, lines of text are separated by newline characters in a file, but two other conventions are sometimes used. The MS-DOS convention uses a carriage return character followed by a linefeed character; when editing such files, the colon changes to either a backslash (‘\\’) or ‘(DOS)’, depending on the operating system. Another convention, employed by older Macintosh systems, uses a carriage return character instead of a newline; when editing such files, the colon changes to either a forward slash (‘/’) or ‘(Mac)’. On some systems, Emacs displays ‘(Unix)’ instead of the colon for files that use newline as the line separator.
+The character after cs is usually a colon. If a different string is displayed, that indicates a nontrivial end-of-line convention for encoding a file. Usually, lines of text are separated by newline characters in a file, but two other conventions are sometimes used. The MS-DOS convention uses a carriage return character followed by a linefeed character; when editing such files, the colon changes to either a backslash (‘\’) or ‘(DOS)’, depending on the operating system. Another convention, employed by older Macintosh systems, uses a carriage return character instead of a newline; when editing such files, the colon changes to either a forward slash (‘/’) or ‘(Mac)’. On some systems, Emacs displays ‘(Unix)’ instead of the colon for files that use newline as the line separator.
 
-cs後面的字元通常是冒號。如果顯示不同的字串，則表示對檔案進行編碼的重要行結束約定。通常，文件中的文字行由換行符號分隔，但有時會使用其他兩種約定。MS-DOS 約定使用回車符後接換行符；編輯此類文件時，冒號會改為反斜線 ('\\'） 或 '（DOS）'，取決於作業系統。較舊的 Macintosh 系統採用的另一種約定是使用回車符而不是換行符號。編輯此類文件時，冒號會改為正斜線 ('/'） 或 '（蘋果）'。在某些系統上，Emacs 顯示 '（Unix）' 而不是使用換行符號作為行分隔符號的檔案的冒號。
+cs後面的字元通常是冒號。如果顯示不同的字串，則表示對檔案進行編碼的重要行結束約定。通常，文件中的文字行由換行符號分隔，但有時會使用其他兩種約定。MS-DOS 約定使用回車符後接換行符；編輯此類文件時，冒號會改為反斜線 ('\'） 或 '（DOS）'，取決於作業系統。較舊的 Macintosh 系統採用的另一種約定是使用回車符而不是換行符號。編輯此類文件時，冒號會改為正斜線 ('/'） 或 '（蘋果）'。在某些系統上，Emacs 顯示 '（Unix）' 而不是使用換行符號作為行分隔符號的檔案的冒號。
 
 On frames created for emacsclient (see Invoking emacsclient), the next character is ‘@’. This indication is typical for frames of an Emacs process running as a daemon (see Using Emacs as a Server).
 
 emacsclient在為（請參閱呼叫emacsclient）所建立的幀上，下一個字元是 '@'。此指示對於作為守護程序運行的 Emacs 進程的框架來說是典型的（請參閱使用 Emacs 作為伺服器）。
 
-The next element on the mode line is the string indicated by ch. This shows two dashes (‘&#x2013;’) if the buffer displayed in the window has the same contents as the corresponding file on the disk; i.e., if the buffer is unmodified. If the buffer is modified, it shows two stars (‘\*\*’). For a read-only buffer, it shows ‘%\*’ if the buffer is modified, and ‘%%’ otherwise.
+The next element on the mode line is the string indicated by ch. This shows two dashes (‘--’) if the buffer displayed in the window has the same contents as the corresponding file on the disk; i.e., if the buffer is unmodified. If the buffer is modified, it shows two stars (‘**’). For a read-only buffer, it shows ‘%*’ if the buffer is modified, and ‘%%’ otherwise.
 
-模式行上的下一個元素是ch指示的字串 。這顯示了兩個破折號（'&#x2013;') 如果視窗中顯示的緩衝區與磁碟上對應檔案的內容相同；即，如果緩衝區未修改。如果緩衝區被修改，它會顯示兩顆星（'**\*'）。對於唯讀緩衝區，它顯示 '%**' 如果緩衝區被修改，並且 '%%' 否則。
+模式行上的下一個元素是ch指示的字串 。這顯示了兩個破折號（'--') 如果視窗中顯示的緩衝區與磁碟上對應檔案的內容相同；即，如果緩衝區未修改。如果緩衝區被修改，它會顯示兩顆星（'**'）。對於唯讀緩衝區，它顯示 '%*' 如果緩衝區被修改，並且 '%%' 否則。
 
 The character after ch is normally a dash (‘-’). However, if default-directory (see File Names) for the current buffer is on a remote machine, ‘@’ is displayed instead.
 
@@ -58,7 +58,7 @@ buf是視窗中顯示的緩衝區的名稱。通常，這與您正在編輯的�
 
 pos tells you whether there is additional text above the top of the window, or below the bottom. If your buffer is small and all of it is visible in the window, pos is ‘All’. Otherwise, it is ‘Top’ if you are looking at the beginning of the buffer, ‘Bot’ if you are looking at the end of the buffer, or ‘nn%’, where nn is the percentage of the buffer above the top of the window. With Size Indication mode, you can display the size of the buffer as well. See Optional Mode Line Features.
 
-pos告訴您視窗頂部上方或底部下方是否有其他文字。如果您的緩衝區很小且所有緩衝區都在視窗中可見，則pos是 '全部'。否則，就是‘頂部'如果您正在查看緩衝區的開頭，'機器人' 如果您正在查看緩衝區的末尾，或者 '% \_'，其中nn是視窗頂部上方緩衝區的百分比。使用大小指示模式，您也可以顯示緩衝區的大小。請參閱可選模式線功能。
+pos告訴您視窗頂部上方或底部下方是否有其他文字。如果您的緩衝區很小且所有緩衝區都在視窗中可見，則pos是 '全部'。否則，就是‘頂部'如果您正在查看緩衝區的開頭，'機器人' 如果您正在查看緩衝區的末尾，或者 '% _'，其中nn是視窗頂部上方緩衝區的百分比。使用大小指示模式，您也可以顯示緩衝區的大小。請參閱可選模式線功能。
 
 line is the character ‘L’ followed by the line number at point. (You can display the current column number too, by turning on Column Number mode. See Optional Mode Line Features.)
 
