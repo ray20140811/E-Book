@@ -1,0 +1,29 @@
+#+TITLE: GNU Emacs manual - 5 Keys and Commands
+#+AUTHOR: Free Software Foundation, Inc.
+#+DATE: <2023-09-25 Mon>
+
+* 5 Keys and Commands
+
+This manual is full of passages that tell you what particular keys do. But Emacs does not assign meanings to keys directly. Instead, Emacs assigns meanings to named commands, and then gives keys their meanings by binding them to commands.
+
+本手冊充滿了告訴您特定鍵的用途的段落。但 Emacs 並不直接為鍵賦予含義。相反，Emacs 為命名命令分配含義，然後透過將鍵綁定到命令來賦予鍵其含義。
+
+Every command has a name chosen by a programmer. The name is usually made of a few English words separated by dashes; for example, next-line or forward-word. Internally, each command is a special type of Lisp function, and the actions associated with the command are performed by running the function. See What Is a Function in The Emacs Lisp Reference Manual.
+
+每個命令都有一個由程式設計師選擇的名稱。這個名稱通常由幾個用破折號分隔的英文單字組成；例如， next-line或forward-word。在內部，每個命令都是一種特殊類型的 Lisp函數，與命令相關的操作是透過執行該函數來執行的。請參閱Emacs Lisp 參考手冊中的什麼是函數。
+
+The bindings between keys and commands are recorded in tables called keymaps. See Keymaps.
+
+鍵和命令之間的綁定記錄在稱為 鍵映射的表中。請參閱鍵盤映射。
+
+When we say that “C-n moves down vertically one line” we are glossing over a subtle distinction that is irrelevant in ordinary use, but vital for Emacs customization. The command next-line does a vertical move downward. C-n has this effect because it is bound to next-line. If you rebind C-n to the command forward-word, C-n will move forward one word instead.
+
+當我們說「C-n垂直向下移動一行」時，我們掩蓋了一種微妙的區別，這種區別在普通使用中無關緊要，但對於 Emacs 定制至關重要。此指令next-line會垂直向下移動。 C-n具有這種效果是因為它必然是next-line. 如果您重新綁定C-n到命令 forward-word，C-n則會向前移動一個單字。
+
+In this manual, we will often speak of keys like C-n as commands, even though strictly speaking the key is bound to a command. Usually, we state the name of the command which really does the work in parentheses after mentioning the key that runs it. For example, we will say that “The command C-n (next-line) moves point vertically down”, meaning that the command next-line moves vertically down, and the key C-n is normally bound to it.
+
+在本手冊中，我們經常將按鍵視為C-n命令，儘管嚴格來說按鍵是綁定到命令的。通常，我們在提到運行該命令的鍵後，會在括號中聲明真正起作用的命令的名稱。例如，我們會說“命令C-n（next-line）垂直向下移動點”，意思是命令next-line垂直向下移動，並且鍵C-n通常與其綁定。
+
+Since we are discussing customization, we should tell you about variables. Often the description of a command will say, “To change this, set the variable mumble-foo.” A variable is a name used to store a value. Most of the variables documented in this manual are meant for customization: some command or other part of Emacs examines the variable and behaves differently according to the value that you set. You can ignore the information about variables until you are interested in customizing them. Then read the basic information on variables (see Variables) and the information about specific variables will make sense.
+
+既然我們正在討論定制，我們應該告訴你 變數。命令的描述通常會說：“要更改此設置，請設置變數mumble-foo。” 變數是用於儲存值的名稱。本手冊中記錄的大多數變數都是為了自訂：Emacs 的某些命令或其他部分會檢查變量，並根據您設定的值表現出不同的行為。您可以忽略有關變數的信息，直到您有興趣自訂它們為止。然後閱讀變數的基本資訊（參見變數），特定變數的資訊就會有意義。
