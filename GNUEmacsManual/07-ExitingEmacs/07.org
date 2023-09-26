@@ -1,0 +1,47 @@
+#+TITLE: GNU Emacs manual - 7 Exiting Emacs
+#+AUTHOR: Free Software Foundation, Inc.
+#+DATE: <2023-09-26 Tue>
+
+* 7 Exiting Emacs
+
+C-x C-c
+    Kill Emacs (save-buffers-kill-terminal).
+
+C-z
+    On a text terminal, suspend Emacs; on a graphical display, iconify (or “minimize”) the selected frame (suspend-frame).
+
+Killing Emacs means terminating the Emacs program. To do this, type C-x C-c (save-buffers-kill-terminal). A two-character key sequence is used to make it harder to type by accident. If there are any modified file-visiting buffers when you type C-x C-c, Emacs first offers to save these buffers. If you do not save them all, it asks for confirmation again, since the unsaved changes will be lost. Emacs also asks for confirmation if any subprocesses are still running, since killing Emacs will also kill the subprocesses (see Running Shell Commands from Emacs).
+
+殺死Emacs 意味著終止 Emacs 程式。為此，請鍵入C-x C-c( save-buffers-kill-terminal)。使用兩個字元的按鍵序列可防止意外鍵入。如果在您鍵入 時有任何修改的文件存取緩衝區C-x C-c，Emacs 首先會提議保存這些緩衝區。如果您不全部儲存，則會要求再次確認，因為未儲存的變更將會遺失。Emacs 也要求確認是否有任何子進程仍在執行，因為終止 Emacs 也會終止子進程（請參閱從 Emacs 執行 Shell 命令）。
+
+C-x C-c behaves specially if you are using Emacs as a server. If you type it from a client frame, it closes the client connection. See Using Emacs as a Server.
+
+C-x C-c如果您使用 Emacs 作為伺服器，則會出現特殊行為。如果您從客戶端框架鍵入它，它將關閉客戶端連線。請參閱使用 Emacs 作為伺服器。
+
+Emacs can, optionally, record certain session information when you kill it, such as the files you were visiting at the time. This information is then available the next time you start Emacs. See Saving Emacs Sessions.
+
+Emacs 可以選擇在您終止它時記錄某些會話信息，例如您當時正在訪問的文件。下次啟動 Emacs 時即可使用此資訊。請參閱儲存 Emacs 會話。
+
+If the value of the variable confirm-kill-emacs is non-nil, C-x C-c assumes that its value is a predicate function, and calls that function. If the result of the function call is non-nil, the session is killed, otherwise Emacs continues to run. One convenient function to use as the value of confirm-kill-emacs is the function yes-or-no-p. The default value of confirm-kill-emacs is nil.
+
+如果變數的值為confirm-kill-emacsnon- nil，C-x C-c則假定其值是謂詞函數，並呼叫該函數。如果函數呼叫的結果為非nil，則會話被終止，否則 Emacs 繼續運行。confirm-kill-emacs函數 是一種可以方便地用作 的值的函數 yes-or-no-p。confirm-kill-emacs的預設值為nil。
+
+If the value of the variable confirm-kill-processes is nil, C-x C-c does not ask for confirmation before killing subprocesses started by Emacs. The value is t by default.
+
+如果變數的值為confirm-kill-processes， nil則C-x C-c在終止 Emacs 啟動的子程序之前不要求確認。該值為t預設值。
+
+To further customize what happens when Emacs is exiting, see Killing Emacs in The GNU Emacs Lisp Reference Manual.
+
+若要進一步自訂 Emacs 退出時發生的情況，請參閱 《GNU Emacs Lisp 參考手冊》中的終止 Emacs。
+
+To kill Emacs without being prompted about saving, type M-x kill-emacs.
+
+若要終止 Emacs 而不提示儲存，請輸入M-x kill-emacs。
+
+C-z runs the command suspend-frame. On a graphical display, this command minimizes (or iconifies) the selected Emacs frame, hiding it in a way that lets you bring it back later (exactly how this hiding occurs depends on the window system). On a text terminal, the C-z command suspends Emacs, stopping the program temporarily and returning control to the parent process (usually a shell); in most shells, you can resume Emacs after suspending it with the shell command %emacs.
+
+C-z運行命令suspend-frame。在圖形顯示上，此命令最小化（或圖示化）選定的 Emacs 框架，以某種方式隱藏它，以便您稍後將其恢復（這種隱藏的具體方式取決於視窗系統）。在文字終端上，該C-z指令會掛起Emacs，暫時停止程式並將控制權傳回給父進程（通常是 shell）；在大多數 shell 中，您可以在使用 shell 命令暫停 Emacs 後恢復它%emacs。
+
+Text terminals usually listen for certain special characters whose meaning is to kill or suspend the program you are running. This terminal feature is turned off while you are in Emacs. The meanings of C-z and C-x C-c as keys in Emacs were inspired by the use of C-z and C-c on several operating systems as the characters for stopping or killing a program, but that is their only relationship with the operating system. You can customize these keys to run any commands of your choice (see Keymaps).
+
+文字終端通常會偵聽某些特殊字符，其含義是終止或掛起正在運行的程式。 當您使用 Emacs 時，此終端功能將會關閉。C-zEmacs 中和作為鍵 的含義受到了在多個作業系統上C-x C-c使用C-z和作為停止或終止程式的字元的啟發，但這是它們與作業系統的唯一關係。C-c您可以自訂這些鍵來執行您選擇的任何命令（請參閱鍵盤映射）。
