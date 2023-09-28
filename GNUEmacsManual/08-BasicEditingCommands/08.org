@@ -1,0 +1,21 @@
+#+TITLE: GNU Emacs manual - 8 Basic Editing Commands
+#+AUTHOR: Free Software Foundation, Inc.
+#+DATE: <2023-09-28 Thu>
+
+* 8 Basic Editing Commands
+
+Here we explain the basics of how to enter text, make corrections, and save the text in a file. If this material is new to you, we suggest you first run the Emacs learn-by-doing tutorial, by typing C-h t (help-with-tutorial).
+
+在這裡，我們解釋如何輸入文字、進行更正以及將文字保存在文件中的基礎知識。如果您對本資料不熟悉，我們建議您先輸入 C-h t (help-with-tutorial) 來執行 Emacs 邊做邊學教學。
+
+- Inserting Text
+- Changing the Location of Point
+- Erasing Text
+- Undoing Changes
+- Files
+- Help
+- Blank Lines
+- Continuation Lines
+- Cursor Position Information
+- Numeric Arguments
+- Repeating a Command
