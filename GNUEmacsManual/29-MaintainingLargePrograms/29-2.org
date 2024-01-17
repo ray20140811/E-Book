@@ -1,0 +1,18 @@
+* 29.2 Working with Projects
+
+A project is a collection of files used for producing one or more programs. Files that belong to a project are typically stored in a hierarchy of directories; the top-level directory of the hierarchy is known as the project root.
+
+專案是用於產生一個或多個程序的文件的集合。屬於專案的檔案通常儲存在目錄層次結構中；層次結構的頂層目錄稱為專案根。
+
+Whether a given directory is a root of some project is determined by the project-specific infrastructure, known as project back-end. Emacs currently supports two such back-ends: VC-aware (see Version Control), whereby a VCS repository is considered a project; and EDE (see Emacs Development Environment). This is expected to be extended in the future to support additional types of projects.
+
+給定目錄是否是某個專案的根目錄由專案特定的基礎設施（稱為專案後端）決定。Emacs 目前支援兩種這樣的後端： VC-aware（請參閱版本控制），其中 VCS 儲存庫被視為一個專案；和 EDE（請參閱Emacs 開發環境）。預計未來將擴展以支援其他類型的專案。
+
+Which files do or don’t belong to a project is also determined by the project back-end. For example, the VC-aware back-end doesn’t consider “ignored” files (see Ignore Version Control Files) to be part of the project. Also, the VC-aware Project back-end considers “untracked” files by default. That behavior is controllable with the variable project-vc-include-untracked.
+
+哪些檔案屬於或不屬於專案也由專案後端決定。例如，VC 感知後端不會將「忽略」檔案（請參閱忽略版本控製檔）視為專案的一部分。此外，VC 感知專案後端預設考慮「未追蹤」檔案。該行為可以透過變數 來控制 project-vc-include-untracked。
+
+	- Project Commands That Operate on Files		對檔案進行操作的專案命令
+	- Project Commands That Operate on Buffers	對緩衝區進行操作的專案命令
+	- Switching Projects												切換專案
+	- Managing the Project List File						管理專案清單檔案

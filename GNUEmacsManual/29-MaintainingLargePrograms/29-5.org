@@ -1,0 +1,37 @@
+* 29.5 Emacs Development Environment Emacs開發環境
+
+EDE (Emacs Development Environment) is a package that simplifies the task of creating, building, and debugging large programs with Emacs. It provides some of the features of an IDE, or Integrated Development Environment, in Emacs.
+
+EDE（Emacs 開發環境）是一個軟體包，可簡化使用 Emacs 建立、建置和調試大型程式的任務。它提供了 Emacs 中 IDE（或整合開發環境）的一些功能。
+
+This section provides a brief description of EDE usage. For full details, see EDE in Emacs Development Environment.
+
+本節提供 EDE 用法的簡要說明。有關完整詳細信息，請參閱Emacs 開發環境中的EDE。
+
+EDE is implemented as a global minor mode (see Minor Modes). To enable it, type M-x global-ede-mode or click on the ‘Project Support (EDE)’ item in the ‘Tools’ menu. You can also enable EDE each time you start Emacs, by adding the following line to your initialization file:
+
+EDE 作為全域次要模式實作（請參閱次要模式）。要啟用它，請鍵入M-x global-ede-mode或按一下“專案支援（EDE）' 中的項目工具' 菜單。您也可以在每次啟動 Emacs 時啟用 EDE，方法是將以下行新增至初始化檔案：
+
+#+begin_src
+(global-ede-mode t)
+#+end_src
+
+Activating EDE adds a menu named ‘Development’ to the menu bar. Many EDE commands, including the ones described below, can be invoked from this menu.
+
+啟動 EDE 會新增一個名為 '開發' 到選單列。許多 EDE 命令，包括下面描述的命令，都可以從此功能表呼叫。
+
+EDE organizes files into projects, which correspond to directory trees. The project root is the topmost directory of a project. To define a new project, visit a file in the desired project root and type M-x ede-new. This command prompts for a project type, which refers to the underlying method that EDE will use to manage the project (see EDE in Emacs Development Environment). The most common project types are ‘Make’, which uses Makefiles, and ‘Automake’, which uses GNU Automake (see Automake in Automake). In both cases, EDE also creates a file named Project.ede, which stores information about the project.
+
+EDE 將檔案組織到專案中，專案對應目錄樹。專案根目錄是專案的最頂層目錄。若要定義新項目，請造訪所需項目根目錄中的檔案並輸入M-x ede-new. 此命令提示輸入 項目類型，它指的是 EDE 將用於管理專案的底層方法（請參閱Emacs 開發環境中的EDE）。最常見的項目類型是'製作'，它使用 Makefile，以及 '汽車製造商'，它使用 GNU Automake（請參閱Automake中的Automake）。在這兩種情況下，EDE 也會建立一個名為項目.ede，它儲存有關項目的資訊。
+
+A project may contain one or more targets. A target can be an object file, executable program, or some other type of file, which is built from one or more of the files in the project.
+
+一個項目可能包含一個或多個目標。目標可以是目標檔案、可執行程式或某種其他類型的文件，它們是根據專案中的一個或多個文件建構的。
+
+To add a new target to a project, type C-c . t (M-x ede-new-target). This command also asks if you wish to add the current file to that target, which means that the target is to be built from that file. After you have defined a target, you can add more files to it by typing C-c . a (ede-add-file).
+
+若要將新目標新增至項目，請鍵入C-c . t ( M-x ede-new-target)。此命令還會詢問您是否希望將當前檔案新增至該目標，這表示目標將從該檔案建置。定義目標後，您可以透過鍵入C-c . a ( ede-add-file) 向其中新增更多檔案。
+
+To build a target, type C-c . c (ede-compile-target). To build all the targets in the project, type C-c . C (ede-compile-project). EDE uses the file types to guess how the target should be built.
+
+若要建置目標，請鍵入C-c . c( ede-compile-target)。若要建置專案中的所有目標，請鍵入C-c . C ( ede-compile-project)。EDE 使用檔案類型來猜測應該如何建立目標。

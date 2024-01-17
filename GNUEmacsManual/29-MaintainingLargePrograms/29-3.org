@@ -1,0 +1,8 @@
+* 29.3 Change Logs
+
+Many software projects keep a change log. This is a file, normally named ChangeLog, containing a chronological record of when and how the program was changed. Sometimes, these files are automatically generated from the change log entries stored in version control systems, or are used to generate these change log entries. Sometimes, there are several change log files, each recording the changes in one directory or directory tree.
+
+許多軟體專案都會保留變更日誌。這是一個檔案，通常命名為變更日誌，包含程式更改時間和方式的時間記錄。有時，這些檔案是根據版本控制系統中儲存的變更日誌條目自動產生的，或用於產生這些變更日誌條目。有時，會有多個變更日誌檔案，每個變更日誌檔案都會記錄一個目錄或目錄樹中的變更。
+
+	- Change Log Commands	更改日誌命令
+	- Format of ChangeLog	變更日誌的格式

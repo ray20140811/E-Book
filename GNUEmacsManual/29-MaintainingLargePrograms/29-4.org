@@ -1,0 +1,37 @@
+* 29.4 Find Identifier References 查找標識符引用
+
+An identifier is a name of a syntactical subunit of the program: a function, a subroutine, a method, a class, a data type, a macro, etc. In a programming language, each identifier is a symbol in the language’s syntax. Identifiers are also known as tags.
+
+標識符是程式的語法子單元的名稱：函數、子程式、方法、類別、資料類型、巨集等。在程式語言中，每個識別碼都是該語言語法中的符號。標識符也稱為標籤。
+
+Program development and maintenance requires capabilities to quickly find where each identifier was defined and referenced, to rename identifiers across the entire project, etc. These capabilities are also useful for finding references in major modes other than those defined to support programming languages. For example, chapters, sections, appendices, etc. of a text or a TeX document can be treated as subunits as well, and their names can be used as identifiers. In this chapter, we use the term “identifiers” to collectively refer to the names of any kind of subunits, in program source and in other kinds of text alike.
+
+程式開發和維護需要能夠快速查找每個標識符的定義和引用位置、在整個專案中重命名標識符等。這些功能對於查找主要模式中的引用（除了為支援程式語言而定義的模式之外）也很有用。例如，文字或 TeX 文件的章、節、附錄等也可以被視為子單元，並且它們的名稱可以用作識別符。在本章中，我們使用術語「標識符」來統指程式原始碼和其他類型文字中的任何類型子單元的名稱。
+
+Emacs provides a unified interface to these capabilities, called ‘xref’.
+
+Emacs 為這些功能提供了一個統一的接口，稱為 'xref'。
+
+To do its job, xref needs to make use of information and to employ methods specific to the major mode. What files to search for identifiers, how to find references to identifiers, how to complete on identifiers—all this and more is mode-specific knowledge. xref delegates the mode-specific parts of its job to a backend provided by the mode; it also includes defaults for some of its commands, for those modes that don’t provide their own.
+
+為了完成它的工作，xref需要利用資訊並採用特定於主要模式的方法。在哪些文件中搜尋標識符、如何查找對標識符的引用、如何完成標識符——所有這些以及更多內容都是特定於模式的知識。 xref將其工作的特定於模式的部分委託給 該模式提供的後端；它還包括一些命令的預設值，適用於那些不提供自己的模式的命令。
+
+A backend can implement its capabilities in a variety of ways. Here are a few examples:
+
+後端可以透過多種方式實現其功能。這裡有一些例子：
+
+	1. Some major modes provide built-in means for looking up the language symbols. For example, Emacs Lisp symbols can be identified by searching the package load history, maintained by the Emacs Lisp interpreter, and by consulting the built-in documentation strings; the Emacs Lisp mode uses these facilities in its backend to allow finding definitions of symbols. (One disadvantage of this kind of backend is that it only knows about subunits that were loaded into the interpreter.)
+	
+	一些主要模式提供了用於查找語言符號的內建方法。例如，Emacs Lisp 符號可以透過搜尋由 Emacs Lisp 解釋器維護的套件載入歷史記錄以及查閱內建文件字串來識別；Emacs Lisp 模式在其後端使用這些工具來允許尋找符號的定義。（這種後端的一個缺點是它只知道載入到解釋器中的子單元。）
+	
+	2. If Eglot is activated for the current buffer’s project (see Working with Projects) and the current buffer’s major mode, Eglot consults an external language server program and provides the data supplied by the server regarding the definitions of the identifiers in the project. See Eglot Features in Eglot: The Emacs LSP Client.
+	
+	如果針對目前緩衝區的項目（請參閱使用項目）和目前緩衝區的主要模式啟動了 Eglot，則 Eglot 會查閱外部語言伺服器程式並提供伺服器提供的有關項目中識別碼定義的資料。請參閱Eglot中的Eglot 功能：Emacs LSP 用戶端。
+	
+	3. An external program can extract references by scanning the relevant files, and build a database of these references. A backend can then access this database whenever it needs to list or look up references. The Emacs distribution includes etags, a command for tagging identifier definitions in programs, which supports many programming languages and other major modes, such as HTML, by extracting references into tags tables. See Creating Tags Tables. Major modes for languages supported by etags can use tags tables as basis for their backend. (One disadvantage of this kind of backend is that tags tables need to be kept reasonably up to date, by rebuilding them from time to time.)
+	
+	外部程序可以透過掃描相關文件來提取參考文獻，並建立這些參考文獻的資料庫。然後，後端可以在需要列出或尋找參考時存取該資料庫。Emacs 發行版包括一個用於在程式中標記標識符定義的命令，該命令透過將引用提取到標記表etags中來支援許多程式語言和其他主要模式，例如 HTML 。請參閱建立標籤表。支援的語言的主要模式可以使用標籤表作為其後端的基礎。（這種後端的一個缺點是標籤表需要透過不時重建來保持合理的最新狀態。） etags
+	
+	- Find Identifiers				尋找標識符
+	- Tags Tables							標籤表
+	- Selecting a Tags Table	選擇標籤表
