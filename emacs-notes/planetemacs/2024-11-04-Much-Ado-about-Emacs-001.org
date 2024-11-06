@@ -1,0 +1,113 @@
+#+TITLE: [[https://bicycleforyourmind.com/much_ado_about_emacs_001][Much Ado about Emacs 001]]
+#+AUTHOR: Chris Guidotti
+
+This is going to be a recurrent series on my working in Emacs.I will write about what I am trying, adopting, and discarding.
+The rationale or the benefits behind the decisions.
+The goal is two pronged:
+
+1. It might help people going through the same process.
+2. It will help me understand the changes I am making to the configuration of Emacs and my workflow in it.
+
+** god-mode
+
+god-mode is a major change to the way I interact with Emacs.
+
+I am using the ZSA Moonlander as my keyboard and was having trouble with the continual mashing of the Ctrl key and the Alt key while using Emacs.I tried to change the location of those keys to get rid of the fatigue that comes from contorting my hands to reach them.Didn’t help. God-mode solves that problem.
+
+Not interested in switching to evil-mode, or doom yet, it made sense to try out god-mode as an alternative.
+I specially liked this feature in god-mode:
+
+#+begin_example
+All existing key bindings will work in God mode.
+It’s only there to reduce your usage of modifier keys.
+#+end_example
+
+Using it for a week now. Still getting used to it, but I must point out that not reaching for the Ctrl key and the Alt key makes the process of using Emacs easier on my wrists. Will use this for a couple of months before I decide on continuing to use this or switching to evil-mode.Have to give it a reasonable amount of time to embed itself in my muscle memory.
+
+This is my setup for god-mode.
+
+#+begin_src emacs-lisp
+(use-package god-mode)
+  (god-mode)
+    (global-set-key (kbd "<escape>") #'god-mode-all)
+    (setq god-exempt-major-modes nil)
+    (setq god-exempt-predicates nil)
+    (global-set-key (kbd "C-x C-1") #'delete-other-windows)
+    (global-set-key (kbd "C-x C-2") #'vsplit-last-buffer)
+    (global-set-key (kbd "C-x C-3") #'hsplit-last-buffer)
+    (global-set-key (kbd "C-x C-0") #'delete-window)
+    (defun my-god-mode-update-cursor-type ()
+    (setq cursor-type (if (or god-local-mode buffer-read-only) 'box 'bar)))
+    (add-hook 'post-command-hook #'my-god-mode-update-cursor-type)
+#+end_src
+
+** A New Mode line
+
+I was using the mode line from Sophie Bosio. It was impressively minimal. I wanted some more information displayed. Being slightly familiar with doom-modeline. I decided to switch to it. The result is still minimal but it does contain the information I want.
+
+This is what I am using:
+
+#+begin_src emacs-lisp
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1)
+(setq doom-modeline-height 25)
+(setq doom-modeline-bar-width 4)
+(setq doom-modeline-hud nil)
+(setq doom-modeline-window-width-limit 85)
+(setq doom-modeline-project-detection 'auto)
+(setq doom-modeline-buffer-file-name-style 'truncate-nil)
+(setq doom-modeline-icon t)
+(setq doom-modeline-major-mode-icon t)
+(setq doom-modeline-major-mode-color-icon t)
+(setq doom-modeline-buffer-state-icon t)
+(setq doom-modeline-buffer-modification-icon t)
+(setq doom-modeline-buffer-name t)
+(setq doom-modeline-highlight-modified-buffer-name t)
+(setq doom-modeline-column-zero-based t)
+(setq doom-modeline-percent-position '(-3 "%p"))
+(setq doom-modeline-position-line-format '("L%l"))
+(setq doom-modeline-position-column-format '("C%c"))
+(setq doom-modeline-position-column-line-format '("%l:%c"))
+(setq doom-modeline-minor-modes nil)
+(setq doom-modeline-enable-word-count 1)
+(setq doom-modeline-continuous-word-count-modes '(markdown-mode gfm-mode org-mode))
+(setq doom-modeline-buffer-encoding nil)
+(setq doom-modeline-indent-info nil)
+(setq doom-modeline-total-line-number 1)
+(setq doom-modeline-vcs-icon nil)
+(setq doom-modeline-check-icon t)
+(setq doom-modeline-check-simple-format nil)
+(setq doom-modeline-number-limit 99)
+(setq doom-modeline-workspace-name nil)
+(setq doom-modeline-persp-name nil)
+(setq doom-modeline-display-default-persp-name nil)
+(setq doom-modeline-persp-icon nil)
+(setq doom-modeline-lsp nil)
+(setq doom-modeline-github nil)
+(setq doom-modeline-modal t)
+(setq doom-modeline-modal-icon t)
+(setq doom-modeline-modal-modern-icon t)
+(setq doom-modeline-always-show-macro-register nil)
+(setq doom-modeline-mu4e nil)
+(setq doom-modeline-gnus nil)
+(setq doom-modeline-buffer-file-name-function #'identity)
+(setq doom-modeline-buffer-file-truename-function #'identity))
+
+(use-package nerd-icons
+  :custom
+  (nerd-icons-font-family "Symbols Nerd Font Mono"))
+  
+#+end_src
+
+** Turning Off M-Ret From Splitting the Line
+
+M-return continues a list in org-mode. You have to get to the end of the line and press it to get a new list item. That was a pain. This code makes it possible to press the keyboard command wherever you are in the line and it gives a new list item after the one you were on.
+
+I did not write this. Unfortunately I don’t remember where I got it from. Sorry. Need to do a better job of documenting the source of ideas. The code is:
+
+#+begin_src emacs-lisp
+(setq org-M-RET-may-split-line '((item . nil)))
+#+end_src
+
+macosxguru at the gmail thingie.
