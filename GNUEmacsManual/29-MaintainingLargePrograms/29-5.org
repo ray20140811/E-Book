@@ -22,7 +22,7 @@ Activating EDE adds a menu named ‘Development’ to the menu bar. Many EDE com
 
 EDE organizes files into projects, which correspond to directory trees. The project root is the topmost directory of a project. To define a new project, visit a file in the desired project root and type M-x ede-new. This command prompts for a project type, which refers to the underlying method that EDE will use to manage the project (see EDE in Emacs Development Environment). The most common project types are ‘Make’, which uses Makefiles, and ‘Automake’, which uses GNU Automake (see Automake in Automake). In both cases, EDE also creates a file named Project.ede, which stores information about the project.
 
-EDE 將檔案組織到專案中，專案對應目錄樹。專案根目錄是專案的最頂層目錄。若要定義新項目，請造訪所需項目根目錄中的檔案並輸入M-x ede-new. 此命令提示輸入 項目類型，它指的是 EDE 將用於管理專案的底層方法（請參閱Emacs 開發環境中的EDE）。最常見的項目類型是'製作'，它使用 Makefile，以及 '汽車製造商'，它使用 GNU Automake（請參閱Automake中的Automake）。在這兩種情況下，EDE 也會建立一個名為項目.ede，它儲存有關項目的資訊。
+EDE 將檔案組織到專案中，專案對應目錄樹。專案根目錄是專案的最頂層目錄。若要定義新項目，請造訪所需項目根目錄中的檔案並輸入M-x ede-new. 此命令提示輸入 項目類型，它指的是 EDE 將用於管理專案的底層方法（請參閱Emacs 開發環境中的EDE）。最常見的項目類型是'Make'，它使用 Makefile，以及 'Automake'，它使用 GNU Automake（請參閱Automake中的Automake）。在這兩種情況下，EDE 也會建立一個名為項目.ede，它儲存有關項目的資訊。
 
 A project may contain one or more targets. A target can be an object file, executable program, or some other type of file, which is built from one or more of the files in the project.
 
