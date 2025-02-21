@@ -1,0 +1,71 @@
+#+TITLE: [[https://youtu.be/Yah69AfYP34][From vanilla Emacs to Java IDE in 5 minutes]]
+#+AUTHOR: Skybert Hacks
+
+** Set up package manager
+
+#+begin_src lisp
+  (condition-case nil
+    (require 'use-package)
+    (file-error
+     (require 'package)
+     (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+     (package-initialize)
+     (package-refresh-contents)
+     (package-install 'use-package)
+     (setq use-package-always-ensure t)
+     (require 'use-package)))
+#+end_src
+
+** Font & theme
+
+#+begin_src lisp
+  (set-face-attribute
+   'default
+   nil
+   :family "Source Code Pro"
+   :height 150
+   :weight 'medium
+   :width 'normal)
+  (use-package sweet-theme :ensure t :init (load-theme 'sweet t))
+#+end_src
+
+** Show shortcuts
+
+#+begin_src elisp
+  (load "/usr/local/src/interaction-log.el/interaction-log.el")
+  (ilong-show-in-new-frame)
+#+end_src
+
+** Install lsp-java & dap-java
+
+#+begin_src elisp
+  (use-package projectile)
+  (use-package flycheck)
+  (use-package yasnippet :config (yas-global-mode))
+  (use-package lsp-mode :hook ((lsp-mode . lsp-enable-which-key-integration))
+    :config (setq lsp-completion-enable-additional-text-edit nil))
+  (use-package hydra)
+  (use-package company)
+  (use-package lsp-ui)
+  (use-package which-key :config (which-key-mode))
+  (use-package lsp-java :config (add-hook 'java-mode-hook 'lsp))
+  (use-package dap-mode :after lsp-mode :config (dap-auto-configure-mode))
+  (use-package dap-java :ensure nil)
+  (use-package helm-lsp)
+  (use-package helm
+    :config (helm-mode))
+  (use-package lsp-treemacs)
+#+end_src
+
+** Project navigation
+
+#+begin_src elisp
+  (use-package projectile
+    :ensure t
+    :init (projectile-mode +1)
+    :config
+    (define-key
+     projectile-mode-map
+     (kbd "C-c p")
+     'projectile-command-map))
+#+end_src
